@@ -1,0 +1,6 @@
+version = 1
+
+[[annotations]]
+path = ["*.png"]
+SPDX-FileCopyrightText = "INFRARED_BARON"
+SPDX-License-Identifier = "LicenseRef-MojaveSun13"

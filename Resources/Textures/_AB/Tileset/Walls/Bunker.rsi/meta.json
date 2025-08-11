@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 64
+    },
+    "license": "CC BY-NC-SA 3.0",
+    "copyright": "By INFRARED_BARON",
+    "disclaimer of edits done": "Side sprites and conversion to ss14 wall smoothing technology done by StudioFaewilds",
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "Bunker0",
+            "directions": 4
+        },
+        {
+            "name": "Bunker1",
+            "directions": 4
+        },
+        {
+            "name": "Bunker2",
+            "directions": 4
+        },
+        {
+            "name": "Bunker3",
+            "directions": 4
+        },
+        {
+            "name": "Bunker4",
+            "directions": 4
+        },
+        {
+            "name": "Bunker5",
+            "directions": 4
+        },
+        {
+            "name": "Bunker6",
+            "directions": 4
+        },
+        {
+            "name": "Bunker7",
+            "directions": 4
+        }
+    ]
+}

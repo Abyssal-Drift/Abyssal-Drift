@@ -125,6 +125,37 @@
     base: brick
 
 - type: entity
+  parent: BaseStructureWall
+  id: WallBunker
+  name: bunker wall
+  components:
+  - type: Sprite
+    sprite: _AB/Tileset/Walls/Bunker.rsi
+  - type: Icon
+    sprite: _AB/Tileset/Walls/Bunker.rsi
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: Destructible
+  - type: Occluder # Breaks on diagonal walls
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Girder:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: walls
+    base: bunker
+
+- type: entity
   parent: BaseWall
   id: WallClock
   name: clock wall
