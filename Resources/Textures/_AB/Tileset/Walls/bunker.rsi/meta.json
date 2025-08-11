@@ -12,35 +12,35 @@
             "name": "full"
         },
         {
-            "name": "Bunker0",
+            "name": "bunker0",
             "directions": 4
         },
         {
-            "name": "Bunker1",
+            "name": "bunker1",
             "directions": 4
         },
         {
-            "name": "Bunker2",
+            "name": "bunker2",
             "directions": 4
         },
         {
-            "name": "Bunker3",
+            "name": "bunker3",
             "directions": 4
         },
         {
-            "name": "Bunker4",
+            "name": "bunker4",
             "directions": 4
         },
         {
-            "name": "Bunker5",
+            "name": "bunker5",
             "directions": 4
         },
         {
-            "name": "Bunker6",
+            "name": "bunker6",
             "directions": 4
         },
         {
-            "name": "Bunker7",
+            "name": "bunker7",
             "directions": 4
         }
     ]

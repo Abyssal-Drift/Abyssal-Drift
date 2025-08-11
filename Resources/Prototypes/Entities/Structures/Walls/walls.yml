@@ -130,9 +130,9 @@
   name: bunker wall
   components:
   - type: Sprite
-    sprite: _AB/Tileset/Walls/Bunker.rsi
+    sprite: _AB/Tileset/Walls/bunker.rsi
   - type: Icon
-    sprite: _AB/Tileset/Walls/Bunker.rsi
+    sprite: _AB/Tileset/Walls/bunker.rsi
   - type: RCDDeconstructable
     cost: 6
     delay: 8
