@@ -74,6 +74,42 @@
     _itemstatus_content_margin_left: "#06060604"
     _itemstatus_patch_margin: "#07060404"
 
+- type: uiTheme
+  id: RetroThemeDefault
+  path: /Textures/_ST/Interface/Retro_Default/
+  colors:
+    whiteText: "#FFF5EE"
+    slotSelectedGold: "#e6b812"
+    slotColor: "#0f1215"
+    slotOutline: "#333850"
+    slotText: "#333850"
+    nanoGold: "#A88B5E"
+    goodGreenFore: "#31843E"
+    concerningOrangeFore: "#A5762F"
+    dangerousRedFore: "#BB3232"
+    disabledFore: "#5A5A5A"
+    _itemstatus_content_margin_right: "#06060404"
+    _itemstatus_content_margin_left: "#04060604"
+    _itemstatus_patch_margin: "#07060404"
+
+- type: uiTheme
+  id: RetroThemeMinimal
+  path: /Textures/_ST/Interface/Retro_Minimalist/
+  colors:
+    whiteText: "#FFF5EE"
+    slotSelectedGold: "#e6b812"
+    slotColor: "#0f1215"
+    slotOutline: "#333850"
+    slotText: "#333850"
+    nanoGold: "#A88B5E"
+    goodGreenFore: "#31843E"
+    concerningOrangeFore: "#A5762F"
+    dangerousRedFore: "#BB3232"
+    disabledFore: "#5A5A5A"
+    _itemstatus_content_margin_right: "#06060604"
+    _itemstatus_content_margin_left: "#06060604"
+    _itemstatus_patch_margin: "#07060404"
+
 # Stellar HUDs
 - type: hudTheme
   id: STDefaultTheme
@@ -101,13 +137,13 @@
 
 # Wizden HUDs
 - type: hudTheme
-  id: SS14DefaultTheme
+  id: RetroThemeDefault
   name: ui-options-hud-theme-wizden
-  path: Default
+  path: Retro_Default
   order: 98
 
 - type: hudTheme
-  id: SS14MinimalistTheme
+  id: RetroThemeMinimal
   name: ui-options-hud-theme-wizden-minimalist
-  path: Minimalist
+  path: Retro_Minimalist
   order: 99

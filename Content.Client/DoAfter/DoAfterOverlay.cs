@@ -24,7 +24,6 @@ public sealed class DoAfterOverlay : Overlay
     private readonly ProgressColorSystem _progressColor;
     private readonly SharedContainerSystem _container;
     private readonly SpriteSystem _sprite;
-
     private readonly Texture _barTexture;
     private readonly ShaderInstance _unshadedShader;
 
@@ -36,10 +35,12 @@ public sealed class DoAfterOverlay : Overlay
     // Hardcoded width of the progress bar because it doesn't match the texture.
     private const float StartX = 2;
     private const float EndX = 22f;
+    private const float StartY = 2; // Stellar - Revamped DoAfters. Starting Y offset of the progress bar, affects width.
+    private const float ProgressY = 5; // Stellar - Revamped DoAfters. Ending Y offset of the progress bar, affects width.
 
     public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowFOV;
 
-    public DoAfterOverlay(IEntityManager entManager, IPrototypeManager protoManager, IGameTiming timing, IPlayerManager player)
+    public DoAfterOverlay(Texture barTexture, IEntityManager entManager, IPrototypeManager protoManager, IGameTiming timing, IPlayerManager player) // Stellar - Revamped DoAfters
     {
         _entManager = entManager;
         _timing = timing;
@@ -49,8 +50,7 @@ public sealed class DoAfterOverlay : Overlay
         _container = _entManager.EntitySysManager.GetEntitySystem<SharedContainerSystem>();
         _progressColor = _entManager.System<ProgressColorSystem>();
         _sprite = _entManager.System<SpriteSystem>();
-        var sprite = new SpriteSpecifier.Rsi(new("/Textures/Interface/Misc/progress_bar.rsi"), "icon");
-        _barTexture = _entManager.EntitySysManager.GetEntitySystem<SpriteSystem>().Frame0(sprite);
+        _barTexture = barTexture; // Stellar - Revamped DoAfters
 
         _unshadedShader = protoManager.Index(UnshadedShader).Instance();
     }
@@ -152,9 +152,15 @@ public sealed class DoAfterOverlay : Overlay
                 }
 
                 var xProgress = (EndX - StartX) * elapsedRatio + StartX;
-                var box = new Box2(new Vector2(StartX, 3f) / EyeManager.PixelsPerMeter, new Vector2(xProgress, 4f) / EyeManager.PixelsPerMeter);
+                var box = new Box2(new Vector2(StartX, StartY) / EyeManager.PixelsPerMeter, new Vector2(xProgress, ProgressY) / EyeManager.PixelsPerMeter); // Begin Stellar - Revamped DoAfters
+                var boxGlow = new Box2(new Vector2(StartX - 1f, StartY - 1f) / EyeManager.PixelsPerMeter, new Vector2(xProgress + 1f, ProgressY + 1f) / EyeManager.PixelsPerMeter);
+                var boxHighlight = new Box2(new Vector2(StartX, StartY + 1f) / EyeManager.PixelsPerMeter, new Vector2(xProgress, ProgressY - 2f) / EyeManager.PixelsPerMeter);
                 box = box.Translated(position);
+                boxGlow = boxGlow.Translated(position);
+                boxHighlight = boxHighlight.Translated(position);
+                handle.DrawRect(boxGlow, color.WithAlpha(0.1f));
                 handle.DrawRect(box, color);
+                handle.DrawRect(boxHighlight, Color.InterpolateBetween(color, Color.White, 0.55f)); // End Stellar - Revamped DoAfters
                 offset += _barTexture.Height / scale;
             }
         }

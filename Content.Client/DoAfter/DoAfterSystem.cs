@@ -1,8 +1,11 @@
 using System.Diagnostics.CodeAnalysis;
+using Content.Shared.CCVar; // Stellar - Revamped DoAfters
 using Content.Shared.DoAfter;
 using Content.Shared.Hands.Components;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
+using Robust.Client.UserInterface; // Stellar - Revamped DoAfters
+using Robust.Shared.Configuration; // Stellar - Revamped DoAfters
 using Robust.Shared.Prototypes;
 
 namespace Content.Client.DoAfter;
@@ -13,15 +16,22 @@ namespace Content.Client.DoAfter;
 /// </summary>
 public sealed class DoAfterSystem : SharedDoAfterSystem
 {
+    [Dependency] private readonly IConfigurationManager _configManager = default!; // Stellar - Revamped DoAfters
+    [Dependency] private readonly IUserInterfaceManager _userInterface = default!; // Stellar - Revamped DoAfters
     [Dependency] private readonly IOverlayManager _overlay = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly MetaDataSystem _metadata = default!;
 
+    private readonly string _barTexturePath = "/progressbar"; // Stellar - Revamped DoAfters
+    private Texture? _barTexture; // Stellar - Revamped DoAfters
+
     public override void Initialize()
     {
         base.Initialize();
-        _overlay.AddOverlay(new DoAfterOverlay(EntityManager, _prototype, GameTiming, _player));
+        _barTexture = _userInterface.CurrentTheme.ResolveTextureOrNull($"{_userInterface.CurrentTheme.Path}{_barTexturePath}")?.Texture; // Begin Stellar - Revamped DoAfters
+        _overlay.AddOverlay(new DoAfterOverlay(_barTexture!, EntityManager, _prototype, GameTiming, _player));
+        _configManager.OnValueChanged(CCVars.InterfaceTheme, ReloadOverlay, true); // End Stellar - Revamped DoAfters
     }
 
     public override void Shutdown()
@@ -29,6 +39,13 @@ public sealed class DoAfterSystem : SharedDoAfterSystem
         base.Shutdown();
         _overlay.RemoveOverlay<DoAfterOverlay>();
     }
+
+    private void ReloadOverlay(string hudTheme) // Begin Stellar - Revamped DoAfters
+    {
+        _barTexture = _userInterface.CurrentTheme.ResolveTextureOrNull($"{_userInterface.CurrentTheme.Path}{_barTexturePath}")?.Texture;
+        _overlay.RemoveOverlay<DoAfterOverlay>();
+        _overlay.AddOverlay(new DoAfterOverlay(_barTexture!, EntityManager, _prototype, GameTiming, _player));
+    } // End Stellar - Revamped DoAfters
 
 #pragma warning disable RA0028 // No base call in overriden function
     public override void Update(float frameTime)

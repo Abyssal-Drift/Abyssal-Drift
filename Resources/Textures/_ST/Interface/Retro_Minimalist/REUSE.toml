@@ -1,0 +1,6 @@
+version = 1
+
+[[annotations]]
+path = ["*.png"]
+SPDX-FileCopyrightText = ["Wizard's Den Contributors"]
+SPDX-License-Identifier = "LicenseRef-WizardsDen"
