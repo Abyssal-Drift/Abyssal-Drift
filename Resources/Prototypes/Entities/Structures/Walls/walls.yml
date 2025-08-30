@@ -137,8 +137,8 @@
     cost: 6
     delay: 8
     fx: EffectRCDDeconstruct8
-  - type: Destructible
   - type: Occluder # Breaks on diagonal walls
+  - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
@@ -1758,6 +1758,6 @@
   - type: IconSmooth
     key: cards
     base: card
-  - type: Occluder 
+  - type: Occluder
   - type: BlockWeather
   - type: SunShadowCast
