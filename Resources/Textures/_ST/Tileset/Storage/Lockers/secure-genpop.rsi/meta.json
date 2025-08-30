@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "license": "LicenseRef-Wallening",
+  "copyright": "By AftrLite",
+  "size": {
+    "x": 32,
+    "y": 48
+  },
+  "states": [
+    {
+      "name": "base"
+    },
+    {
+      "name": "welded"
+    },
+    {
+      "name": "generic"
+    },
+    {
+      "name": "generic_door"
+    },
+    {
+      "name": "door-closed"
+    },
+    {
+      "name": "door-open"
+    },
+    {
+      "name": "locked"
+    },
+    {
+      "name": "unlocked"
+    },
+    {
+      "name": "genpop_door_2"
+    },
+    {
+      "name": "genpop_door_3"
+    },
+    {
+      "name": "genpop_door_4"
+    },
+    {
+      "name": "genpop_door_5"
+    },
+    {
+      "name": "genpop_door_6"
+    },
+    {
+      "name": "genpop_door_7"
+    },
+    {
+      "name": "genpop_door_8"
+    }
+  ]
+}

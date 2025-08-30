@@ -11,18 +11,21 @@
     noRot: true
   - type: Sprite
     noRot: true
-    sprite: Structures/Storage/closet.rsi
+    offset: 0, 0.5 # Begin Stellar - Lockers
+    drawdepth: Mobs
+    sprite: _ST/Tileset/Storage/Lockers/base-locker.rsi
     layers:
-    - state: generic
+    - state: base
       map: ["enum.StorageVisualLayers.Base"]
-    - state: generic_door
+    - state: door-closed
       map: ["enum.StorageVisualLayers.Door"]
     - state: welded
+      sprite: _ST/Tileset/Storage/Lockers/base-locker-effects.rsi
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
     - state: paper
+      sprite: _ST/Tileset/Storage/Lockers/base-locker-effects.rsi # End Stellar - Lockers
       visible: false
-      sprite: Structures/Storage/closet_labels.rsi
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: MovedByPressure
   - type: PaperLabel
@@ -49,7 +52,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.25,-0.48,0.25,0.48"
+          bounds: "-0.25,-0.10,0.25,0.55"
         density: 75
         mask:
         - MachineMask
@@ -108,11 +111,17 @@
           Invoice: { state: invoice }
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: generic_door
+    stateBaseClosed: base # Begin Stellar - Lockers
+    stateDoorOpen: door-open
+    stateDoorClosed: door-closed # End Stellar - Lockers
   - type: StaticPrice
     price: 75
+  - type: Dropshadow
+    sprite:
+      sprite: _ST/Effects/dropshadow.rsi
+      state: shadow-locker
+    offset: 0, -0.25
+    anchorShadow: true
 
 # steel closet base (that can be constructed/deconstructed)
 - type: entity
@@ -129,23 +138,16 @@
 
 #Wall Closet
 - type: entity
+  parent: BaseWallmountMetallic
   id: BaseWallCloset
-  placement:
-    mode: SnapgridCenter
   abstract: true
   name: wall closet
   description: A standard-issue Nanotrasen storage unit, now on walls.
   components:
-  - type: InteractionOutline
-  - type: Clickable
   - type: ResistLocker
   - type: Weldable
-  - type: WallMount
-    arc: 175
   - type: StaticPrice
     price: 75
-  - type: Transform
-    noRot: false
   - type: Sprite
     drawdepth: WallMountedItems
     noRot: false
@@ -170,9 +172,6 @@
     containers:
       entity_storage: !type:Container
         ents: []
-  - type: Damageable
-    damageContainer: StructuralInorganic
-    damageModifierSet: Metallic
   - type: Destructible
     thresholds:
     - trigger:

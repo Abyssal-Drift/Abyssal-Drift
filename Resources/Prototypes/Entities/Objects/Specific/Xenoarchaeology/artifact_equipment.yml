@@ -12,19 +12,23 @@
     - type: ResistLocker
     - type: Sprite
       drawdepth: Objects
-      sprite: Structures/Storage/Crates/artifact.rsi
+      noRot: true # Begin Stellar - Crates
+      offset: 0, 0.25
+      sprite: _ST/Tileset/Storage/Crates/artifact-secure.rsi # End Stellar - Crates
       layers:
-      - state: artifact_container
-        map: ["enum.StorageVisualLayers.Base"]
-      - state: artifact_container_door
+      # - state: artifact_container # Stellar - Crates
+      #   map: ["enum.StorageVisualLayers.Base"] # Stellar - Crates
+      - state: closed
         map: ["enum.StorageVisualLayers.Door"]
       - state: welded
+        sprite: _ST/Tileset/Storage/Crates/base-effects.rsi # Stellar - Crates
         visible: false
         map: ["enum.WeldableLayers.BaseWelded"]
       - state: locked
         map: ["enum.LockVisualLayers.Lock"]
         shader: unshaded
       - state: paper
+        sprite: _ST/Tileset/Storage/Crates/base-effects.rsi # Stellar - Crates
         map: ["enum.PaperLabelVisuals.Layer"]
     - type: InteractionOutline
     - type: Physics
@@ -40,8 +44,8 @@
           layer:
           - MachineLayer
     - type: Icon
-      sprite: Structures/Storage/Crates/artifact.rsi
-      state: artifact_container_icon
+      sprite: _ST/Tileset/Storage/Crates/artifact-secure.rsi # End Stellar - Crates
+      state: icon # Stellar - Crates
     - type: EntityStorage
       capacity: 1
       whitelist:
@@ -76,8 +80,8 @@
           - Book
     - type: Appearance
     - type: EntityStorageVisuals
-      stateDoorOpen: artifact_container_open
-      stateDoorClosed: artifact_container_door
+      stateDoorOpen: open # Stellar - Crates
+      stateDoorClosed: closed # Stellar - Crates
     - type: GenericVisualizer
       visuals:
         enum.PaperLabelVisuals.HasLabel:

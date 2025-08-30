@@ -40,6 +40,8 @@
   - type: Tag
     tags:
     - ForceFixRotations
+  - type: PlacementReplacement # Stellar
+    key: tables # Stellar
 
 - type: entity
   id: CounterBase

@@ -2,11 +2,14 @@ using System.Numerics;
 using Content.Shared.Explosion.Components;
 using JetBrains.Annotations;
 using Robust.Client.Graphics;
+using Robust.Client.ResourceManagement; // Stellar - Improved fire
 using Robust.Shared.Enums;
-using Robust.Shared.Map;
+using Robust.Shared.Graphics.RSI; // Stellar - Improved fire
+// using Robust.Shared.Map; // Stellar - Improved fire
 using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Random;
+// using Robust.Shared.Random; // Stellar - Improved fire
+using Robust.Shared.Timing; // Stellar - Improved fire
 
 namespace Content.Client.Explosion;
 
@@ -15,7 +18,7 @@ public sealed class ExplosionOverlay : Overlay
 {
     private static readonly ProtoId<ShaderPrototype> UnshadedShader = "unshaded";
 
-    [Dependency] private readonly IRobustRandom _robustRandom = default!;
+    // [Dependency] private readonly IRobustRandom _robustRandom = default!; // Stellar - Improved fire
     [Dependency] private readonly IEntityManager _entMan = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
     private readonly SharedTransformSystem _transformSystem;
@@ -25,12 +28,30 @@ public sealed class ExplosionOverlay : Overlay
 
     private ShaderInstance _shader;
 
-    public ExplosionOverlay(SharedAppearanceSystem appearanceSystem)
+    private const int FireStates = 3; // Begin Stellar - Fire
+    private const string FireRsiPath = "/Textures/_ST/Effects/tile-fire-explode.rsi";
+    private readonly float[] _fireTimer = new float[FireStates];
+    private readonly float[][] _fireFrameDelays = new float[FireStates][];
+    private readonly int[] _fireFrameCounter = new int[FireStates];
+    private readonly Texture[][] _fireFrames = new Texture[FireStates][];
+
+    public ExplosionOverlay(SharedAppearanceSystem appearanceSystem, IResourceCache resourceCache) // End Stellar - Improved fire
     {
         IoCManager.InjectDependencies(this);
         _shader = _proto.Index(UnshadedShader).Instance();
         _transformSystem = _entMan.System<SharedTransformSystem>();
         _appearance = appearanceSystem;
+        var fire = resourceCache.GetResource<RSIResource>(FireRsiPath).RSI; // Begin Stellar - Improved fire
+
+        for (var i = 0; i < FireStates; i++)
+        {
+            if (!fire.TryGetState((i + 1).ToString(), out var state))
+                throw new ArgumentOutOfRangeException($"Fire RSI doesn't have state \"{i}\"!");
+
+            _fireFrames[i] = state.GetFrames(RsiDirection.South);
+            _fireFrameDelays[i] = state.GetDelays();
+            _fireFrameCounter[i] = 0;
+        } // End Stellar - Improved fire
     }
 
     protected override void Draw(in OverlayDrawArgs args)
@@ -89,7 +110,27 @@ public sealed class ExplosionOverlay : Overlay
 
         DrawTiles(drawHandle, gridBounds, index, visuals.SpaceTiles, visuals, visuals.SpaceTileSize, textures);
     }
+    // Begin Stellar - Improved fire
+    protected override void FrameUpdate(FrameEventArgs args)
+    {
+        base.FrameUpdate(args);
 
+        for (var i = 0; i < FireStates; i++)
+        {
+            var delays = _fireFrameDelays[i];
+            if (delays.Length == 0)
+                continue;
+
+            var frameCount = _fireFrameCounter[i];
+            _fireTimer[i] += args.DeltaSeconds;
+            var time = delays[frameCount];
+
+            if (_fireTimer[i] < time) continue;
+            _fireTimer[i] -= time;
+            _fireFrameCounter[i] = (frameCount + 1) % _fireFrames[i].Length;
+        }
+    }
+    // End Stellar - Improved fire
     private void DrawTiles(
         DrawingHandleWorld drawHandle,
         Box2 gridBounds,
@@ -99,13 +140,14 @@ public sealed class ExplosionOverlay : Overlay
         ushort tileSize,
         ExplosionVisualsTexturesComponent textures)
     {
+
         for (var j = 0; j <= index; j++)
         {
             if (!tileSets.TryGetValue(j, out var tiles))
                 continue;
 
-            var frameIndex = (int) Math.Min(visuals.Intensity[j] / textures.IntensityPerState, textures.FireFrames.Count - 1);
-            var frames = textures.FireFrames[frameIndex];
+            // var frameIndex = (int) Math.Min(visuals.Intensity[j] / textures.IntensityPerState, textures.FireFrames.Count - 1); // Stellar - Improved fire
+            // var frames = textures.FireFrames[frameIndex]; // Stellar - Improved fire
 
             foreach (var tile in tiles)
             {
@@ -114,7 +156,8 @@ public sealed class ExplosionOverlay : Overlay
                 if (!gridBounds.Contains(centre))
                     continue;
 
-                var texture = _robustRandom.Pick(frames);
+                var fireState = (int) Math.Min(visuals.Intensity[j] / textures.IntensityPerState, textures.FireFrames.Count - 1); // Stellar - Improved fire
+                var texture = _fireFrames[fireState][_fireFrameCounter[fireState]]; // Stellar - Improved fire
                 drawHandle.DrawTextureRect(texture, Box2.CenteredAround(centre, new Vector2(tileSize, tileSize)), textures.FireColor);
             }
         }

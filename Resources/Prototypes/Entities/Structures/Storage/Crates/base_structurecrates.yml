@@ -9,22 +9,30 @@
   - type: Transform
     noRot: true
   - type: Icon
-    sprite: Structures/Storage/Crates/generic.rsi
+    sprite: _ST/Tileset/Storage/Crates/base.rsi # Stellar - Crates
     state: icon
   - type: Sprite
     noRot: true
-    sprite: Structures/Storage/Crates/generic.rsi
+    sprite: _ST/Tileset/Storage/Crates/base.rsi # Stellar - Crates
+    offset: 0, 0.25 # Stellar - Crates
     layers:
-    - state: base
-      map: ["enum.StorageVisualLayers.Base"]
+    # - state: base # Stellar - Crates
+    #   map: ["enum.StorageVisualLayers.Base"] # Stellar - Crates
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
     - state: welded
       visible: false
+      sprite: _ST/Tileset/Storage/Crates/base-effects.rsi # Stellar - Crates
       map: ["enum.WeldableLayers.BaseWelded"]
     - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
+      sprite: _ST/Tileset/Storage/Crates/base-effects.rsi # Stellar - Crates
       map: ["enum.PaperLabelVisuals.Layer"]
+  - type: Dropshadow # Stellar
+    sprite:
+      sprite: _ST/Effects/dropshadow.rsi
+      state: shadow-crate
+    offset: 0, -0.25
+    anchorShadow: true
   - type: InteractionOutline
   - type: Physics
   - type: Fixtures
@@ -112,22 +120,23 @@
   - type: LockVisuals
   - type: AccessReader
   - type: Icon
-    sprite: Structures/Storage/Crates/secure.rsi
+    sprite: _ST/Tileset/Storage/Crates/base-secure.rsi # Stellar - Crates
     state: icon
   - type: Sprite
-    sprite: Structures/Storage/Crates/secure.rsi
+    sprite: _ST/Tileset/Storage/Crates/base-secure.rsi # Stellar - Crates
     layers:
-    - state: base
+    # - state: base # Stellar - Crates
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
     - state: welded
       visible: false
+      sprite: _ST/Tileset/Storage/Crates/base-effects.rsi # Stellar - Crates
       map: ["enum.WeldableLayers.BaseWelded"]
     - state: locked
       map: ["enum.LockVisualLayers.Lock"]
       shader: unshaded
     - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
+      sprite: _ST/Tileset/Storage/Crates/base-effects.rsi # Stellar - Crates
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: Damageable

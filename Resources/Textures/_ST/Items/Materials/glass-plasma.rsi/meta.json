@@ -1,0 +1,28 @@
+{
+    "version": 1,
+    "license": "LicenseRef-Wallening",
+    "copyright": "By AftrLite",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "material-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "material-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "material"
+    },
+    {
+      "name": "material-2"
+    },
+    {
+      "name": "material-3"
+    }
+  ]
+}

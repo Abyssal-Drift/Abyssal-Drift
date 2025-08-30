@@ -15,6 +15,7 @@
     tags:
     - Sheet
     - Metal
+    - ConstructionMaterial
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
@@ -47,17 +48,19 @@
   - type: Stack
     stackType: Steel
     baseLayer: base
-    layerStates:
-    - steel
-    - steel_2
-    - steel_3
+    layerStates: # Begin Stellar - Materials
+    - material
+    - material-2
+    - material-3
   - type: Sprite
-    state: steel_3
+    sprite: _ST/Items/Materials/steel.rsi
+    state: material-3
     layers:
-    - state: steel_3
+    - state: material
       map: ["base"]
   - type: Item
-    heldPrefix: steel
+    sprite: _ST/Items/Materials/steel.rsi
+    heldPrefix: material # End Stellar - Materials
   - type: Appearance
   - type: Extractable
     grindableSolutionName: steel
@@ -93,15 +96,6 @@
   - type: Stack
     stackType: Steel
     count: 1
-
-- type: entity
-  parent: SheetSteel
-  id: SheetSteelLingering0
-  suffix: Lingering, 0
-  components:
-  - type: Stack
-    lingering: true
-    count: 0
 
 - type: entity
   parent: SheetMetalBase
@@ -180,17 +174,19 @@
   - type: Stack
     stackType: Plasteel
     baseLayer: base
-    layerStates:
-    - plasteel
-    - plasteel_2
-    - plasteel_3
+    layerStates: # Begin Stellar - Materials
+    - material
+    - material-2
+    - material-3
   - type: Sprite
-    state: plasteel_3
+    sprite: _ST/Items/Materials/plasteel.rsi
+    state: material-3
     layers:
-    - state: plasteel_3
+    - state: material
       map: ["base"]
   - type: Item
-    heldPrefix: plasteel
+    sprite: _ST/Items/Materials/plasteel.rsi
+    heldPrefix: material # End Stellar - Materials
   - type: Appearance
   - type: Extractable
     grindableSolutionName: plasteel
@@ -229,12 +225,3 @@
   - type: Stack
     stackType: Plasteel
     count: 1
-
-- type: entity
-  parent: SheetPlasteel
-  id: SheetPlasteelLingering0
-  suffix: Lingering, 0
-  components:
-  - type: Stack
-    lingering: true
-    count: 0

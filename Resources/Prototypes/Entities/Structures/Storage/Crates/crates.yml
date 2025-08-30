@@ -4,9 +4,9 @@
   name: crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/generic.rsi
+    sprite: _ST/Tileset/Storage/Crates/base.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/generic.rsi
+    sprite: _ST/Tileset/Storage/Crates/base.rsi # Stellar - Crates
   - type: Reflect
     reflects:
     - Energy
@@ -23,9 +23,9 @@
   name: plastic crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/plastic.rsi
+    sprite: _ST/Tileset/Storage/Crates/plastic.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/plastic.rsi
+    sprite: _ST/Tileset/Storage/Crates/plastic.rsi # Stellar - Crates
   - type: Construction
     graph: CratePlastic
     node: crateplastic
@@ -42,9 +42,9 @@
   name: freezer
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/freezer.rsi
+    sprite: _ST/Tileset/Storage/Crates/freezer.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/freezer.rsi
+    sprite: _ST/Tileset/Storage/Crates/freezer.rsi # Stellar - Crates
   - type: AntiRottingContainer
   - type: ExplosionResistance
     damageCoefficient: 0.50
@@ -59,12 +59,12 @@
 - type: entity
   parent: CratePlastic
   id: CrateHydroponics
-  name: hydroponics crate
+  name: botany crate # Stellar
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/hydroponics.rsi
+    sprite: _ST/Tileset/Storage/Crates/botany.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/hydroponics.rsi
+    sprite: _ST/Tileset/Storage/Crates/botany.rsi # Stellar - Crates
 
 - type: entity
   parent: CratePlastic
@@ -72,9 +72,9 @@
   name: medical crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/medical.rsi
+    sprite: _ST/Tileset/Storage/Crates/medical.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/medical.rsi
+    sprite: _ST/Tileset/Storage/Crates/medical.rsi # Stellar - Crates
 
 - type: entity
   parent: CrateGenericSteel
@@ -83,9 +83,9 @@
   description: Is not actually lead lined. Do not store your plutonium in this.
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/radiation.rsi
+    sprite: _ST/Tileset/Storage/Crates/engineering-radiation.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/radiation.rsi
+    sprite: _ST/Tileset/Storage/Crates/engineering-radiation.rsi # Stellar - Crates
 
 - type: entity
   parent: CratePlastic
@@ -93,9 +93,9 @@
   name: oxygen crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/o2.rsi
+    sprite: _ST/Tileset/Storage/Crates/oxygen.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/o2.rsi
+    sprite: _ST/Tileset/Storage/Crates/oxygen.rsi # Stellar - Crates
 
 - type: entity
   parent: CrateGenericSteel
@@ -103,9 +103,9 @@
   name: electrical crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/electrical.rsi
+    sprite: _ST/Tileset/Storage/Crates/engineering-electrical.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/electrical.rsi
+    sprite: _ST/Tileset/Storage/Crates/engineering-electrical.rsi # Stellar - Crates
 
 - type: entity
   parent: CrateGenericSteel
@@ -113,9 +113,9 @@
   name: engineering crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/engineering.rsi
+    sprite: _ST/Tileset/Storage/Crates/engineering.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/engineering.rsi
+    sprite: _ST/Tileset/Storage/Crates/engineering.rsi # Stellar - Crates
 
 - type: entity
   parent: CrateGenericSteel
@@ -123,9 +123,9 @@
   name: science crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/science.rsi
+    sprite: _ST/Tileset/Storage/Crates/science.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/science.rsi
+    sprite: _ST/Tileset/Storage/Crates/science.rsi # Stellar - Crates
 
 - type: entity
   parent: CrateGenericSteel
@@ -133,9 +133,9 @@
   name: surgery crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/surgery.rsi
+    sprite: _ST/Tileset/Storage/Crates/surgery.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/surgery.rsi
+    sprite:  _ST/Tileset/Storage/Crates/surgery.rsi # Stellar - Crates
 
 - type: entity
   parent: CrateGeneric
@@ -198,9 +198,9 @@
   name: secgear crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/sec_gear.rsi
+    sprite: _ST/Tileset/Storage/Crates/security-secure.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/sec_gear.rsi
+    sprite: _ST/Tileset/Storage/Crates/security-secure.rsi # Stellar - Crates
   - type: AccessReader
     access: [["Security"]]
 
@@ -210,9 +210,9 @@
   name: secure engineering crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/engicrate_secure.rsi
+    sprite: _ST/Tileset/Storage/Crates/engineering-secure.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/engicrate_secure.rsi
+    sprite: _ST/Tileset/Storage/Crates/engineering-secure.rsi # Stellar - Crates
   - type: AccessReader
     access: [["Engineering"]]
 
@@ -222,9 +222,9 @@
   name: secure medical crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/medicalcrate_secure.rsi
+    sprite: _ST/Tileset/Storage/Crates/medical-secure.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/medicalcrate_secure.rsi
+    sprite: _ST/Tileset/Storage/Crates/medical-secure.rsi # Stellar - Crates
   - type: AccessReader
     access: [["Medical"]]
 
@@ -234,9 +234,9 @@
   name: secure chemistry crate
   components:
     - type: Icon
-      sprite: Structures/Storage/Crates/chemcrate_secure.rsi
+      sprite: _ST/Tileset/Storage/Crates/medical-chemistry-secure.rsi # Stellar - Crates
     - type: Sprite
-      sprite: Structures/Storage/Crates/chemcrate_secure.rsi
+      sprite: _ST/Tileset/Storage/Crates/medical-chemistry-secure.rsi # Stellar - Crates
     - type: AccessReader
       access: [["Chemistry"]]
 
@@ -246,9 +246,9 @@
   name: private crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/privatecrate_secure.rsi
+    sprite: _ST/Tileset/Storage/Crates/private-secure.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/privatecrate_secure.rsi
+    sprite: _ST/Tileset/Storage/Crates/private-secure.rsi # Stellar - Crates
 
 - type: entity
   parent: CrateBaseSecure
@@ -256,9 +256,9 @@
   name: secure science crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/scicrate_secure.rsi
+    sprite: _ST/Tileset/Storage/Crates/science-secure.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/scicrate_secure.rsi
+    sprite: _ST/Tileset/Storage/Crates/science-secure.rsi # Stellar - Crates
   - type: AccessReader
     access: [["Research"]]
 
@@ -268,9 +268,9 @@
   name: plasma crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/plasma.rsi
+    sprite: _ST/Tileset/Storage/Crates/plasma-secure.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/plasma.rsi
+    sprite: _ST/Tileset/Storage/Crates/plasma-secure.rsi # Stellar - Crates
   - type: AccessReader
     access: [["Engineering"], ["Research"], ["Chemistry"]]
 
@@ -280,19 +280,19 @@
   name: secure crate
   components:
     - type: Icon
-      sprite: Structures/Storage/Crates/secure.rsi
+      sprite: _ST/Tileset/Storage/Crates/base-secure.rsi # Stellar - Crates
     - type: Sprite
-      sprite: Structures/Storage/Crates/secure.rsi
+      sprite: _ST/Tileset/Storage/Crates/base-secure.rsi # Stellar - Crates
 
 - type: entity
   parent: CrateBaseSecure
   id: CrateHydroSecure
-  name: secure hydroponics crate
+  name: secure botany crate # Stellar
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/hydro_secure.rsi
+    sprite: _ST/Tileset/Storage/Crates/botany-secure.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/hydro_secure.rsi
+    sprite: _ST/Tileset/Storage/Crates/botany-secure.rsi # Stellar - Crates
   - type: AccessReader
     access: [["Hydroponics"]]
 
@@ -302,9 +302,9 @@
   name: secure weapon crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/weapon.rsi
+    sprite: _ST/Tileset/Storage/Crates/security-armory-secure.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/weapon.rsi
+    sprite: _ST/Tileset/Storage/Crates/security-armory-secure.rsi # Stellar - Crates
   - type: AccessReader
     access: [["Armory"]]
 
@@ -316,7 +316,7 @@
   description: An armory access locked crate for storing contraband confiscated from suspects or prisoners.
   components:
   - type: Sprite
-    sprite: Structures/Storage/Crates/sec_gear.rsi
+    sprite:  _ST/Tileset/Storage/Crates/security-contraband-secure.rsi # Stellar - Crates
   - type: AccessReader
     access: [["Armory"]]
 
@@ -326,9 +326,9 @@
   name: command crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/command.rsi
+    sprite: _ST/Tileset/Storage/Crates/command-secure.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/command.rsi
+    sprite: _ST/Tileset/Storage/Crates/command-secure.rsi # Stellar - Crates
   - type: AccessReader
     access: [["Command"]]
 
@@ -340,18 +340,18 @@
   - type: EntityStorage
     airtight: false
   - type: Sprite
-    sprite: Structures/Storage/Crates/livestock.rsi
+    sprite: _ST/Tileset/Storage/Crates/livestock.rsi # Stellar - Crates
     layers:
-    - state: base
+    # - state: base # Stellar - Crates
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
     - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
+      sprite: _ST/Tileset/Storage/Crates/base-effects.rsi # Stellar - Crates
       offset: "-0.25,0.625"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: Icon
-    sprite: Structures/Storage/Crates/livestock.rsi
-    state: base
+    sprite: _ST/Tileset/Storage/Crates/livestock.rsi # Stellar - Crates
+    state: icon # Stellar - Crates
   - type: Destructible
     thresholds:
     - trigger:
@@ -392,63 +392,64 @@
 - type: entity
   parent: CrateGeneric
   id: CrateRodentCage
-  name: hamster cage
-  components:
-  - type: Sprite
-    sprite: Structures/Storage/Crates/cage.rsi
-    layers:
-    - state: base
-    - state: closed
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
-      offset: "0.0,0.125"
-      map: ["enum.PaperLabelVisuals.Layer"]
-  - type: Icon
-    sprite: Structures/Storage/Crates/cage.rsi
-  - type: Destructible
-    thresholds:
-    - trigger: # Excess damage, don't spawn entities
-        !type:DamageTrigger
-        damage: 75
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalGlassBreak
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-    - trigger:
-        !type:DamageTrigger
-        damage: 15
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalGlassBreak
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetPlastic:
-            min: 1
-            max: 2
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: Physics
-    bodyType: Dynamic
-  - type: EntityStorage
-    capacity: 1
-    airtight: false
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.4,-0.4,0.4,0.29"
-        density: 80
-        mask:
-        - CrateMask
-        layer:
-        - LargeMobLayer
-  - type: StaticPrice
-    price: 75
+  name: DEPRECATED # Begin Stellar - Crates
+  description: DEPRECATED
+  # components:
+  # - type: Sprite
+  #   sprite: Structures/Storage/Crates/cage.rsi
+  #   layers:
+  #   - state: base
+  #   - state: closed
+  #     map: ["enum.StorageVisualLayers.Door"]
+  #   - state: paper
+  #     sprite: Structures/Storage/Crates/labels.rsi
+  #     offset: "0.0,0.125"
+  #     map: ["enum.PaperLabelVisuals.Layer"]
+  # - type: Icon
+  #   sprite: Structures/Storage/Crates/cage.rsi
+  # - type: Destructible
+  #   thresholds:
+  #   - trigger: # Excess damage, don't spawn entities
+  #       !type:DamageTrigger
+  #       damage: 75
+  #     behaviors:
+  #     - !type:PlaySoundBehavior
+  #       sound:
+  #         collection: MetalGlassBreak
+  #     - !type:DoActsBehavior
+  #       acts: ["Destruction"]
+  #   - trigger:
+  #       !type:DamageTrigger
+  #       damage: 15
+  #     behaviors:
+  #     - !type:PlaySoundBehavior
+  #       sound:
+  #         collection: MetalGlassBreak
+  #     - !type:SpawnEntitiesBehavior
+  #       spawn:
+  #         SheetPlastic:
+  #           min: 1
+  #           max: 2
+  #     - !type:DoActsBehavior
+  #       acts: [ "Destruction" ]
+  # - type: Physics
+  #   bodyType: Dynamic
+  # - type: EntityStorage
+  #   capacity: 1
+  #   airtight: false
+  # - type: Fixtures
+  #   fixtures:
+  #     fix1:
+  #       shape:
+  #         !type:PhysShapeAabb
+  #         bounds: "-0.4,-0.4,0.4,0.29"
+  #       density: 80
+  #       mask:
+  #       - CrateMask
+  #       layer:
+  #       - LargeMobLayer
+  # - type: StaticPrice
+  #   price: 75 # End Stellar - Crates
 
 - type: entity
   id: CrateBaseLockBox
@@ -457,24 +458,24 @@
   description: "A secure lock box. Funds from its sale will be distributed back to the department. Just remember: Cargo always takes a cut."
   abstract: true
   components:
-  - type: Sprite
-    sprite: Structures/Storage/Crates/lockbox.rsi
-  - type: GenericVisualizer
-    visuals:
-      enum.PaperLabelVisuals.HasLabel:
-        enum.PaperLabelVisuals.Layer:
-          True: { visible: true }
-          False: { visible: false }
-      enum.PaperLabelVisuals.LabelType:
-        enum.PaperLabelVisuals.Layer:
-          Paper: { state: paper }
-          Bounty: { state: bounty }
-          CaptainsPaper: { state: captains_paper }
-          Invoice: { state: invoice }
-      enum.StorageVisuals.Open:
-        lid_overlay:
-          True: { visible: false }
-          False: { visible: true }
+  # - type: Sprite # Begin Stellar - Crates
+  #   sprite: Structures/Storage/Crates/lockbox.rsi
+  # - type: GenericVisualizer
+  #   visuals:
+  #     enum.PaperLabelVisuals.HasLabel:
+  #       enum.PaperLabelVisuals.Layer:
+  #         True: { visible: true }
+  #         False: { visible: false }
+  #     enum.PaperLabelVisuals.LabelType:
+  #       enum.PaperLabelVisuals.Layer:
+  #         Paper: { state: paper }
+  #         Bounty: { state: bounty }
+  #         CaptainsPaper: { state: captains_paper }
+  #         Invoice: { state: invoice }
+  #     enum.StorageVisuals.Open:
+  #       lid_overlay:
+  #         True: { visible: false }
+  #         False: { visible: true } # End Stellar - Crates
   - type: OverrideSell
   - type: Fixtures
     fixtures:
@@ -494,25 +495,26 @@
   name: engineering lock box
   components:
   - type: Sprite
-    layers:
-    - state: base
-    - state: overlay
-      color: "#ad8c27"
-    - state: closed
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: overlay-closed
-      color: "#ad8c27"
-      map: [ lid_overlay ]
-    - state: welded
-      visible: false
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: locked
-      map: ["enum.LockVisualLayers.Lock"]
-      shader: unshaded
-    - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
-      offset: "-0.46875,0.03125"
-      map: ["enum.PaperLabelVisuals.Layer"]
+    sprite: _ST/Tileset/Storage/Crates/lockbox-engineering.rsi # Begin Stellar - Crates
+    # layers:
+    # - state: base
+    # - state: overlay
+    #   color: "#ad8c27"
+    # - state: closed
+    #   map: ["enum.StorageVisualLayers.Door"]
+    # - state: overlay-closed
+    #   color: "#ad8c27"
+    #   map: [ lid_overlay ]
+    # - state: welded
+    #   visible: false
+    #   map: ["enum.WeldableLayers.BaseWelded"]
+    # - state: locked
+    #   map: ["enum.LockVisualLayers.Lock"]
+    #   shader: unshaded
+    # - state: paper
+    #   sprite: Structures/Storage/Crates/labels.rsi
+    #   offset: "-0.46875,0.03125"
+    #   map: ["enum.PaperLabelVisuals.Layer"] # End Stellar - Crates
   - type: OverrideSell
     overrideAccount: Engineering
   - type: AccessReader
@@ -524,25 +526,26 @@
   name: medical lock box
   components:
   - type: Sprite
-    layers:
-    - state: base
-    - state: overlay
-      color: "#92c7e8"
-    - state: closed
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: overlay-closed
-      color: "#92c7e8"
-      map: [ lid_overlay ]
-    - state: welded
-      visible: false
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: locked
-      map: ["enum.LockVisualLayers.Lock"]
-      shader: unshaded
-    - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
-      offset: "-0.46875,0.03125"
-      map: ["enum.PaperLabelVisuals.Layer"]
+    sprite: _ST/Tileset/Storage/Crates/lockbox-medical.rsi # Begin Stellar - Crates
+    # layers:
+    # - state: base
+    # - state: overlay
+    #   color: "#92c7e8"
+    # - state: closed
+    #   map: ["enum.StorageVisualLayers.Door"]
+    # - state: overlay-closed
+    #   color: "#92c7e8"
+    #   map: [ lid_overlay ]
+    # - state: welded
+    #   visible: false
+    #   map: ["enum.WeldableLayers.BaseWelded"]
+    # - state: locked
+    #   map: ["enum.LockVisualLayers.Lock"]
+    #   shader: unshaded
+    # - state: paper
+    #   sprite: Structures/Storage/Crates/labels.rsi
+    #   offset: "-0.46875,0.03125"
+    #   map: ["enum.PaperLabelVisuals.Layer"] # End Stellar - Crates
   - type: OverrideSell
     overrideAccount: Medical
   - type: AccessReader
@@ -554,25 +557,26 @@
   name: science lock box
   components:
   - type: Sprite
-    layers:
-    - state: base
-    - state: overlay
-      color: "#ba4bf0"
-    - state: closed
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: overlay-closed
-      color: "#ba4bf0"
-      map: [ lid_overlay ]
-    - state: welded
-      visible: false
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: locked
-      map: ["enum.LockVisualLayers.Lock"]
-      shader: unshaded
-    - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
-      offset: "-0.46875,0.03125"
-      map: ["enum.PaperLabelVisuals.Layer"]
+    sprite: _ST/Tileset/Storage/Crates/lockbox-science.rsi # Begin Stellar - Crates
+    # layers:
+    # - state: base
+    # - state: overlay
+    #   color: "#ba4bf0"
+    # - state: closed
+    #   map: ["enum.StorageVisualLayers.Door"]
+    # - state: overlay-closed
+    #   color: "#ba4bf0"
+    #   map: [ lid_overlay ]
+    # - state: welded
+    #   visible: false
+    #   map: ["enum.WeldableLayers.BaseWelded"]
+    # - state: locked
+    #   map: ["enum.LockVisualLayers.Lock"]
+    #   shader: unshaded
+    # - state: paper
+    #   sprite: Structures/Storage/Crates/labels.rsi
+    #   offset: "-0.46875,0.03125"
+    #   map: ["enum.PaperLabelVisuals.Layer"] # End Stellar - Crates
   - type: OverrideSell
     overrideAccount: Science
   - type: AccessReader
@@ -584,25 +588,26 @@
   name: security lock box
   components:
   - type: Sprite
-    layers:
-    - state: base
-    - state: overlay
-      color: "#c12d30"
-    - state: closed
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: overlay-closed
-      color: "#c12d30"
-      map: [ lid_overlay ]
-    - state: welded
-      visible: false
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: locked
-      map: ["enum.LockVisualLayers.Lock"]
-      shader: unshaded
-    - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
-      offset: "-0.46875,0.03125"
-      map: ["enum.PaperLabelVisuals.Layer"]
+    sprite: _ST/Tileset/Storage/Crates/lockbox-security.rsi # Begin Stellar - Crates
+    # layers:
+    # - state: base
+    # - state: overlay
+    #   color: "#c12d30"
+    # - state: closed
+    #   map: ["enum.StorageVisualLayers.Door"]
+    # - state: overlay-closed
+    #   color: "#c12d30"
+    #   map: [ lid_overlay ]
+    # - state: welded
+    #   visible: false
+    #   map: ["enum.WeldableLayers.BaseWelded"]
+    # - state: locked
+    #   map: ["enum.LockVisualLayers.Lock"]
+    #   shader: unshaded
+    # - state: paper
+    #   sprite: Structures/Storage/Crates/labels.rsi
+    #   offset: "-0.46875,0.03125"
+    #   map: ["enum.PaperLabelVisuals.Layer"] # End Stellar - Crates
   - type: OverrideSell
     overrideAccount: Security
   - type: AccessReader
@@ -614,25 +619,26 @@
   name: service lock box
   components:
   - type: Sprite
-    layers:
-    - state: base
-    - state: overlay
-      color: "#53b723"
-    - state: closed
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: overlay-closed
-      color: "#53b723"
-      map: [ lid_overlay ]
-    - state: welded
-      visible: false
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: locked
-      map: ["enum.LockVisualLayers.Lock"]
-      shader: unshaded
-    - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
-      offset: "-0.46875,0.03125"
-      map: ["enum.PaperLabelVisuals.Layer"]
+    sprite: _ST/Tileset/Storage/Crates/lockbox-service.rsi # Begin Stellar - Crates
+    # layers:
+    # - state: base
+    # - state: overlay
+    #   color: "#53b723"
+    # - state: closed
+    #   map: ["enum.StorageVisualLayers.Door"]
+    # - state: overlay-closed
+    #   color: "#53b723"
+    #   map: [ lid_overlay ]
+    # - state: welded
+    #   visible: false
+    #   map: ["enum.WeldableLayers.BaseWelded"]
+    # - state: locked
+    #   map: ["enum.LockVisualLayers.Lock"]
+    #   shader: unshaded
+    # - state: paper
+    #   sprite: Structures/Storage/Crates/labels.rsi
+    #   offset: "-0.46875,0.03125"
+    #   map: ["enum.PaperLabelVisuals.Layer"] # End Stellar - Crates
   - type: OverrideSell
     overrideAccount: Service
   - type: AccessReader
@@ -641,53 +647,53 @@
 - type: entity
   parent: CrateGeneric
   id: CratePirate
-  name: pirate chest
-  description: A space pirate chest, not for station lubbers.
-  components:
-  - type: Sprite
-    sprite: Structures/Storage/Crates/piratechest.rsi
-    layers:
-    - state: crate
-      map: ["enum.StorageVisualLayers.Base"]
-    - state: crate_door
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: welded
-      visible: false
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
-      offset: "0.0,-0.09375"
-      map: ["enum.PaperLabelVisuals.Layer"]
-  - type: Icon
-    sprite: Structures/Storage/Crates/piratechest.rsi
-    state: crate_icon
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateDoorOpen: crate_open
-    stateDoorClosed: crate_door
+  name: DEPRECATED # Begin Stellar - Crates
+  description: DEPRECATED
+  # components:
+  # - type: Sprite
+  #   sprite: Structures/Storage/Crates/piratechest.rsi
+  #   layers:
+  #   - state: crate
+  #     map: ["enum.StorageVisualLayers.Base"]
+  #   - state: crate_door
+  #     map: ["enum.StorageVisualLayers.Door"]
+  #   - state: welded
+  #     visible: false
+  #     map: ["enum.WeldableLayers.BaseWelded"]
+  #   - state: paper
+  #     sprite: Structures/Storage/Crates/labels.rsi
+  #     offset: "0.0,-0.09375"
+  #     map: ["enum.PaperLabelVisuals.Layer"]
+  # - type: Icon
+  #   sprite: Structures/Storage/Crates/piratechest.rsi
+  #   state: crate_icon
+  # - type: Appearance
+  # - type: EntityStorageVisuals
+  #   stateDoorOpen: crate_open
+  #   stateDoorClosed: crate_door # End Stellar - Crates
 
 - type: entity
   parent: CratePirate
   id: CrateToyBox
-  name: toy box
-  suffix: Empty
-  description: A box overflowing with fun.
-  components:
-  - type: Sprite
-    sprite: Structures/Storage/Crates/toybox.rsi
-    layers:
-    - state: crate
-      map: ["enum.StorageVisualLayers.Base"]
-    - state: crate_door
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: welded
-      visible: false
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: paper
-      map: ["enum.PaperLabelVisuals.Layer"]
-  - type: Icon
-    sprite: Structures/Storage/Crates/toybox.rsi
-    state: crate_icon
+  name: DEPRECATED # Begin Stellar - Crates
+  # suffix: Empty
+  description: DEPRECATED
+  # components:
+  # - type: Sprite
+  #   sprite: Structures/Storage/Crates/toybox.rsi
+  #   layers:
+  #   - state: crate
+  #     map: ["enum.StorageVisualLayers.Base"]
+  #   - state: crate_door
+  #     map: ["enum.StorageVisualLayers.Door"]
+  #   - state: welded
+  #     visible: false
+  #     map: ["enum.WeldableLayers.BaseWelded"]
+  #   - state: paper
+  #     map: ["enum.PaperLabelVisuals.Layer"]
+  # - type: Icon
+  #   sprite: Structures/Storage/Crates/toybox.rsi
+  #   state: crate_icon # End Stellar - Crates
 
 - type: entity
   parent: CrateGeneric
@@ -740,91 +746,91 @@
 - type: entity
   parent: CrateGeneric
   id: CrateWoodenGrave
-  name: grave
-  suffix: wooden
-  description: Someone died here...
-  components:
-  - type: Sprite
-    sprite: Structures/Storage/Crates/wooden_grave.rsi
-    layers:
-    - state: base
-    - state: closed
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
-      offset: "-0.28125,0.625"
-      map: ["enum.PaperLabelVisuals.Layer"]
-  - type: Icon
-    sprite: Structures/Storage/Crates/wooden_grave.rsi
-    state: base
-  - type: Destructible
-    thresholds:
-    - trigger: # Excess damage, don't spawn entities
-        !type:DamageTrigger
-        damage: 400
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: WoodDestroy
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-    - trigger:
-        !type:DamageTrigger
-        damage: 200 # discourage just beating the grave to break it open
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: WoodDestroy
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          MaterialWoodPlank1:
-            min: 1
-            max: 4
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: Physics
-    bodyType: Static
-  - type: Grave
-  - type: ProRottingContainer
-  - type: EntityStorage
-    airtight: true
-    isCollidableWhenOpen: false
-    closeSound:
-      path: /Audio/Items/shovel_dig.ogg
-    openSound:
-      path: /Audio/Items/shovel_dig.ogg
+  name: DEPRECATED # Begin Stellar - Crates
+  # suffix: wooden
+  description: DEPRECATED
+  # components:
+  # - type: Sprite
+  #   sprite: Structures/Storage/Crates/wooden_grave.rsi
+  #   layers:
+  #   - state: base
+  #   - state: closed
+  #     map: ["enum.StorageVisualLayers.Door"]
+  #   - state: paper
+  #     sprite: Structures/Storage/Crates/labels.rsi
+  #     offset: "-0.28125,0.625"
+  #     map: ["enum.PaperLabelVisuals.Layer"]
+  # - type: Icon
+  #   sprite: Structures/Storage/Crates/wooden_grave.rsi
+  #   state: base
+  # - type: Destructible
+  #   thresholds:
+  #   - trigger: # Excess damage, don't spawn entities
+  #       !type:DamageTrigger
+  #       damage: 400
+  #     behaviors:
+  #     - !type:PlaySoundBehavior
+  #       sound:
+  #         collection: WoodDestroy
+  #     - !type:DoActsBehavior
+  #       acts: ["Destruction"]
+  #   - trigger:
+  #       !type:DamageTrigger
+  #       damage: 200 # discourage just beating the grave to break it open
+  #     behaviors:
+  #     - !type:PlaySoundBehavior
+  #       sound:
+  #         collection: WoodDestroy
+  #     - !type:SpawnEntitiesBehavior
+  #       spawn:
+  #         MaterialWoodPlank1:
+  #           min: 1
+  #           max: 4
+  #     - !type:DoActsBehavior
+  #       acts: [ "Destruction" ]
+  # - type: Physics
+  #   bodyType: Static
+  # - type: Grave
+  # - type: ProRottingContainer
+  # - type: EntityStorage
+  #   airtight: true
+  #   isCollidableWhenOpen: false
+  #   closeSound:
+  #     path: /Audio/Items/shovel_dig.ogg
+  #   openSound:
+  #     path: /Audio/Items/shovel_dig.ogg # End Stellar - Crates
 
 - type: entity
   parent: CrateWoodenGrave
   id: CrateStoneGrave
-  name: grave
-  suffix: stone
-  description: Someone died here...
-  components:
-  - type: Sprite
-    sprite: Structures/Storage/Crates/stone_grave.rsi
-    layers:
-    - state: base
-    - state: closed
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
-      offset: "-0.3125,0.5625"
-      map: ["enum.PaperLabelVisuals.Layer"]
-  - type: Icon
-    sprite: Structures/Storage/Crates/stone_grave.rsi
-    state: base
+  name: DEPRECATED # Begin Stellar - Crates
+  # suffix: stone
+  description: DEPRECATED
+  # components:
+  # - type: Sprite
+  #   sprite: Structures/Storage/Crates/stone_grave.rsi
+  #   layers:
+  #   - state: base
+  #   - state: closed
+  #     map: ["enum.StorageVisualLayers.Door"]
+  #   - state: paper
+  #     sprite: Structures/Storage/Crates/labels.rsi
+  #     offset: "-0.3125,0.5625"
+  #     map: ["enum.PaperLabelVisuals.Layer"]
+  # - type: Icon
+  #   sprite: Structures/Storage/Crates/stone_grave.rsi
+  #   state: base # End Stellar - Crates
 
 - type: entity
   parent: CrateGenericSteel
   id: CrateSyndicate
-  name: Syndicate crate
-  description: A dark steel crate with red bands and a letter S embossed on the front.
+  name: DEPRECATED # Stellar - Crate
+  description: DEPRECATED # Stellar - Crates
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/syndicate.rsi
+    sprite: _ST/Tileset/Storage/Crates/base.rsi # Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/syndicate.rsi
+    sprite: _ST/Tileset/Storage/Crates/base.rsi # Stellar - Crates
 
 - type: entity
   parent: [StructureWheeled, CrateBaseWeldable]
@@ -832,22 +838,29 @@
   name: trash cart
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/trashcart.rsi
+    sprite: _ST/Tileset/Storage/Carts/trashcart.rsi # Begin Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/trashcart.rsi
+    sprite: _ST/Tileset/Storage/Carts/trashcart.rsi # Begin Stellar - Crates
     layers:
-    - state: base
+    # - state: base # Stellar - Crates
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
     - state: welded
+      sprite: _ST/Tileset/Storage/Crates/base-effects.rsi # Stellar - Crates
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
     - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
+      sprite: _ST/Tileset/Storage/Crates/base-effects.rsi # Stellar - Crates
       offset: "0.0,0.03125"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: Paintable
     group: null
+  - type: Dropshadow # Begin Stellar - Crates
+    sprite:
+      sprite: _ST/Effects/dropshadow.rsi
+      state: shadow-cart
+    offset: 0, -0.25
+    anchorShadow: true # End Stellar - Crates
 
 - type: entity
   parent: CrateBaseSecure
@@ -855,27 +868,34 @@
   name: janitorial trash cart
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/trashcart_jani.rsi
+    sprite: _ST/Tileset/Storage/Carts/trashcart_janitor.rsi # Begin Stellar - Crates
   - type: Sprite
-    sprite: Structures/Storage/Crates/trashcart_jani.rsi
+    sprite: _ST/Tileset/Storage/Carts/trashcart_janitor.rsi # Begin Stellar - Crates
     layers:
-    - state: base
+    # - state: base # Stellar - Crates
     - state: closed
       map: ["enum.StorageVisualLayers.Door"]
     - state: welded
+      sprite: _ST/Tileset/Storage/Crates/base-effects.rsi # Stellar - Crates
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
     - state: locked
       map: ["enum.LockVisualLayers.Lock"]
       shader: unshaded
     - state: paper
-      sprite: Structures/Storage/Crates/labels.rsi
+      sprite: _ST/Tileset/Storage/Crates/base-effects.rsi # Stellar - Crates
       offset: "0.0,0.03125"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: AccessReader
     access: [["Janitor"]]
   - type: Paintable
     group: null
+  - type: Dropshadow # Begin Stellar - Crates
+    sprite:
+      sprite: _ST/Effects/dropshadow.rsi
+      state: shadow-cart
+    offset: 0, -0.25
+    anchorShadow: true # End Stellar - Crates
 
 - type: entity
   parent: CrateBaseWeldable

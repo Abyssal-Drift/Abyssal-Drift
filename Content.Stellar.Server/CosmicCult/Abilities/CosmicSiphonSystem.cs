@@ -4,7 +4,7 @@
 // SPDX-License-Identifier: LicenseRef-CosmicCult
 
 using Content.Server.Ghost;
-using Content.Server.Light.Components;
+using Content.Shared.Light.Components;
 using Content.Stellar.Shared.CosmicCult;
 using Content.Stellar.Shared.CosmicCult.Components;
 using Content.Shared.Alert;

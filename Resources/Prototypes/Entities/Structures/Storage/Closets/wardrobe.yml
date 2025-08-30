@@ -4,6 +4,14 @@
   parent: ClosetSteelBase
   abstract: true
   description: It's a storage unit for standard-issue Nanotrasen attire.
+  components: # Begin Stellar - Lockers
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/wardrobe.rsi
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: base
+    stateDoorOpen: door-open
+    stateDoorClosed: door-closed # End Stellar - Lockers
 
 # Colored
 
@@ -16,9 +24,9 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: blue_door
+    # stateBaseClosed: generic # Begin Stellar - Lockers
+    # stateDoorOpen: generic_open
+    stateDoorClosed: door-blue # End Stellar - Lockers
 
 # Pink wardrobe
 - type: entity
@@ -29,9 +37,9 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: pink_door
+    # stateBaseClosed: generic # Begin Stellar - Lockers
+    # stateDoorOpen: generic_open
+    stateDoorClosed: door-pink # End Stellar - Lockers
 
 # Black wardrobe
 - type: entity
@@ -42,9 +50,9 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: black_door
+    # stateBaseClosed: generic # Begin Stellar - Lockers
+    # stateDoorOpen: generic_open
+    stateDoorClosed: door-black # End Stellar - Lockers
 
 # Green wardrobe
 - type: entity
@@ -55,9 +63,9 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: green_door
+    # stateBaseClosed: generic # Begin Stellar - Lockers
+    # stateDoorOpen: generic_open
+    stateDoorClosed: door-green # End Stellar - Lockers
 
 # Prison wardrobe
 - type: entity
@@ -67,9 +75,9 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: orange_door
+    # stateBaseClosed: generic # Begin Stellar - Lockers
+    # stateDoorOpen: generic_open
+    stateDoorClosed: door-orange # End Stellar - Lockers
 
 # Yellow wardrobe
 - type: entity
@@ -80,9 +88,9 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: yellow_door
+    # stateBaseClosed: generic # Begin Stellar - Lockers
+    # stateDoorOpen: generic_open
+    stateDoorClosed: door-yellow # End Stellar - Lockers
 
 # White wardrobe
 - type: entity
@@ -93,9 +101,9 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: white_door
+    # stateBaseClosed: generic # Begin Stellar - Lockers
+    # stateDoorOpen: generic_open
+    stateDoorClosed: door-white # End Stellar - Lockers
 
 # Grey wardrobe
 - type: entity
@@ -106,9 +114,9 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: grey_door
+    # stateBaseClosed: generic # Begin Stellar - Lockers
+    # stateDoorOpen: generic_open
+    stateDoorClosed: door-closed # End Stellar - Lockers
 
 # Mixed wardrobe
 - type: entity
@@ -119,111 +127,112 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: mixed_door
+    # stateBaseClosed: generic # Begin Stellar - Lockers
+    # stateDoorOpen: generic_open
+    stateDoorClosed: door-mixed # End Stellar - Lockers
 
 # Jobs
+# Stellar - Lockers | Job Wardrobes have all been rendered defunct. Please use Job Lockers and Departmental ClothingVends or i will kill you for contributing to bloat.
 
 - type: entity
   id: WardrobeSecurity
-  parent: WardrobeBase
-  name: security wardrobe
-  components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: red_door
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: WardrobeAtmospherics
-  parent: WardrobeBase
-  name: atmospherics wardrobe
-  components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: atmos_wardrobe_door
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: ClosetJanitor
-  parent: WardrobeMixed
-  name: custodial closet
-  description: It's a storage unit for janitorial clothes and gear.
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: WardrobeFormal
-  parent: WardrobeBlack
-  name: formal closet
-  description: It's a storage unit for formal clothing.
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: ClosetChef
-  parent: WardrobeBlack
-  name: chef's closet
-  description: It's a storage unit for foodservice garments and mouse traps.
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: WardrobeChapel
-  parent: WardrobeBlack
-  name: cleric's wardrobe # Stellar - Chaplains to Clerics
-  description: It's a storage unit for Nanotrasen-approved religious attire.
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: ClosetLegal
-  parent: WardrobeBlue
-  name: legal closet
-  description: It's a storage unit for courtroom apparel and items.
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: WardrobeCargo
-  parent: WardrobePrison
-  name: cargo wardrobe
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
+
 
 - type: entity
   id: WardrobeSalvage
-  parent: WardrobeMixed
-  name: salvage wardrobe
-  description: Notably not salvaged.
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: WardrobeEngineering
-  parent: WardrobeYellow
-  name: engineering wardrobe
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: WardrobeMedicalDoctor
-  parent: WardrobeWhite
-  name: medical doctor's wardrobe
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: WardrobeRobotics
-  parent: WardrobeBlack
-  name: robotics wardrobe
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: WardrobeChemistry
-  parent: WardrobeWhite
-  name: chemistry wardrobe
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: WardrobeGenetics
-  parent: WardrobeWhite
-  name: genetics wardrobe
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: WardrobeVirology
-  parent: WardrobeWhite
-  name: virology wardrobe
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: WardrobeScience
-  parent: WardrobeWhite
-  name: science wardrobe
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers
 
 - type: entity
   id: WardrobeBotanist
-  parent: WardrobeGreen
-  name: botanist wardrobe
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED # End Stellar - Lockers

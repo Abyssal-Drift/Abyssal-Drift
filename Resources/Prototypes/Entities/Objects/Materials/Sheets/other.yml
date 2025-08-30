@@ -12,6 +12,7 @@
   - type: Tag
     tags:
     - Sheet
+    - ConstructionMaterial
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
@@ -86,17 +87,19 @@
   - type: Stack
     stackType: Plasma
     baseLayer: base
-    layerStates:
-    - plasma
-    - plasma_2
-    - plasma_3
+    layerStates: # Begin Stellar - Materials
+    - material
+    - material-2
+    - material-3
   - type: Sprite
-    state: plasma_3
+    sprite: _ST/Items/Materials/plasma.rsi
+    state: material-3
     layers:
-    - state: plasma_3
+    - state: material
       map: ["base"]
   - type: Item
-    heldPrefix: plasma
+    sprite: _ST/Items/Materials/plasma.rsi
+    heldPrefix: material # End Stellar - Materials
   - type: Appearance
   - type: Extractable
     grindableSolutionName: plasma
@@ -110,6 +113,7 @@
   - type: Tag
     tags:
     - Sheet
+    - ConstructionMaterial
 
 - type: entity
   parent: SheetPlasma
@@ -133,16 +137,6 @@
     count: 1
 
 - type: entity
-  parent: SheetPlasma
-  id: SheetPlasmaLingering0
-  name: plasma
-  suffix: 0, Lingering
-  components:
-  - type: Stack
-    lingering: true
-    count: 0
-
-- type: entity
   parent: SheetOtherBase
   id: SheetPlastic
   name: plastic
@@ -152,6 +146,7 @@
     tags:
     - Plastic
     - Sheet
+    - ConstructionMaterial
   - type: Material
   - type: PhysicalComposition
     materialComposition:
@@ -159,17 +154,19 @@
   - type: Stack
     stackType: Plastic
     baseLayer: base
-    layerStates:
-    - plastic
-    - plastic_2
-    - plastic_3
+    layerStates: # Begin Stellar - Materials
+    - material
+    - material-2
+    - material-3
   - type: Sprite
-    state: plastic_3
+    sprite: _ST/Items/Materials/plastic.rsi
+    state: material-3
     layers:
-    - state: plastic_3
+    - state: material
       map: ["base"]
   - type: Item
-    heldPrefix: plastic
+    sprite: _ST/Items/Materials/plastic.rsi
+    heldPrefix: material # End Stellar - Materials
   - type: Appearance
   - type: Extractable
     grindableSolutionName: plastic
@@ -221,18 +218,20 @@
   - type: Stack
     stackType: Uranium
     baseLayer: base
-    layerStates:
-    - uranium
-    - uranium_2
-    - uranium_3
+    layerStates: # Begin Stellar - Materials
+    - material
+    - material-2
+    - material-3
   - type: Sprite
-    state: uranium_3
+    sprite: _ST/Items/Materials/uranium.rsi
+    state: material-3
     layers:
-    - state: uranium_3
+    - state: material
       map: ["base"]
   - type: Appearance
   - type: Item
-    heldPrefix: uranium
+    sprite: _ST/Items/Materials/uranium.rsi
+    heldPrefix: material # End Stellar - Materials
   - type: Extractable
     grindableSolutionName: food
   - type: SolutionContainerManager

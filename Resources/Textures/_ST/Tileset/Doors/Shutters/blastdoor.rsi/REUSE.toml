@@ -1,0 +1,6 @@
+version = 1
+
+[[annotations]]
+path = ["*.png"]
+SPDX-FileCopyrightText = "???"
+SPDX-License-Identifier = "CC-BY-SA-3.0"

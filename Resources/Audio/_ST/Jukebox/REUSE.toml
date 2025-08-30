@@ -1,6 +1,0 @@
-version = 1
-
-[[annotations]]
-path = ["jungle_juice.ogg", "apocalypse.ogg", "somewhere_in_space.ogg", "new_save.ogg", "gruntwork.ogg"]
-SPDX-FileCopyrightText = "Custom songs composed for Stellar Station by Darklyac."
-SPDX-License-Identifier = "LicenseRef-Wallening"

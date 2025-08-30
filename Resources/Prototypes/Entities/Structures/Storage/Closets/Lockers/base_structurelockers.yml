@@ -7,22 +7,23 @@
   - type: Lock
   - type: LockVisuals
   - type: Sprite
-    sprite: Structures/Storage/closet.rsi
+    sprite: _ST/Tileset/Storage/Lockers/base-locker-secure.rsi # Begin Stellar - Lockers
     noRot: true
     layers:
-    - state: generic
+    - state: base
       map: ["enum.StorageVisualLayers.Base"]
-    - state: generic_door
+    - state: door-closed
       map: ["enum.StorageVisualLayers.Door"]
     - state: locked
       map: ["enum.LockVisualLayers.Lock"]
       shader: unshaded
     - state: welded
+      sprite: _ST/Tileset/Storage/Lockers/base-locker-effects.rsi
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
     - state: paper
       visible: false
-      sprite: Structures/Storage/closet_labels.rsi
+      sprite: _ST/Tileset/Storage/Lockers/base-locker-effects.rsi # End Stellar - Lockers
       offset: "-0.065,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: Destructible

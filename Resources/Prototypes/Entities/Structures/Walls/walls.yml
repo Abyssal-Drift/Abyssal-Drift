@@ -521,12 +521,16 @@
   suffix: indestructible
   components:
     - type: Sprite
-      sprite: Structures/Walls/plastitanium.rsi
+      # Begin Stellar - Wallening
+      sprite: _ST/Tileset/Walls/plastitanium.rsi
+    - type: SpriteFade
     - type: Icon
-      sprite: Structures/Walls/plastitanium.rsi
+      sprite: _ST/Tileset/Walls/plastitanium.rsi
+      state: full
+      # End Stellar - Wallening
     - type: IconSmooth
-      key: walls
-      base: plastitanium
+      key: wallsbase
+      base: wall # Stellar - Wallening
     - type: Fixtures
       fixtures:
         fix1:
@@ -572,11 +576,15 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
-    state: state0
+    sprite: _ST/Tileset/Walls/diagonal.rsi # Begin Stellar - Wallening
+    state: plastitanium
   - type: Icon
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
-    state: state0
+    sprite: _ST/Tileset/Walls/diagonal.rsi
+    state: plastitanium
+  - type: IconSmooth
+    mode: NoSprite
+    key: wallsbase
+  - type: SpriteFade # End Stellar - Wallening
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallicStrong
@@ -591,11 +599,15 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
-    state: state0
+    sprite: _ST/Tileset/Walls/diagonal.rsi # Begin Stellar - Wallening
+    state: plastitanium
   - type: Icon
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
-    state: state0
+    sprite: _ST/Tileset/Walls/diagonal.rsi
+    state: plastitanium
+  - type: IconSmooth
+    mode: NoSprite
+    key: wallsbase
+  - type: SpriteFade # End Stellar - Wallening
   - type: Destructible
     thresholds:
     - trigger:
@@ -734,11 +746,15 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/reinforced_diagonal.rsi
-    state: state0
+    sprite: _ST/Tileset/Walls/diagonal.rsi # Begin Stellar - Wallening
+    state: metal_reinforced
   - type: Icon
-    sprite: Structures/Walls/reinforced_diagonal.rsi
-    state: state0
+    sprite: _ST/Tileset/Walls/diagonal.rsi
+    state: metal_reinforced
+  - type: IconSmooth
+    mode: NoSprite
+    key: wallsbase
+  - type: SpriteFade # End Stellar - Wallening
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallicStrong
@@ -1064,11 +1080,11 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/solid_diagonal.rsi
-    state: state0
+    sprite: _ST/Tileset/Walls/diagonal.rsi # Stellar
+    state: metal
   - type: Icon
-    sprite: Structures/Walls/solid_diagonal.rsi
-    state: state0
+    sprite: _ST/Tileset/Walls/diagonal.rsi # Stellar
+    state: metal
   - type: Destructible
     thresholds:
     - trigger:
@@ -1091,6 +1107,10 @@
           collection: MetalSlam
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: IconSmooth # Begin Stellar - Wallening
+    mode: NoSprite
+    key: wallsbase
+  - type: SpriteFade # End Stellar - Wallening
 
 - type: entity
   parent: WallSolid
@@ -1670,3 +1690,74 @@
   - type: IconSmooth
     key: cobblebricks
     base: cobblebrick
+
+# Cardboard
+
+- type: entity
+  id: Cardwall
+  parent: BaseStructure
+  name: cardboard wall
+  description: Budget cuts are hitting hard.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/pierce.ogg"
+  - type: Tag
+    tags:
+    - Wall
+  - type: Sprite
+    drawdepth: SmallObjects #so bullets pass 'through'
+    sprite: Structures/Walls/card.rsi
+  - type: Icon
+    sprite: Structures/Walls/card.rsi
+    state: full
+  - type: Construction
+    graph: Cardwall
+    node: cardwall
+    deconstructionTarget: start
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: Card
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - FlimsyLayer
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80 #excess damage (nuke?). avoid computational cost of spawning entities.
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 40
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialCardboard:
+            min: 1
+            max: 2
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: cards
+    base: card
+  - type: Occluder 
+  - type: BlockWeather
+  - type: SunShadowCast

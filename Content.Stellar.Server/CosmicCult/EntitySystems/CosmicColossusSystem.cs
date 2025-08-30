@@ -6,8 +6,8 @@
 using Content.Stellar.Server.CosmicCult.Components;
 using Content.Server.Actions;
 using Content.Server.Popups;
-using Content.Server.Station.Components;
-using Content.Server.Station.Systems;
+using Content.Shared.Station.Components;
+using Content.Shared.Station;
 using Content.Stellar.Shared.CosmicCult.Components;
 using Content.Shared.Audio;
 using Content.Shared.Damage;
@@ -31,7 +31,7 @@ public sealed class CosmicColossusSystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly MobThresholdSystem _threshold = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly StationSystem _station = default!;
+    [Dependency] private readonly SharedStationSystem _station = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedAmbientSoundSystem _ambientSound = default!;
@@ -86,11 +86,10 @@ public sealed class CosmicColossusSystem : EntitySystem
     private void OnSpawn(Entity<CosmicColossusComponent> ent, ref ComponentInit args) // I WANT THIS BIG GUY HURLED TOWARDS THE STATION
     {
         ent.Comp.DeathTimer = _timing.CurTime + ent.Comp.DeathWait;
-        var station = _station.GetStationInMap(Transform(ent).MapID);
-        if (TryComp<StationDataComponent>(station, out var stationData))
+        if (_station.GetStationInMap(Transform(ent).MapID) is { } station &&
+            _station.GetLargestGrid(station) is { } grid)
         {
-            var stationGrid = _station.GetLargestGrid(stationData);
-            _throw.TryThrow(ent, Transform(stationGrid!.Value).Coordinates, baseThrowSpeed: 30, null, 0, 0, false, false, false, false, false);
+            _throw.TryThrow(ent, Transform(grid).Coordinates, baseThrowSpeed: 30, null, 0, 0, false, false, false, false, false);
         }
         if (ent.Comp.Timed)
             _actions.AddAction(ent, ref ent.Comp.EffigyPlaceActionEntity, ent.Comp.EffigyPlaceAction, ent);

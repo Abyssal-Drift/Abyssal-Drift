@@ -9,7 +9,7 @@
   components:
   - type: StationAiWhitelist
   - type: Sprite
-    sprite: Structures/Doors/Shutters/shutters.rsi
+    sprite: _ST/Tileset/Doors/Shutters/shutter.rsi # Stellar
     drawdepth: BlastDoors
     layers:
     - state: closed
@@ -41,7 +41,7 @@
     - ForceNoFixRotations # Don't want the fixrotations command to target these
   - type: Door
     openDrawDepth: BlastDoors
-    closedDrawDepth: BlastDoors
+    closedDrawDepth: OverMobs
     bumpOpen: false
     clickOpen: false
     closeTimeOne: 0.2
@@ -135,7 +135,7 @@
   description: Why did they make these shutters radioactive?
   components:
   - type: Sprite
-    sprite: Structures/Doors/Shutters/shutters_radiation.rsi
+    sprite: _ST/Tileset/Doors/Shutters/shutter_radiation.rsi # Stellar
     layers:
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
@@ -173,7 +173,7 @@
   description: The Best (TM) place to see your friends explode!
   components:
   - type: Sprite
-    sprite: Structures/Doors/Shutters/shutters_window.rsi
+    sprite: _ST/Tileset/Doors/Shutters/shutter_window.rsi # Stellar
     layers:
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]

@@ -1,0 +1,36 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from tg-wallening and modified by AftrLite (GitHub).",
+    "size":
+    {
+    "x": 42,
+    "y": 76
+    },
+    "states":
+    [
+        {
+        "name": "base",
+        "directions": 4
+        },
+        {
+        "name": "wires"
+        },
+        {
+        "name": "alarm_b1",
+        "directions": 4
+        },
+        {
+        "name": "alarm0",
+        "directions": 4
+        },
+        {
+        "name": "alarm1",
+        "directions": 4
+        },
+        {
+        "name": "alarm2",
+        "directions": 4
+        }
+  ]
+}

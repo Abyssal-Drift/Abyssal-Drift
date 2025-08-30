@@ -3,7 +3,7 @@
 //
 // SPDX-License-Identifier: LicenseRef-CosmicCult
 
-using Content.Shared.Roles;
+using Content.Shared.Roles.Components;
 
 namespace Content.Stellar.Shared.CosmicCult.Roles;
 

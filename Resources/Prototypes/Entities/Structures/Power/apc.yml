@@ -1,4 +1,5 @@
 - type: entity
+  parent: BaseWallmount
   categories: [ HideSpawnMenu ]
   id: BaseAPC
   name: APC
@@ -19,15 +20,11 @@
     color: "#3db83b"
     castShadows: false
     netsync: false
-  - type: Clickable
   - type: AccessReader
     access: [["Engineering"]]
-  - type: InteractionOutline
-  - type: Transform
-    anchored: true
   - type: Sprite
     drawdepth: Overdoors # Stellar
-    sprite: _ST/Tileset/OnWalls/apc.rsi # Stellar - Wallening
+    sprite: _ST/Tileset/Wallmounts/apc.rsi # Stellar - Wallening
     layers:
     - state: base
     - state: panel
@@ -76,7 +73,7 @@
     sourceNode: input
     loadNode: output
     collectionName: apc
-    sprite: _ST/Tileset/OnWalls/apc.rsi # Stellar - Wallening
+    sprite: _ST/Tileset/Wallmounts/apc.rsi # Stellar - Wallening
     state: static
   - type: BatteryCharger
     voltage: Medium
@@ -156,6 +153,7 @@
 
 # APC under construction
 - type: entity
+  parent: BaseWallmountMetallic
   categories: [ HideSpawnMenu ]
   id: APCFrame
   name: APC frame
@@ -163,21 +161,13 @@
   placement:
     mode: SnapgridCenter
   components:
-  - type: Clickable
-  - type: InteractionOutline
-  - type: Transform
-    anchored: true
   - type: Sprite
     drawdepth: WallMountedItems
-    sprite: _ST/Tileset/OnWalls/apc.rsi # Stellar - Wallening
+    sprite: _ST/Tileset/Wallmounts/apc.rsi # Stellar - Wallening
     state: frame
   - type: Construction
     graph: APC
     node: apcFrame
-  - type: WallMount
-  - type: Damageable
-    damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
   - type: Destructible
     thresholds:
     - trigger:

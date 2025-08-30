@@ -49,6 +49,10 @@ public sealed class MonumentPlacementPreviewOverlay : Overlay
     private readonly SpriteSpecifier _outlineTex;
     private readonly SpriteSpecifier _starTex;
 
+    private static readonly ProtoId<ShaderPrototype> SaturationShuffle = "SaturationShuffle";
+    private static readonly ProtoId<ShaderPrototype> MonumentPulse = "MonumentPulse";
+    private static readonly ProtoId<ShaderPrototype> Unshaded = "unshaded";
+
     //todo arbitrary sprite drawing overlay at some point
     //I don't want to have to make a new overlay for every "draw a sprite at x" thing
     //also I kinda want wrappers around the dog ass existing arbitrary rendering methods
@@ -63,14 +67,14 @@ public sealed class MonumentPlacementPreviewOverlay : Overlay
         _preview = _ent.System<MonumentPlacementPreviewSystem>();
         _timing = timing;
 
-        _saturationShader = protoMan.Index<ShaderPrototype>("SaturationShuffle").InstanceUnique();
+        _saturationShader = protoMan.Index(SaturationShuffle).InstanceUnique();
         _saturationShader.SetParameter("tileSize", new Vector2(96, 96));
-        _saturationShader.SetParameter("hsv", new Robust.Shared.Maths.Vector3(1.0f, 0.25f, 0.2f));
+        _saturationShader.SetParameter("hsv", new Vector3(1.0f, 0.25f, 0.2f));
 
-        _starsShader = protoMan.Index<ShaderPrototype>("MonumentPulse").InstanceUnique();
+        _starsShader = protoMan.Index(MonumentPulse).InstanceUnique();
         _starsShader.SetParameter("tileSize", new Vector2(96, 96));
 
-        _unshadedShader = protoMan.Index<ShaderPrototype>("unshaded").Instance(); //doesn't need a unique instance
+        _unshadedShader = protoMan.Index(Unshaded).Instance(); //doesn't need a unique instance
 
         ZIndex = (int) Content.Shared.DrawDepth.DrawDepth.Mobs; //make the overlay render at the same depth as the actual sprite. might want to make it 1 lower if things get wierd with it.
 

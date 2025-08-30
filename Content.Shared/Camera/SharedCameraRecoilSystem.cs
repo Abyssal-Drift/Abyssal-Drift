@@ -13,7 +13,7 @@ public abstract class SharedCameraRecoilSystem : EntitySystem
     /// <summary>
     ///     Maximum rate of magnitude restore towards 0 kick.
     /// </summary>
-    private const float RestoreRateMax = 30f;
+    private const float RestoreRateMax = 15f; // Stellar
 
     /// <summary>
     ///     Minimum rate of magnitude restore towards 0 kick.
@@ -23,12 +23,12 @@ public abstract class SharedCameraRecoilSystem : EntitySystem
     /// <summary>
     ///     Time in seconds since the last kick that lerps RestoreRateMin and RestoreRateMax
     /// </summary>
-    private const float RestoreRateRamp = 4f;
+    private const float RestoreRateRamp = 6f; // Stellar
 
     /// <summary>
     ///     The maximum magnitude of the kick applied to the camera at any point.
     /// </summary>
-    protected const float KickMagnitudeMax = 1f;
+    protected const float KickMagnitudeMax = 1.5f; // Stellar
 
     [Dependency] private readonly SharedContentEyeSystem _eye = default!;
     [Dependency] private readonly INetManager _net = default!;
@@ -67,7 +67,7 @@ public abstract class SharedCameraRecoilSystem : EntitySystem
             {
                 var normalized = recoil.CurrentKick.Normalized();
                 recoil.LastKickTime += frameTime;
-                var restoreRate = MathHelper.Lerp(RestoreRateMin, RestoreRateMax, Math.Min(1, recoil.LastKickTime / RestoreRateRamp));
+                var restoreRate = MathHelper.Lerp(RestoreRateMin, RestoreRateMax, Easings.OutElastic(Math.Min(2, recoil.LastKickTime / RestoreRateRamp))); // Stellar
                 var restore = normalized * restoreRate * frameTime;
                 var (x, y) = recoil.CurrentKick - restore;
                 if (Math.Sign(x) != Math.Sign(recoil.CurrentKick.X))

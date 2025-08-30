@@ -5,9 +5,9 @@
   description: A mechanical door that permits one-way access and prevents tailgating.
   components:
   - type: Sprite
-    sprite: Structures/Doors/turnstile.rsi
-    snapCardinals: true
-    drawdepth: Doors
+    sprite: _ST/Tileset/Doors/Misc/turnstile.rsi # Stellar
+    # snapCardinals: true # Stellar | STOP THIS TO PROTOTYPES I SWEAR TO GOD
+    drawdepth: Mobs # Stellar
     layers:
     - state: turnstile
       map: [ "enum.TurnstileVisualLayers.Base" ]

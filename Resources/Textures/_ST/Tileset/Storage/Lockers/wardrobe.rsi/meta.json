@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "license": "LicenseRef-Wallening",
+  "copyright": "By AftrLite",
+  "size": {
+    "x": 32,
+    "y": 48
+  },
+  "states": [
+    {
+      "name": "base"
+    },
+    {
+      "name": "door-open"
+    },
+    {
+      "name": "door-closed"
+    },
+    {
+      "name": "door-blue"
+    },
+    {
+      "name": "door-pink"
+    },
+    {
+      "name": "door-black"
+    },
+    {
+      "name": "door-green"
+    },
+    {
+      "name": "door-orange"
+    },
+    {
+      "name": "door-red"
+    },
+    {
+      "name": "door-yellow"
+    },
+    {
+      "name": "door-white"
+    },
+    {
+      "name": "door-mixed"
+    }
+  ]
+}

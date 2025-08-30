@@ -6,28 +6,34 @@
   id: SomewhereInSpace
   name: Darklyac - Somewhere in Space
   path:
-    path: /Audio/_ST/Jukebox/somewhere_in_space.ogg
-
-- type: jukebox
-  id: Apocalypse
-  name: Darklyac - Apocalypse
-  path:
-    path: /Audio/_ST/Jukebox/apocalypse.ogg
+    path: /Audio/_ST/Music/Mono/somewhere_in_space.ogg
 
 - type: jukebox
   id: NewSave
   name: Darklyac - New Save
   path:
-    path: /Audio/_ST/Jukebox/new_save.ogg
+    path: /Audio/_ST/Music/Mono/new_save.ogg
 
 - type: jukebox
   id: JungleJuice
   name: Darklyac - Jungle Juice
   path:
-    path: /Audio/_ST/Jukebox/jungle_juice.ogg
+    path: /Audio/_ST/Music/Mono/jungle_juice.ogg
 
 - type: jukebox
   id: Gruntwork
   name: Darklyac - Gruntwork
   path:
-    path: /Audio/_ST/Jukebox/gruntwork.ogg
+    path: /Audio/_ST/Music/Mono/gruntwork.ogg
+
+- type: jukebox
+  id: Valley
+  name: Darklyac - Valley
+  path:
+    path: /Audio/_ST/Music/Mono/valley.ogg
+
+- type: jukebox
+  id: 8oclockGhosts
+  name: Darklyac - 8 O'Clock Ghosts
+  path:
+    path: /Audio/_ST/Music/Mono/8oclock_ghosts.ogg

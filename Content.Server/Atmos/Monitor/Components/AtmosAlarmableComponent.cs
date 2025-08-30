@@ -36,7 +36,7 @@ public sealed partial class AtmosAlarmableComponent : Component
     [ViewVariables] public bool IgnoreAlarms { get; set; } = false;
 
     [DataField("alarmSound")]
-    public SoundSpecifier AlarmSound { get; set; } = new SoundPathSpecifier("/Audio/Machines/alarm.ogg");
+    public SoundSpecifier AlarmSound { get; set; } = new SoundPathSpecifier("/Audio/_ST/Machines/atmos_alarm.ogg"); // Stellar - New default Atmos alarm
 
     [DataField("alarmVolume")]
     public float AlarmVolume { get; set; } = -10;
@@ -48,7 +48,7 @@ public sealed partial class AtmosAlarmableComponent : Component
     public HashSet<string> SyncWithTags { get; private set; } = new();
 
     [DataField("monitorAlertTypes")]
-    public HashSet<AtmosMonitorThresholdType>? MonitorAlertTypes { get; private set; }
+    public AtmosMonitorThresholdTypeFlags MonitorAlertTypes { get; private set; }
 
     /// <summary>
     ///     If this device should receive only. If it can only

@@ -1,0 +1,80 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from tg-wallening and modified by AftrLite (GitHub).",
+    "size":
+    {
+    "x": 42,
+    "y": 76
+    },
+    "states": [
+        {
+            "name": "base",
+            "directions": 4
+        },
+        {
+        "name": "broadcasting",
+        "directions": 4,
+        "delays": [
+            [
+                0.15,
+                0.1,
+                0.1
+            ],
+            [
+                0.15,
+                0.1,
+                0.1
+            ],
+            [
+                0.15,
+                0.1,
+                0.1
+            ],
+            [
+                0.15,
+                0.1,
+                0.1
+            ]
+        ]
+        },
+        {
+            "name": "build",
+            "directions": 4
+        },
+        {
+        "name": "speaker",
+        "directions": 4,
+        "delays": [
+            [
+                0.15,
+                0.1,
+                0.1
+            ],
+            [
+                0.15,
+                0.1,
+                0.1
+            ],
+            [
+                0.15,
+                0.1,
+                0.1
+            ],
+            [
+                0.15,
+                0.1,
+                0.1
+            ]
+        ]
+        },
+        {
+            "name": "unshaded",
+            "directions": 4
+        },
+        {
+            "name": "panel",
+            "directions": 4
+        }
+    ]
+}

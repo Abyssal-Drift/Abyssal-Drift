@@ -4,12 +4,12 @@
 // SPDX-License-Identifier: LicenseRef-CosmicCult
 
 using System.Numerics;
-using Content.Server.Actions;
-using Content.Server.Popups;
-using Content.Server.Station.Components;
-using Content.Server.Station.Systems;
+using Content.Shared.Actions;
+using Content.Shared.Popups;
 using Content.Stellar.Shared.CosmicCult.Components;
 using Content.Stellar.Shared.CosmicCult;
+using Content.Shared.Station.Components;
+using Content.Shared.Station;
 using Content.Shared.Maps;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Map;
@@ -19,15 +19,15 @@ namespace Content.Stellar.Server.CosmicCult.Abilities;
 
 public sealed class CosmicMonumentSystem : EntitySystem
 {
-    [Dependency] private readonly ActionsSystem _actions = default!;
+    [Dependency] private readonly SharedActionsSystem _actions = default!;
     [Dependency] private readonly CosmicCultRuleSystem _cultRule = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly TurfSystem _turf = default!;
     [Dependency] private readonly MonumentSystem _monument = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedMapSystem _map = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly StationSystem _station = default!;
+    [Dependency] private readonly SharedStationSystem _station = default!;
 
     private static readonly EntProtoId MonumentCollider = "MonumentCollider";
     private static readonly EntProtoId MonumentCosmicCultMoveEnd = "MonumentCosmicCultMoveEnd";
@@ -125,11 +125,7 @@ public sealed class CosmicMonumentSystem : EntitySystem
 
         //CHECK IF WE'RE ON THE STATION OR IF SOMEONE'S TRYING TO SNEAK THIS ONTO SOMETHING SMOL
         var station = _station.GetStationInMap(xform.MapID);
-
-        EntityUid? stationGrid = null;
-
-        if (TryComp<StationDataComponent>(station, out var stationData))
-            stationGrid = _station.GetLargestGrid(stationData);
+        var stationGrid = _station.GetLargestGrid(station!.Value);
 
         if (stationGrid is not null && stationGrid != xform.GridUid)
         {

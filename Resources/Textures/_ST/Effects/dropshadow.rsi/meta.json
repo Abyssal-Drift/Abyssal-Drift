@@ -8,6 +8,12 @@
     },
     "states": [
         {
+            "name": "shadow-small-1"
+        },
+        {
+            "name": "shadow-small-2"
+        },
+        {
             "name": "shadow-medium"
         },
         {
@@ -23,6 +29,18 @@
         },
         {
             "name": "shadow-ape"
+        },
+        {
+            "name": "shadow-lightpost"
+        },
+        {
+            "name": "shadow-crate"
+        },
+        {
+            "name": "shadow-locker"
+        },
+        {
+            "name": "shadow-cart"
         }
     ]
 }

@@ -26,6 +26,12 @@ public sealed partial class DropshadowComponent : Component
     /// </summary>
     [DataField]
     public Vector2 Offset = new Vector2(0, -0.062f);
+
+    /// <summary>
+    /// Wether or not to give this entity a drop shadow when it's anchored.
+    /// </summary>
+    [DataField]
+    public bool AnchorShadow = false;
 }
 
 [Serializable, NetSerializable]

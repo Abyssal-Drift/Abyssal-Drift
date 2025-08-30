@@ -17,7 +17,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-          bounds: "-0.49,-0.40,0.49,0.40"
+          bounds: "-0.49,-0.49,0.49,0.49"
         density: 100
         mask:
         - FullTileMask
@@ -27,7 +27,7 @@
     bumpOpen: false
     clickOpen: true
     closedDrawDepth: Mobs
-    openDrawDepth: Mobs
+    openDrawDepth: BelowMobs
     openSound:
       path: /Audio/Effects/door_open.ogg
     closeSound:
@@ -51,7 +51,8 @@
   id: StellarAirlock
   parent: StellarTallDoorBase
   name: airlock
-  description: An airlock.
+  description: An sturdy-looking airlock.
+  suffix: Service
   components:
   - type: StationAiWhitelist
   - type: MeleeSound
@@ -60,10 +61,9 @@
         path:
           "/Audio/Weapons/smash.ogg"
   - type: InteractionOutline
-  - type: SpriteFade
   - type: Sprite
     drawdepth: Mobs
-    sprite: _ST/Tileset/Doors/Airlocks/airlock_base.rsi
+    sprite: _ST/Tileset/Doors/Airlocks/service.rsi
     layers:
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
@@ -95,8 +95,6 @@
     openTimeTwo: 0.6
     openingAnimationTime: 0.8
     closingAnimationTime: 0.8
-    closedDrawDepth: Mobs
-    openDrawDepth: Mobs
     openSound:
       path: /Audio/_ST/Machines/airlock_open.ogg
     closeSound:
@@ -195,105 +193,217 @@
       # This tag is used to nagivate the Airlock construction graph. It's needed because the construction graph is shared between Airlock, AirlockGlass, and HighSecDoor
 
 - type: entity
+  id: StellarAirlockCommand
+  parent: StellarAirlock
+  name: command airlock
+  suffix: Command
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command.rsi
+
+- type: entity
+  id: StellarAirlockCommandCaptain
+  parent: StellarAirlockCommand
+  suffix: Captain
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-captain.rsi
+
+- type: entity
+  id: StellarAirlockCommandService
+  parent: StellarAirlockCommand
+  suffix: Head of Personnel
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-service.rsi
+
+- type: entity
+  id: StellarAirlockCommandSecurity
+  parent: StellarAirlockCommand
+  suffix: Head of Security
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-security.rsi
+
+- type: entity
+  id: StellarAirlockCommandScience
+  parent: StellarAirlockCommand
+  suffix: Research Director
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-science.rsi
+
+- type: entity
+  id: StellarAirlockCommandMedical
+  parent: StellarAirlockCommand
+  suffix: Head of Medicine
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-medical.rsi
+
+- type: entity
+  id: StellarAirlockCommandCargo
+  parent: StellarAirlockCommand
+  suffix: Quartermaster
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-cargo.rsi
+
+- type: entity
+  id: StellarAirlockCommandEngineering
+  parent: StellarAirlockCommand
+  suffix: Chief Engineer
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-engineering,rsi
+
+- type: entity
+  id: StellarAirlockScience
+  parent: StellarAirlock
+  name: airlock
+  suffix: Science
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/science.rsi
+
+- type: entity
+  id: StellarAirlockFreezer
+  parent: StellarAirlock
+  name: walk-in freezer door
+  suffix: Service
+  description: A heavy sliding door, made for a walk-in freezer.
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/freezer.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+    - state: closed_unlit
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects_freezer.rsi
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseUnlit"]
+    - state: bolted_unlit
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects_freezer.rsi
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseBolted"]
+    - state: emergency_unlit
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects_freezer.rsi
+      map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
+      shader: unshaded
+
+- type: entity
+  id: StellarAirlockMaintenance
+  parent: StellarAirlock
+  name: maintenance airlock
+  suffix: Maintenance
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/maintenance.rsi
+
+- type: entity
   id: StellarAirlockGlass
   parent: StellarAirlock
-  name: Glass Airlock
+  name: airlock
+  suffix: Glass
   description: An airlock with a window.
   components:
   - type: Sprite
-    sprite: _ST/Tileset/Doors/Airlocks/airlock_glass_base.rsi
-    layers:
-    - state: closed
-      map: ["enum.DoorVisualLayers.Base"]
-    - state: closed_unlit
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseUnlit"]
-    - state: welded
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
-      map: ["enum.WeldableLayers.BaseWelded"]
-      visible: false
-    - state: bolted_unlit
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
-      shader: unshaded
-      map: ["enum.DoorVisualLayers.BaseBolted"]
-    - state: emergency_unlit
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
-      map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
-      shader: unshaded
-    - state: panel_open
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/airlock_glass_base.rsi
   - type: Door
     occludes: false
   - type: Occluder
     enabled: false
 
 - type: entity
-  id: StellarAirlockGlassWhite
-  parent: StellarAirlock
-  name: glass white airlock
+  id: StellarAirlockGlassExternals
+  parent: StellarAirlockGlass
+  name: external airlock
+  suffix: Glass, Externals
   description: An airlock with a window.
   components:
   - type: Sprite
-    sprite: _ST/Tileset/Doors/Airlocks/airlock_glass_white.rsi
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/externals-glass.rsi
     layers:
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
     - state: closed_unlit
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects_externals.rsi
       shader: unshaded
       map: ["enum.DoorVisualLayers.BaseUnlit"]
-    - state: welded
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
-      map: ["enum.WeldableLayers.BaseWelded"]
-      visible: false
     - state: bolted_unlit
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects_externals.rsi
       shader: unshaded
       map: ["enum.DoorVisualLayers.BaseBolted"]
     - state: emergency_unlit
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects_externals.rsi
       map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
       shader: unshaded
-    - state: panel_open
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Door
-    occludes: false
-  - type: Occluder
-    enabled: false
+    closedDrawDepth: Mobs
+    openDrawDepth: Mobs
 
 - type: entity
-  id: StellarAirlockGlassScience
-  parent: StellarAirlock
-  name: glass science airlock
+  id: StellarAirlockGlassShuttle
+  parent: StellarAirlockGlass
+  name: shuttle airlock
+  suffix: Glass, Shuttle
+  description: An airlock with a window.
   components:
   - type: Sprite
-    sprite: _ST/Tileset/Doors/Airlocks/airlock_glass_science.rsi
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/shuttle-glass.rsi
     layers:
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
     - state: closed_unlit
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects_angled.rsi
       shader: unshaded
       map: ["enum.DoorVisualLayers.BaseUnlit"]
-    - state: welded
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
-      map: ["enum.WeldableLayers.BaseWelded"]
-      visible: false
     - state: bolted_unlit
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects_angled.rsi
       shader: unshaded
       map: ["enum.DoorVisualLayers.BaseBolted"]
     - state: emergency_unlit
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects_angled.rsi
       map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
       shader: unshaded
-    - state: panel_open
-      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
-      map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Door
-    occludes: false
-  - type: Occluder
-    enabled: false
+    closedDrawDepth: Mobs
+    openDrawDepth: Mobs
+
+- type: entity
+  id: StellarAirlockGlassPlastitanium
+  parent: StellarAirlockGlassShuttle
+  name: plastitanium airlock
+  suffix: Glass, Plastitanium
+  description: An airlock with a window.
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/plastitanium-glass.rsi
+
+- type: entity
+  id: StellarAirlockVault
+  parent: StellarAirlock
+  name: vault airlock
+  suffix: Vault
+  description: An airlock with a window.
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/highsecurity.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+    - state: closed_unlit
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects_highsecurity.rsi
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseUnlit"]
+    - state: bolted_unlit
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects_highsecurity.rsi
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseBolted"]
+    - state: emergency_unlit
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects_highsecurity.rsi
+      map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
+      shader: unshaded
+  - type: Door
+    closedDrawDepth: Mobs
+    openDrawDepth: Mobs

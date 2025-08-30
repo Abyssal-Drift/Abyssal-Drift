@@ -37,6 +37,7 @@ public sealed class CameraRecoilSystem : SharedCameraRecoilSystem
         if (!Resolve(uid, ref component, false))
             return;
 
+        recoil *= 0.4f; // Stellar - Reduce all recoil to 40% of wizden base because camera-induced nausea is bad, mkay?
         recoil *= _intensity;
 
         // Use really bad math to "dampen" kicks when we're already kicked.

@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 80
+    },
+    "license": "LicenseRef-Wallening",
+    "copyright": "By AftrLite",
+    "states": [
+        {
+            "name": "metal",
+            "directions": 4
+        },
+        {
+            "name": "metal_reinforced",
+            "directions": 4
+        },
+        {
+            "name": "plastitanium",
+            "directions": 4
+        }
+    ]
+}

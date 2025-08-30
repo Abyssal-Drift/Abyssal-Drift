@@ -154,7 +154,7 @@ public sealed class DoAfterOverlay : Overlay
                 var xProgress = (EndX - StartX) * elapsedRatio + StartX;
                 var box = new Box2(new Vector2(StartX, StartY) / EyeManager.PixelsPerMeter, new Vector2(xProgress, ProgressY) / EyeManager.PixelsPerMeter); // Begin Stellar - Revamped DoAfters
                 var boxGlow = new Box2(new Vector2(StartX - 1f, StartY - 1f) / EyeManager.PixelsPerMeter, new Vector2(xProgress + 1f, ProgressY + 1f) / EyeManager.PixelsPerMeter);
-                var boxHighlight = new Box2(new Vector2(StartX, StartY + 1f) / EyeManager.PixelsPerMeter, new Vector2(xProgress, ProgressY - 2f) / EyeManager.PixelsPerMeter);
+                var boxHighlight = new Box2(new Vector2(StartX, StartY + 1f) / EyeManager.PixelsPerMeter, new Vector2(xProgress, ProgressY - 1f) / EyeManager.PixelsPerMeter);
                 box = box.Translated(position);
                 boxGlow = boxGlow.Translated(position);
                 boxHighlight = boxHighlight.Translated(position);

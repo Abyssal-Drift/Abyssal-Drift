@@ -60,7 +60,7 @@ namespace Content.Server.Atmos.EntitySystems
 
             if (tile.Hotspot.Bypassing)
             {
-                tile.Hotspot.State = 3;
+                // tile.Hotspot.State = 3; // Stellar - Improved fire
 
                 var gridUid = ent.Owner;
                 var tilePos = tile.GridIndices;
@@ -83,7 +83,7 @@ namespace Content.Server.Atmos.EntitySystems
                 }
 
                 // Add a random burned decal to the tile only if there are less than 4 of them
-                if (tileBurntDecals < 4)
+                if (tileBurntDecals < 1) // Stellar - FOUR DECALS LAYERED AT ONCE? WHAT? No, let's keep that at one decal, thank you.
                     _decalSystem.TryAddDecal(_burntDecals[_random.Next(_burntDecals.Length)], new EntityCoordinates(gridUid, tilePos), out _, cleanable: true);
 
                 if (tile.Air.Temperature > Atmospherics.FireMinimumTemperatureToSpread)
@@ -100,10 +100,10 @@ namespace Content.Server.Atmos.EntitySystems
                     }
                 }
             }
-            else
-            {
-                tile.Hotspot.State = (byte) (tile.Hotspot.Volume > Atmospherics.CellVolume * 0.4f ? 2 : 1);
-            }
+            // else // Begin Stellar - Improved fire
+            // {
+            //     tile.Hotspot.State = (byte) (tile.Hotspot.Volume > Atmospherics.CellVolume * 0.4f ? 2 : 1);
+            // } // End Stellar - Improved fire
 
             if (tile.Hotspot.Temperature > tile.MaxFireTemperatureSustained)
                 tile.MaxFireTemperatureSustained = tile.Hotspot.Temperature;
@@ -176,6 +176,31 @@ namespace Content.Server.Atmos.EntitySystems
         private void PerformHotspotExposure(TileAtmosphere tile)
         {
             if (tile.Air == null || !tile.Hotspot.Valid) return;
+
+            switch (tile.Hotspot.Temperature) // Begin Stellar - Improved fire
+            {
+                case <= 390.15f:
+                    tile.Hotspot.State = 1;
+                    break;
+                case <= 475.15f:
+                    tile.Hotspot.State = 2;
+                    break;
+                case <= 570.15f:
+                    tile.Hotspot.State = 3;
+                    break;
+                case <= 1000.15f:
+                    tile.Hotspot.State = 4;
+                    break;
+                case <= 5000.15f:
+                    tile.Hotspot.State = 5;
+                    break;
+                case <= 10000.15f:
+                    tile.Hotspot.State = 6;
+                    break;
+                case > 10000.15f:
+                    tile.Hotspot.State = 7;
+                    break;
+            } // End Stellar - Improved fire
 
             tile.Hotspot.Bypassing = tile.Hotspot.SkippedFirstProcess && tile.Hotspot.Volume > tile.Air.Volume*0.95f;
 

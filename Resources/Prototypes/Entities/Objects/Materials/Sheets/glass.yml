@@ -15,6 +15,7 @@
   - type: Tag
     tags:
     - Sheet
+    - ConstructionMaterial
   - type: Material
   - type: Damageable
     damageContainer: Inorganic
@@ -60,17 +61,19 @@
   - type: Stack
     stackType: Glass
     baseLayer: base
-    layerStates:
-    - glass
-    - glass_2
-    - glass_3
+    layerStates: # Begin Stellar - Materials
+    - material
+    - material-2
+    - material-3
   - type: Sprite
-    state: glass_3
+    sprite: _ST/Items/Materials/glass.rsi
+    state: material-3
     layers:
-    - state: glass_3
+    - state: material
       map: ["base"]
   - type: Item
-    heldPrefix: glass
+    sprite: _ST/Items/Materials/glass.rsi
+    heldPrefix: material # End Stellar - Materials
   - type: FloorTile
     outputs:
     - FloorGlass
@@ -109,15 +112,6 @@
     count: 1
 
 - type: entity
-  parent: SheetGlass
-  id: SheetGlassLingering0
-  suffix: Lingering, 0
-  components:
-  - type: Stack
-    lingering: true
-    count: 0
-
-- type: entity
   parent: SheetGlassBase
   id: SheetRGlass
   name: reinforced glass
@@ -130,17 +124,19 @@
   - type: Stack
     stackType: ReinforcedGlass
     baseLayer: base
-    layerStates:
-    - rglass
-    - rglass_2
-    - rglass_3
+    layerStates: # Begin Stellar - Materials
+    - material
+    - material-2
+    - material-3
   - type: Sprite
-    state: rglass_3
+    sprite: _ST/Items/Materials/glass-reinforced.rsi
+    state: material-3
     layers:
-    - state: rglass_3
+    - state: material
       map: ["base"]
   - type: Item
-    heldPrefix: rglass
+    sprite: _ST/Items/Materials/glass-reinforced.rsi
+    heldPrefix: material # End Stellar - Materials
   - type: FloorTile
     outputs:
     - FloorRGlass
@@ -198,15 +194,6 @@
         canReact: false
 
 - type: entity
-  parent: SheetRGlass
-  id: SheetRGlassLingering0
-  suffix: Lingering, 0
-  components:
-  - type: Stack
-    lingering: true
-    count: 0
-
-- type: entity
   parent: SheetGlassBase
   id: SheetPGlass
   name: plasma glass
@@ -219,17 +206,19 @@
   - type: Stack
     stackType: PlasmaGlass
     baseLayer: base
-    layerStates:
-    - pglass
-    - pglass_2
-    - pglass_3
+    layerStates: # Begin Stellar - Materials
+    - material
+    - material-2
+    - material-3
   - type: Sprite
-    state: pglass_3
+    sprite: _ST/Items/Materials/glass-plasma.rsi
+    state: material-3
     layers:
-    - state: pglass_3
+    - state: material
       map: ["base"]
   - type: Item
-    heldPrefix: pglass
+    sprite: _ST/Items/Materials/glass-plasma.rsi
+    heldPrefix: material # End Stellar - Materials
   - type: Construction
     graph: Glass
     node: SheetPGlass
@@ -294,17 +283,19 @@
   - type: Stack
     stackType: ReinforcedPlasmaGlass
     baseLayer: base
-    layerStates:
-    - rpglass
-    - rpglass_2
-    - rpglass_3
+    layerStates: # Begin Stellar - Materials
+    - material
+    - material-2
+    - material-3
   - type: Sprite
-    state: rpglass_3
+    sprite: _ST/Items/Materials/glass-reinforced-plasma.rsi
+    state: material-3
     layers:
-    - state: rpglass_3
+    - state: material
       map: ["base"]
   - type: Item
-    heldPrefix: rpglass
+    sprite: _ST/Items/Materials/glass-reinforced-plasma.rsi
+    heldPrefix: material # End Stellar - Materials
   - type: Construction
     graph: Glass
     node: SheetRPGlass
@@ -337,15 +328,6 @@
     count: 1
 
 - type: entity
-  parent: SheetRPGlass
-  id: SheetRPGlassLingering0
-  suffix: Lingering, 0
-  components:
-  - type: Stack
-    lingering: true
-    count: 0
-
-- type: entity
   parent: SheetGlassBase
   id: SheetUGlass
   name: uranium glass
@@ -358,17 +340,19 @@
   - type: Stack
     stackType: UraniumGlass
     baseLayer: base
-    layerStates:
-    - uglass
-    - uglass_2
-    - uglass_3
+    layerStates: # Begin Stellar - Materials
+    - material
+    - material-2
+    - material-3
   - type: Sprite
-    state: uglass_3
+    sprite: _ST/Items/Materials/glass-uranium.rsi
+    state: material-3
     layers:
-    - state: uglass_3
+    - state: material
       map: ["base"]
   - type: Item
-    heldPrefix: uglass
+    sprite: _ST/Items/Materials/glass-uranium.rsi
+    heldPrefix: material # End Stellar - Materials
   - type: Construction
     graph: Glass
     node: SheetUGlass
@@ -432,17 +416,19 @@
   - type: Stack
     stackType: ReinforcedUraniumGlass
     baseLayer: base
-    layerStates:
-    - ruglass
-    - ruglass_2
-    - ruglass_3
+    layerStates: # Begin Stellar - Materials
+    - material
+    - material-2
+    - material-3
   - type: Sprite
-    state: ruglass_3
+    sprite: _ST/Items/Materials/glass-reinforced-uranium.rsi
+    state: material-3
     layers:
-    - state: ruglass_3
+    - state: material
       map: ["base"]
   - type: Item
-    heldPrefix: ruglass
+    sprite: _ST/Items/Materials/glass-reinforced-uranium.rsi
+    heldPrefix: material # End Stellar - Materials
   - type: Construction
     graph: Glass
     node: SheetRUGlass

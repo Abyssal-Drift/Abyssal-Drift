@@ -220,6 +220,7 @@
       - SetParticleZeta
       - SetParticleSigma
   - type: Dropshadow # Begin Stellar - Wallening
+    anchorShadow: true
     sprite:
       sprite: _ST/Effects/dropshadow.rsi
       state: shadow-ape

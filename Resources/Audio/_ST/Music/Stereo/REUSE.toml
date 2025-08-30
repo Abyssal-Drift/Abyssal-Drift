@@ -1,0 +1,6 @@
+version = 1
+
+[[annotations]]
+path = ["jungle_juice_(stereo).ogg", "apocalypse_(stereo).ogg", "somewhere_in_space_(stereo).ogg", "new_save_(stereo).ogg", "gruntwork_(stereo).ogg", "valley_(stereo).ogg", "8_oclock_ghosts_(stereo).ogg"]
+SPDX-FileCopyrightText = "Custom songs composed for Stellar Station by Darklyac."
+SPDX-License-Identifier = "LicenseRef-Wallening"

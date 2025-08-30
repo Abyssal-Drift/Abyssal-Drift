@@ -6,3 +6,12 @@ SPDX-FileCopyrightText = "ParadiseSS13"
 SPDX-License-Identifier = "CC-BY-SA-3.0"
 SPDX-FileAttributionText = "https://github.com/ParadiseSS13/Paradise/tree/275677675bf34c94e9dd2e5e4e257e76a960db94/sound/machines"
 
+[[annotations]]
+path = ["firelock_close.ogg","firelock_open.ogg"]
+SPDX-FileCopyrightText = "Darklyac"
+SPDX-License-Identifier = "CC-BY-SA-3.0"
+
+[[annotations]]
+path = ["atmos_alarm.ogg"]
+SPDX-FileCopyrightText = "AftrLite"
+SPDX-License-Identifier = "LicenseRef-Wallening"

@@ -7,9 +7,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: eng
-    stateDoorOpen: eng_open
-    stateDoorClosed: eng_tool_door
+    # stateBaseClosed: eng # Begin Stellar - Lockers
+    # stateDoorOpen: eng_open
+    # stateDoorClosed: eng_tool_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/engineering-tools.rsi # End Stellar - Lockers
 
 # Radiation suit closet
 - type: entity
@@ -20,9 +22,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: eng
-    stateDoorOpen: eng_open
-    stateDoorClosed: eng_rad_door
+    # stateBaseClosed: eng # Begin Stellar - Lockers
+    # stateDoorOpen: eng_open
+    # stateDoorClosed: eng_rad_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/radiation.rsi # End Stellar - Lockers
 
 # Emergency closet
 - type: entity
@@ -33,9 +37,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: emergency
-    stateDoorOpen: emergency_open
-    stateDoorClosed: emergency_door
+  #   stateBaseClosed: emergency # Begin Stellar - Lockers
+  #   stateDoorOpen: emergency_open
+  #   stateDoorClosed: emergency_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/oxygen.rsi # End Stellar - Lockers
 
 # Emergency N2 closet
 - type: entity
@@ -46,9 +52,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: n2
-    stateDoorOpen: n2_open
-    stateDoorClosed: n2_door
+  #   stateBaseClosed: n2 # Begin Stellar - Lockers
+  #   stateDoorOpen: n2_open
+  #   stateDoorClosed: n2_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/nitrogen.rsi # End Stellar - Lockers
 
 # Fire safety closet
 - type: entity
@@ -59,9 +67,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: fire
-    stateDoorOpen: fire_open
-    stateDoorClosed: fire_door
+    # stateBaseClosed: fire # Begin Stellar - Lockers
+    # stateDoorOpen: fire_open
+    # stateDoorClosed: fire_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/fire.rsi # End Stellar - Lockers
 
 # EOD closet
 - type: entity
@@ -72,23 +82,25 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: bomb
-    stateDoorOpen: bomb_open
-    stateDoorClosed: bomb_door
+    # stateBaseClosed: bomb # Begin Stellar - Lockers
+    # stateDoorOpen: bomb_open
+    # stateDoorClosed: bomb_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/bomb.rsi # End Stellar - Lockers
 
 # Janitorial bomb suit closet
 - type: entity
   id: ClosetJanitorBomb
-  name: janitorial bomb suit closet
+  name: DEPRECATED # Begin Stellar - Lockers
   parent: ClosetSteelBase
-  description: It's a storage unit for janitorial explosion-protective suits.
+  description: DEPRECATED # End Stellar - Lockers
   categories: [ DoNotMap ]
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: janitor_bomb
-    stateDoorOpen: janitor_bomb_open
-    stateDoorClosed: janitor_bomb_door
+    # stateBaseClosed: janitor_bomb # Begin Stellar - Lockers
+    # stateDoorOpen: janitor_bomb_open
+    # stateDoorClosed: janitor_bomb_door # End Stellar - Lockers
 
 # Biohazard
 
@@ -96,58 +108,68 @@
 - type: entity
   id: ClosetL3
   parent: ClosetSteelBase
-  name: level 3 biohazard gear closet
-  description: It's a storage unit for level 3 biohazard gear.
+  name: biohazard gear closet # Stellar - Lockers
+  description: It's a storage unit for biohazard gear. # Stellar - Lockers
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: bio
-    stateDoorOpen: bio_open
-    stateDoorClosed: bio_door
+  # - type: Appearance # Begin Stellar - Lockers
+  # - type: EntityStorageVisuals
+  #   stateBaseClosed: bio
+  #   stateDoorOpen: bio_open
+  #   stateDoorClosed: bio_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/biohazard-base.rsi # End Stellar - Lockers
 
 # Science Variant
 - type: entity
   id: ClosetL3Science
   parent: ClosetL3
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: bio_sci
-    stateDoorOpen: bio_sci_open
-    stateDoorClosed: bio_sci_door
+  # - type: Appearance # Begin Stellar - Lockers
+  # - type: EntityStorageVisuals
+    # stateBaseClosed: bio_sci
+    # stateDoorOpen: bio_sci_open
+    # stateDoorClosed: bio_sci_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/biohazard-science.rsi # End Stellar - Lockers
 
 # Virology variant
 - type: entity
   id: ClosetL3Virology
-  parent: ClosetL3
-  components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: bio_viro
-    stateDoorOpen: bio_viro_open
-    stateDoorClosed: bio_viro_door
+  name: DEPRECATED # Begin Stellar - Lockers
+  parent: ClosetSteelBase
+  description: DEPRECATED
+  # components:
+  # - type: Appearance
+  # - type: EntityStorageVisuals
+  #   stateBaseClosed: bio_viro
+  #   stateDoorOpen: bio_viro_open
+  #   stateDoorClosed: bio_viro_door # End Stellar - Lockers
 
 # Security variant
 - type: entity
   id: ClosetL3Security
   parent: ClosetL3
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: bio_sec
-    stateDoorOpen: bio_sec_open
-    stateDoorClosed: bio_sec_door
+  # - type: Appearance # Begin Stellar - Lockers
+  # - type: EntityStorageVisuals
+  #   stateBaseClosed: bio_sec
+  #   stateDoorOpen: bio_sec_open
+  #   stateDoorClosed: bio_sec_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/biohazard-security.rsi # End Stellar - Lockers
 
 # Janitor variant
 - type: entity
   id: ClosetL3Janitor
   parent: ClosetL3
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: bio_jan
-    stateDoorOpen: bio_jan_open
-    stateDoorClosed: bio_jan_door
+  # - type: Appearance # Begin Stellar - Lockers
+  # - type: EntityStorageVisuals
+  #   stateBaseClosed: bio_jan
+  #   stateDoorOpen: bio_jan_open
+  #   stateDoorClosed: bio_jan_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/biohazard-janitor.rsi # End Stellar - Lockers
 
 # Maintenance closet
 - type: entity
@@ -155,24 +177,24 @@
   name: maintenance closet
   parent: ClosetSteelBase
   description: It's a storage unit.
-  components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateDoorOpen: generic_open
-    stateDoorClosed: generic_door
+  # components: # Begin Stellar - Lockers
+  # - type: Appearance
+  # - type: EntityStorageVisuals
+    # stateDoorOpen: generic_open
+    # stateDoorClosed: generic_door # End Stellar - Lockers
 
 # Syndicate
 - type: entity
   id: LockerSyndicate
-  name: armory closet
+  name: DEPRECATED # Begin Stellar - Lockers
   parent: ClosetSteelBase
-  description: It's a storage unit.
-  components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: syndicate
-    stateDoorOpen: syndicate_open
-    stateDoorClosed: syndicate_door
+  description: DEPRECATED
+  # components:
+  # - type: Appearance
+  # - type: EntityStorageVisuals
+  #   stateBaseClosed: syndicate
+  #   stateDoorOpen: syndicate_open
+  #   stateDoorClosed: syndicate_door # End Stellar - Lockers
 
 # Bluespace closet
 - type: entity

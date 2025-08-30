@@ -1,0 +1,69 @@
+# SPDX-FileCopyrightText: 2025 AftrLite
+#
+# SPDX-License-Identifier: LicenseRef-Wallening
+
+- type: entity
+  id: LockerCargo
+  parent: LockerBase
+  name: cargo technician's locker
+  description: I ship it.
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-cargo.rsi
+  - type: AccessReader
+    access: [["Cargo"]]
+
+- type: entity
+  id: LockerPerformer
+  parent: LockerBase
+  name: performer's locker
+  description: It's all just a routine.
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-service-performer.rsi
+  - type: AccessReader
+    access: [["Theatre"]]
+
+- type: entity
+  id: LockerChef
+  parent: LockerBase
+  name: chef's locker
+  description: For those who cook.
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-service-kitchen.rsi
+  - type: AccessReader
+    access: [["Kitchen"]]
+
+- type: entity
+  id: LockerCleric
+  parent: LockerBase
+  name: cleric's locker
+  description: The locker seems holier than thou.
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-service-cleric.rsi
+  - type: AccessReader
+    access: [["Chapel"]]
+
+- type: entity
+  id: LockerJanitor
+  parent: LockerBase
+  name: janitor's locker
+  description: One must imagine a janitor happy.
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-service-janitor.rsi
+  - type: AccessReader
+    access: [["Janitor"]]
+
+- type: entity
+  id: LockerArmory
+  parent: LockerBase
+  name: armory locker
+  description: A very sturdy-looking locker.
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-security-armory.rsi
+  - type: AccessReader
+    access: [["Security"]]

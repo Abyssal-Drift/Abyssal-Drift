@@ -33,6 +33,9 @@ public sealed partial class DropshadowSystem : SharedDropshadowSystem
         _sprite.LayerMapSet((ent, sprite), DropshadowLayers.Shadow, layer);
         _sprite.LayerSetOffset((ent, sprite), DropshadowLayers.Shadow, ent.Comp.Offset);
         sprite.LayerSetShader(DropshadowLayers.Shadow, "unshaded");
+
+        if (ent.Comp.AnchorShadow)
+            _sprite.LayerSetVisible((ent, sprite), DropshadowLayers.Shadow, Transform(ent).Anchored);
     }
 
     private void OnDropshadowRemoved(Entity<DropshadowComponent> ent, ref ComponentShutdown args)

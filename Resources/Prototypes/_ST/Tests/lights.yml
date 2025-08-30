@@ -11,6 +11,59 @@
   components:
   - type: Sprite
     sprite: _ST/Tileset/Lighting/light_tube.rsi
+  - type: PlacementReplacement
+    key: lights
+
+#################### LIGHT POST, BASE
+- type: entity
+  id: StellarLightPost
+  name: standing light fixture
+  description: A standing light fixture! Requires a light tube to function.
+  suffix: ""
+  parent: PoweredLightPostSmallEmpty
+  components:
+  - type: Sprite
+    offset: 0, 0.25
+    drawdepth: Mobs
+    sprite: _ST/Tileset/Lighting/light_post.rsi
+    state: base
+  - type: PointLight
+    enabled: true
+  - type: PoweredLight
+    hasLampOnSpawn: LightTube
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -15
+    range: 3
+    sound:
+      path: /Audio/Ambience/Objects/light_hum.ogg
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 2
+    popupText: powered-light-component-burn-hand
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "0.10,0.40,-0.15,-0.05"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+        - BulletImpassable
+  - type: Dropshadow
+    sprite:
+      sprite: _ST/Effects/dropshadow.rsi
+      state: shadow-lightpost
+    offset: 0, -0.275
+  - type: PlacementReplacement
+    key: lights
 
 # Variants
 - type: entity

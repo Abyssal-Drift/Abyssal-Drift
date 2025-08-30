@@ -23,9 +23,9 @@
       cost: 4
       delay: 6
       fx: EffectRCDDeconstruct6
-    - type: Tag
-      tags:
-      - ForceFixRotations # Allow fixrotations to target these
+    # - type: Tag # Stellar
+    #   tags: # Stellar
+    #   - ForceFixRotations # Stellar - Firelocks are directional here!
     - type: Destructible
       thresholds:
       - trigger:
@@ -35,8 +35,8 @@
         - !type:DoActsBehavior
           acts: ["Destruction"]
     - type: Sprite
-      sprite: Structures/Doors/Airlocks/Standard/firelock.rsi
-      snapCardinals: true
+      sprite: _ST/Tileset/Doors/Shutters/firelock.rsi # Stellar
+      # snapCardinals: true # Stellar - When uncommented, this line will crash the game. Don't touch.
       layers:
         - state: closed
           map: ["enum.DoorVisualLayers.Base"]
@@ -84,10 +84,11 @@
           - AirlockLayer
     - type: Door
       openDrawDepth: WallTops
-      closeTimeOne: 0.1
-      closeTimeTwo: 0.6
-      openTimeOne: 0.1
-      openTimeTwo: 0.6
+      closedDrawDepth: Mobs # Stellar
+      closeTimeOne: 0.6
+      closeTimeTwo: 0.2 # Stellar
+      openTimeOne: 0.6
+      openTimeTwo: 0.2 # Stellar
       state: Open
       bumpOpen: false
       clickOpen: true
@@ -95,13 +96,13 @@
         types:
           Blunt: 15
       openSound:
-        path: /Audio/Machines/airlock_open.ogg
+        path: /Audio/_ST/Machines/firelock_open.ogg # Stellar
       closeSound:
-        path: /Audio/Machines/airlock_close.ogg
+        path: /Audio/_ST/Machines/firelock_close.ogg # Stellar
       denySound:
         path: /Audio/Machines/airlock_deny.ogg
-      openingAnimationTime: 0.6
-      closingAnimationTime: 0.6
+      openingAnimationTime: 0.8 # Stellar
+      closingAnimationTime: 0.8 # Stellar
     - type: Weldable
       fuel: 5
       time: 3
@@ -120,8 +121,8 @@
       noAirWhenFullyAirBlocked: true
     - type: RadiationBlocker
       enabled: false
-    - type: Occluder
-      enabled: false
+    # - type: Occluder # Stellar
+    #   enabled: false # Stellar - I don't want firelocks occluding! If the door underneath isn't glass, it'll have occlusion anyway! -AftrLite
     - type: WallMount
       arc: 360
     - type: StaticPrice
@@ -133,7 +134,7 @@
     - type: PointLight
       energy: 0.5
       radius: 1.75
-      color: Red
+      color: "#ff9700" # Stellar
       enabled: false
       castShadows: false
     - type: NavMapDoor
@@ -168,7 +169,7 @@
   components:
     - type: StationAiWhitelist
     - type: Sprite
-      sprite: Structures/Doors/Airlocks/Glass/firelock.rsi
+      sprite: _ST/Tileset/Doors/Shutters/firelock.rsi # Stellar
     - type: Occluder
       enabled: false
     - type: Fixtures
@@ -191,11 +192,12 @@
   id: FirelockEdge
   parent: Firelock
   name: firelock
+  suffix: directional # Stellar
   components:
     - type: StationAiWhitelist
     - type: Sprite
-      sprite: Structures/Doors/edge_door_hazard.rsi
-      snapCardinals: false
+      sprite: _ST/Tileset/Doors/Shutters/firelock_directional.rsi # Stellar
+      # snapCardinals: false # Stellar
     - type: Airtight
       airBlocked: false
       noAirWhenFullyAirBlocked: false
@@ -219,6 +221,12 @@
       - ForceNoFixRotations # Prevent fixrotations from targeting these, since the base Firelock is targeted
     - type: Door
       occludes: false
+      openDrawDepth: HighFloorObjects # Begin Stellar
+      closedDrawDepth: Mobs
+      openSound:
+        path: /Audio/_ST/Machines/airlock_open.ogg
+      closeSound:
+        path: /Audio/_ST/Machines/airlock_close.ogg # End Stellar
     - type: Physics
       canCollide: false
     - type: StaticPrice

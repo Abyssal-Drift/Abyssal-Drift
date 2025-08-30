@@ -197,3 +197,75 @@
   id: 24
   time: '2025-08-14T02:49:46.0000000+00:00'
   url: https://github.com/Stellar-Station/Stellar-Station/pull/90
+- author: AftrLite
+  changes:
+  - message: Fixed the new DoAfters' glow.
+    type: Fix
+  id: 25
+  time: '2025-08-19T22:33:48.0000000+00:00'
+  url: https://github.com/Stellar-Station/Stellar-Station/pull/95
+- author: AftrLite
+  changes:
+  - message: More respritening! Again! Wow!
+    type: Add
+  - message: Firelocks now have unique sfx, courtesy of Darklyac.
+    type: Add
+  - message: Atmos devices now have a new alarm sound.
+    type: Add
+  id: 26
+  time: '2025-08-19T13:15:19.0000000+00:00'
+  url: https://github.com/Stellar-Station/Stellar-Station/pull/91
+- author: AftrLite
+  changes:
+  - message: More respritening! Materials & books.
+    type: Add
+  id: 27
+  time: '2025-08-20T10:53:30.0000000+00:00'
+  url: https://github.com/Stellar-Station/Stellar-Station/pull/96
+- author: AftrLite
+  changes:
+  - message: Respritening; Fire & explosions.
+    type: Add
+  id: 28
+  time: '2025-08-22T18:11:41.0000000+00:00'
+  url: https://github.com/Stellar-Station/Stellar-Station/pull/97
+- author: AftrLite
+  changes:
+  - message: Respritening - Lockers
+    type: Add
+  - message: All job-specific wardobes have been deprecated.
+    type: Remove
+  id: 29
+  time: '2025-08-24T07:27:30.0000000+00:00'
+  url: https://github.com/Stellar-Station/Stellar-Station/pull/100
+- author: AftrLite
+  changes:
+  - message: Respritening - Crates
+    type: Add
+  id: 30
+  time: '2025-08-26T10:40:26.0000000+00:00'
+  url: https://github.com/Stellar-Station/Stellar-Station/pull/101
+- author: sowelipililimute
+  changes:
+  - message: Gases no longer overlap weirdly with walls
+    type: Fix
+  id: 31
+  time: '2025-08-22T22:40:40.0000000+00:00'
+  url: https://github.com/Stellar-Station/Stellar-Station/pull/99
+- author: AftrLite
+  changes:
+  - message: Recoil is now less visually harsh.
+    type: Tweak
+  id: 32
+  time: '2025-08-27T04:54:08.0000000+00:00'
+  url: https://github.com/Stellar-Station/Stellar-Station/pull/102
+- author: AftrLite
+  changes:
+  - message: More Stellar Station music has been added to the lobby and jukebox.
+    type: Add
+  - message: A song intended for station events has been derotated from lobby and
+      jukebox.
+    type: Tweak
+  id: 33
+  time: '2025-08-29T02:06:39.0000000+00:00'
+  url: https://github.com/Stellar-Station/Stellar-Station/pull/104

@@ -1,15 +1,16 @@
 - type: entity
   id: LockerBooze
   parent: LockerBase
-  name: booze storage
+  name: liquor cabinet # Stellar
   description: This is where the bartender keeps the booze.
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: cabinet
-    stateDoorOpen: cabinet_open
-    stateDoorClosed: cabinet_door
-
+    # stateBaseClosed: cabinet # Begin Stellar - Lockers
+    # stateDoorOpen: cabinet_open
+    # stateDoorClosed: cabinet_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/cabinet.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [["Bar"]]
   - type: EntityStorage
@@ -25,12 +26,12 @@
   id: LockerSteel
   parent: LockerBaseSecure
   name: secure closet
-  components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: secure
-    stateDoorOpen: secure_open
-    stateDoorClosed: secure_door
+  # components: # Begin Stellar - Lockers
+  # - type: Appearance
+  # - type: EntityStorageVisuals
+  #   stateBaseClosed: secure
+  #   stateDoorOpen: secure_open
+  #   stateDoorClosed: secure_door # Begin Stellar - Lockers
 
 # Cargo
 - type: entity
@@ -40,23 +41,27 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: qm
-    stateDoorOpen: qm_open
-    stateDoorClosed: qm_door
+    # stateBaseClosed: qm # Begin Stellar - Lockers
+    # stateDoorOpen: qm_open
+    # stateDoorClosed: qm_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-command-cargo.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [["Quartermaster"]]
 
 - type: entity
   id: LockerSalvageSpecialist
   parent: LockerBase
-  name: salvage specialist's equipment
+  name: salvage specialist's locker # Stellar - Lockers
   description: Nevermind the pickaxe.
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: mining
-    stateDoorOpen: mining_open
-    stateDoorClosed: mining_door
+    # stateBaseClosed: mining # Begin Stellar - Lockers
+    # stateDoorOpen: mining_open
+    # stateDoorClosed: mining_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-cargo-salvage.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [["Salvage"]]
 
@@ -68,9 +73,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: cap
-    stateDoorOpen: cap_open
-    stateDoorClosed: cap_door
+    # stateBaseClosed: cap # Begin Stellar - Lockers
+    # stateDoorOpen: cap_open
+    # stateDoorClosed: cap_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-command-captain.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [["Captain"]]
 
@@ -81,9 +88,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: hop
-    stateDoorOpen: hop_open
-    stateDoorClosed: hop_door
+    # stateBaseClosed: hop # Begin Stellar - Lockers
+    # stateDoorOpen: hop_open
+    # stateDoorClosed: hop_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-command-service.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [["HeadOfPersonnel"]]
 
@@ -95,9 +104,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: ce
-    stateDoorOpen: ce_open
-    stateDoorClosed: ce_door
+    # stateBaseClosed: ce # Begin Stellar - Lockers
+    # stateDoorOpen: ce_open
+    # stateDoorClosed: ce_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-command-engineering.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [ [ "ChiefEngineer" ] ]
 
@@ -109,9 +120,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: eng
-    stateDoorOpen: eng_open
-    stateDoorClosed: eng_elec_door
+    # stateBaseClosed: eng # Begin Stellar - Lockers
+    # stateDoorOpen: eng_open
+    # stateDoorClosed: eng_elec_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-engineering-electrical.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [ [ "Engineering" ] ]
 
@@ -123,9 +136,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: eng
-    stateDoorOpen: eng_open
-    stateDoorClosed: eng_weld_door
+    # stateBaseClosed: eng # Begin Stellar - Lockers
+    # stateDoorOpen: eng_open
+    # stateDoorClosed: eng_weld_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-engineering-welding.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [ [ "Engineering" ] ]
 
@@ -137,9 +152,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: atmos
-    stateDoorOpen: atmos_open
-    stateDoorClosed: atmos_door
+    # stateBaseClosed: atmos # Begin Stellar - Lockers
+    # stateDoorOpen: atmos_open
+    # stateDoorClosed: atmos_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-engineering-atmos.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [ [ "Atmospherics" ] ]
 
@@ -151,9 +168,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: eng_secure
-    stateDoorOpen: eng_secure_open
-    stateDoorClosed: eng_secure_door
+    # stateBaseClosed: eng_secure # Begin Stellar - Lockers
+    # stateDoorOpen: eng_secure_open
+    # stateDoorClosed: eng_secure_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-engineering.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [ [ "Engineering" ] ]
 
@@ -161,16 +180,16 @@
 - type: entity
   parent: LockerBase
   id: LockerEvacRepair
-  name: emergency shuttle emergency locker
-  description: It's emergencies all the way down.
-  components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: eng
-    stateDoorOpen: eng_open
-    stateDoorClosed: eng_evac_door
-  - type: AccessReader
-    access: [ [ "Engineering" ] ]
+  name: DEPRECATED  # Begin Stellar - Lockers
+  description: DEPRECATED
+  # components:
+  # - type: Appearance
+  # - type: EntityStorageVisuals
+  #   stateBaseClosed: eng
+  #   stateDoorOpen: eng_open
+  #   stateDoorClosed: eng_evac_door
+  # - type: AccessReader
+  #   access: [ [ "Engineering" ] ] # End Stellar - Lockers
 
 # Freezer
 - type: entity
@@ -181,9 +200,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: freezer
-    stateDoorOpen: freezer_open
-    stateDoorClosed: freezer_door
+    # stateBaseClosed: freezer # Begin Stellar - Lockers
+    # stateDoorOpen: freezer_open
+    # stateDoorClosed: freezer_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-freezer.rsi # End Stellar - Lockers
   - type: ExplosionResistance
     damageCoefficient: 0.50
   - type: AntiRottingContainer
@@ -212,9 +233,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: hydro
-    stateDoorOpen: hydro_open
-    stateDoorClosed: hydro_door
+    # stateBaseClosed: hydro # Begin Stellar - Lockers
+    # stateDoorOpen: hydro_open
+    # stateDoorClosed: hydro_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-botany.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [ [ "Hydroponics" ] ]
 
@@ -227,9 +250,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: med
-    stateDoorOpen: med_open
-    stateDoorClosed: med_door
+    # stateBaseClosed: med # Begin Stellar - Lockers
+    # stateDoorOpen: med_open
+    # stateDoorClosed: med_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-medical.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [ [ "Medical" ] ]
 
@@ -241,9 +266,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: med_secure
-    stateDoorOpen: med_secure_open
-    stateDoorClosed: med_secure_door
+    # stateBaseClosed: med_secure # Begin Stellar - Lockers
+    # stateDoorOpen: med_secure_open
+    # stateDoorClosed: med_secure_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-medical-doctor.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [ [ "Medical" ] ]
 
@@ -255,9 +282,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: paramed
-    stateDoorOpen: paramed_open
-    stateDoorClosed: paramed_door
+    # stateBaseClosed: paramed # Begin Stellar - Lockers
+    # stateDoorOpen: paramed_open
+    # stateDoorClosed: paramed_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-medical-paramedic.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [ [ "Medical" ] ]
 
@@ -270,9 +299,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: med
-    stateDoorOpen: med_open
-    stateDoorClosed: chemical_door
+    # stateBaseClosed: med # Begin Stellar - Lockers
+    # stateDoorOpen: med_open
+    # stateDoorClosed: chemical_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-medical-chemistry.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [ [ "Chemistry" ] ]
 
@@ -280,13 +311,15 @@
 - type: entity
   id: LockerChiefMedicalOfficer
   parent: LockerBaseSecure
-  name: chief medical officer's locker
+  name: head of medicine's locker # Stellar
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: cmo
-    stateDoorOpen: cmo_open
-    stateDoorClosed: cmo_door
+    # stateBaseClosed: cmo # Begin Stellar - Lockers
+    # stateDoorOpen: cmo_open
+    # stateDoorClosed: cmo_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-command-medical.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [ [ "ChiefMedicalOfficer" ] ]
 
@@ -298,9 +331,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: rd
-    stateDoorOpen: rd_open
-    stateDoorClosed: rd_door
+    # stateBaseClosed: rd # Begin Stellar - Lockers
+    # stateDoorOpen: rd_open
+    # stateDoorClosed: rd_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-command-science.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [ [ "ResearchDirector" ] ]
 
@@ -311,9 +346,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: science
-    stateDoorOpen: science_open
-    stateDoorClosed: science_door
+    # stateBaseClosed: science # Begin Stellar - Lockers
+    # stateDoorOpen: science_open
+    # stateDoorClosed: science_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-science.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [ [ "Research" ] ]
 
@@ -325,9 +362,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: hos
-    stateDoorOpen: hos_open
-    stateDoorClosed: hos_door
+    # stateBaseClosed: hos # Begin Stellar - Lockers
+    # stateDoorOpen: hos_open
+    # stateDoorClosed: hos_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-command-security.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [["HeadOfSecurity"]]
 
@@ -339,9 +378,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: warden
-    stateDoorOpen: warden_open
-    stateDoorClosed: warden_door
+    # stateBaseClosed: warden # Begin Stellar - Lockers
+    # stateDoorOpen: warden_open
+    # stateDoorClosed: warden_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-security-warden.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [["Armory"]]
 
@@ -349,13 +390,14 @@
 - type: entity
   id: LockerBrigmedic
   parent: LockerBaseSecure
-  name: brigmedic locker
+  name: DEPRECATED # Stellar - Lockers
+  description: DEPRECATED # Stellar - Lockers
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: brigmedic
-    stateDoorOpen: armory_open
-    stateDoorClosed: brigmedic_door
+    # stateBaseClosed: brigmedic # Begin Stellar - Lockers
+    # stateDoorOpen: armory_open
+    # stateDoorClosed: brigmedic_door # End Stellar - Lockers
   - type: AccessReader
     access: [["Medical"]]
 
@@ -367,9 +409,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: sec
-    stateDoorOpen: sec_open
-    stateDoorClosed: sec_door
+    # stateBaseClosed: sec # Begin Stellar - Lockers
+    # stateDoorOpen: sec_open
+    # stateDoorClosed: sec_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-security.rsi # End Stellar - Lockers
   - type: AccessReader
     access: [["Security"]]
 
@@ -380,9 +424,11 @@
   components:
   - type: Appearance
   - type: EntityStorageVisuals
-    stateBaseClosed: shotguncase
-    stateDoorOpen: shotguncase_open
-    stateDoorClosed: shotguncase_door
+    # stateBaseClosed: shotguncase # Begin Stellar - Lockers
+    # stateDoorOpen: shotguncase_open
+    # stateDoorClosed: shotguncase_door
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-gunsafe.rsi # End Stellar - Lockers
   - type: AccessReader
   - type: Construction
     graph: GunSafe
@@ -407,9 +453,11 @@
   components:
   - type: GenpopLocker
   - type: EntityStorageVisuals
-    stateBaseClosed: genpop
-    stateDoorOpen: genpop_open
-    stateDoorClosed: genpop_door_1
+    stateBaseClosed: base # Begin Stellar - Lockers
+    stateDoorOpen: door-open
+    stateDoorClosed: door-closed
+  - type: Sprite
+    sprite: _ST/Tileset/Storage/Lockers/secure-genpop.rsi # End Stellar - Lockers
   - type: UserInterface
     interfaces:
       enum.GenpopLockerUiKey.Key:
@@ -532,15 +580,15 @@
 # Syndicate
 - type: entity
   id: LockerSyndicatePersonal
-  name: armory closet
-  parent: LockerBaseSecure
-  description: It's a personal storage unit for operative gear.
-  components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: syndicate
-    stateDoorOpen: syndicate_open
-    stateDoorClosed: syndicate_door
+  parent: LockerBaseSecure # Begin Stellar - Lockers
+  name: DEPRECATED
+  description: DEPRECATED
+  # components:
+  # - type: Appearance
+  # - type: EntityStorageVisuals
+  #   stateBaseClosed: syndicate
+  #   stateDoorOpen: syndicate_open
+  #   stateDoorClosed: syndicate_door # End Stellar - Lockers
 
 # Bluespace
 - type: entity
@@ -572,41 +620,45 @@
 # Clown
 - type: entity
   id: LockerClown
-  name: clown locker
-  parent: LockerBaseSecure
-  components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Theatre"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: clown
-    stateDoorOpen: clown_open
-    stateDoorClosed: clown_door
+  parent: LockerBaseSecure # Begin Stellar - Lockers
+  name: DEPRECATED
+  description: DEPRECATED
+  # components:
+  # - type: Appearance
+  # - type: AccessReader
+  #   access: [["Theatre"]]
+  # - type: EntityStorageVisuals
+    # stateBaseClosed: clown
+    # stateDoorOpen: clown_open
+    # stateDoorClosed: clown_door # End Stellar - Lockers
+
 
 # Mime
 - type: entity
   id: LockerMime
-  name: mime locker
-  parent: LockerBaseSecure
-  components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Theatre"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: mime
-    stateDoorOpen: mime_open
-    stateDoorClosed: mime_door
+  parent: LockerBaseSecure # Begin Stellar - Lockers
+  name: DEPRECATED
+  description: DEPRECATED
+  # components:
+  # - type: Appearance
+  # - type: AccessReader
+  #   access: [["Theatre"]]
+  # - type: EntityStorageVisuals
+    # stateBaseClosed: mime
+    # stateDoorOpen: mime_open
+    # stateDoorClosed: mime_door # End Stellar - Lockers
 
 # Representative
 - type: entity
   id: LockerRepresentative
-  name: representative locker
-  parent: LockerBaseSecure
-  components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Command"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: hop
-    stateDoorOpen: hop_open
-    stateDoorClosed: representative_door
+  parent: LockerBaseSecure # Begin Stellar - Lockers
+  name: DEPRECATED
+  description: DEPRECATED
+  # components:
+  # - type: Appearance
+  # - type: AccessReader
+  #   access: [["Command"]]
+  # - type: EntityStorageVisuals
+    # stateBaseClosed: hop
+    # stateDoorOpen: hop_open
+    # stateDoorClosed: representative_door # End Stellar - Lockers

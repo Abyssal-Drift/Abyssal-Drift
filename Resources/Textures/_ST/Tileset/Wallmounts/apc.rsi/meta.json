@@ -1,0 +1,148 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from tg-wallening and modified by AftrLite (GitHub).",
+    "size":
+    {
+    "x": 42,
+    "y": 76
+    },
+    "states": [
+    {
+      "name": "base",
+      "directions": 4
+    },
+	{
+      "name": "static"
+    },
+    {
+      "name": "broken",
+      "directions": 4
+    },
+    {
+      "name": "frame",
+      "directions": 4
+    },
+    {
+      "name": "panel",
+      "directions": 4
+    },
+    {
+      "name": "lock0-locked",
+      "directions": 4
+    },
+    {
+      "name": "lock1-locked",
+      "directions": 4
+    },
+    {
+    "name": "display-lack",
+    "directions": 4,
+    "delays":
+    [
+            [
+                0.15,
+                0.15,
+                0.15,
+                0.15
+            ],
+            [
+                0.15,
+                0.15,
+                0.15,
+                0.15
+            ],
+            [
+                0.15,
+                0.15,
+                0.15,
+                0.15
+            ],
+            [
+                0.15,
+                0.15,
+                0.15,
+                0.15
+            ]
+        ]
+    },
+    {
+    "name": "display-charging",
+    "directions": 4,
+    "delays":
+    [
+            [
+                0.15,
+                0.15,
+                0.15,
+                0.15,
+                0.3
+            ],
+            [
+                0.15,
+                0.15,
+                0.15,
+                0.15,
+                0.3
+            ],
+            [
+                0.15,
+                0.15,
+                0.15,
+                0.15,
+                0.3
+            ],
+            [
+                0.15,
+                0.15,
+                0.15,
+                0.15,
+                0.3
+            ]
+        ]
+    },
+    {
+      "name": "display-full",
+      "directions": 4
+    },
+    {
+      "name": "display-remote",
+      "directions": 4
+    },
+    {
+    "name": "emag-unlit",
+    "directions": 4,
+    "delays":
+    [
+            [
+                0.15,
+                0.15,
+                0.15,
+                0.15
+            ],
+            [
+                0.15,
+                0.15,
+                0.15,
+                0.15
+            ],
+            [
+                0.15,
+                0.15,
+                0.15,
+                0.15
+            ],
+            [
+                0.15,
+                0.15,
+                0.15,
+                0.15
+            ]
+        ]
+    },
+    {
+      "name": "sparks-unlit",
+      "directions": 4
+    }
+  ]
+}

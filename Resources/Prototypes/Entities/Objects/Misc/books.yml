@@ -5,7 +5,7 @@
   description: A hardcover book.
   components:
   - type: Sprite
-    sprite: Objects/Misc/books.rsi
+    sprite: _ST/Items/Books/books.rsi # Stellar
     layers:
     - state: paper
     - state: cover_base
@@ -52,7 +52,7 @@
   suffix: guidebook
   components:
   - type: Sprite
-    sprite: Objects/Misc/books.rsi
+    sprite: _ST/Items/Books/books.rsi # Stellar
   - type: Tag
     tags:
     - Book
