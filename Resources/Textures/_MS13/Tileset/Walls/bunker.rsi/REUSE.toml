@@ -1,6 +1,6 @@
 version = 1
 
 [[annotations]]
-path = ["*.png"]
+path = ["Resources/Textures/_MS13/*"]
 SPDX-FileCopyrightText = "INFRARED_BARON"
 SPDX-License-Identifier = "LicenseRef-MojaveSun13"
