@@ -1,0 +1,25 @@
+- type: tile
+  id: FloorSnowBase
+  name: tiles-snow-base
+  sprite: /Textures/_MS13/Tileset/Floor/Natural/Snow/snow.png
+  variants: 12
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepSnow
+  friction: 1.25
+  heatCapacity: 10000
+  weather: true
+  indestructible: true
