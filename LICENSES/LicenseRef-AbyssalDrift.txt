@@ -1,0 +1,7 @@
+Will fill this out later.
+
+For now all unique AbyssalDrift code, maps, assets and written works are held as all rights reserved
+by the AbyssalDrift development team unless stated otherwise.
+
+Our future plans are to open the majority of the ss14 project fork "AbyssalDrift" as open source software and
+share-alike non commercial assets after a core community has developed and the fork has found it's identity.
