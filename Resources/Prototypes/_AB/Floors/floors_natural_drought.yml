@@ -5,7 +5,7 @@
 - type: tile
   id: FloorDroughtSand
   name: tiles-sand-drought
-  sprite: /Textures/_MS13/Tileset/Floor/Natural/Drought/doughtsand.png
+  sprite: /Textures/_MS13/Tileset/Floor/Natural/Drought/droughtsand.png
   variants: 3
   placementVariants:
   - 1.0
