@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: AbyssalDrift / StudioFaewilds
+#
+# SPDX-License-Identifier: LicenseRef-AbyssalDrift
+
+- type: entity
+  id: WallDesertRock
+  parent: BaseStructureWall
+  name: desert rock wall
+  description: A wall made of rock. It looks naturally occuring.
+  components:
+  - type: Sprite
+    sprite: _MS13/Tileset/Walls/desertrock.rsi
+  - type: Icon
+    sprite: _MS13/Tileset/Walls/desertrock.rsi
+  - type: Occluder # Breaks on diagonal walls
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+  - type: IconSmooth
+    key: walls
+    base: desertrock

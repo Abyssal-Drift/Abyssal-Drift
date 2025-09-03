@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-3.0",
+    "copyright": "By INFRARED_BARON // Brightening top and conversion to ss14 wall smoothing technology done by StudioFaewilds",
+    "size": {
+        "x": 32,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "desertrock0",
+            "directions": 4
+        },
+        {
+            "name": "desertrock1",
+            "directions": 4
+        },
+        {
+            "name": "desertrock2",
+            "directions": 4
+        },
+        {
+            "name": "desertrock3",
+            "directions": 4
+        },
+        {
+            "name": "desertrock4",
+            "directions": 4
+        },
+        {
+            "name": "desertrock5",
+            "directions": 4
+        },
+        {
+            "name": "desertrock6",
+            "directions": 4
+        },
+        {
+            "name": "desertrock7",
+            "directions": 4
+        }
+    ]
+}

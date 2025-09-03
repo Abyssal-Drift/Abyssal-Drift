@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-3.0",
+    "copyright": "By INFRARED_BARON // Conversion to ss14 wall smoothing technology done by StudioFaewilds",
+    "size": {
+        "x": 32,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "sandstonewall0",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewall1",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewall2",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewall3",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewall4",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewall5",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewall6",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewall7",
+            "directions": 4
+        }
+    ]
+}
