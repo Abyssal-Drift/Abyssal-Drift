@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: AbyssalDrift / StudioFaewilds
+#
+# SPDX-License-Identifier: LicenseRef-AbyssalDrift
+
+- type: tile
+  id: FloorDroughtSand
+  name: tiles-sand-drought
+  sprite: /Textures/_MS13/Tileset/Floor/Natural/Drought/doughtsand.png
+  variants: 3
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  isSubfloor: true
+  footstepSounds:
+    collection: FootstepAsteroid
+  heatCapacity: 10000
+  weather: true
+  indestructible: true
