@@ -29,3 +29,10 @@
   - type: IconSmooth
     key: walls
     base: sandstonewall
+  - type: RandomIconSmooth
+    randomStates:
+      - sandstonewall
+      - sandstonewallb
+      - sandstonewallc
+      - sandstonewalld
+  - type: Appearance
