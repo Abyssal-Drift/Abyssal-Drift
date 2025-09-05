@@ -41,6 +41,111 @@
         {
             "name": "sandstonewall7",
             "directions": 4
+        },
+        {
+            "name": "fullb"
+        },
+        {
+            "name": "sandstonewallb0",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallb1",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallb2",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallb3",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallb4",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallb5",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallb6",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallb7",
+            "directions": 4
+        },
+        {
+            "name": "fullc"
+        },
+        {
+            "name": "sandstonewallc0",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallc1",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallc2",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallc3",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallc4",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallc5",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallc6",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewallc7",
+            "directions": 4
+        },
+        {
+            "name": "fulld"
+        },
+        {
+            "name": "sandstonewalld0",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewalld1",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewalld2",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewalld3",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewalld4",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewalld5",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewalld6",
+            "directions": 4
+        },
+        {
+            "name": "sandstonewalld7",
+            "directions": 4
         }
     ]
 }
