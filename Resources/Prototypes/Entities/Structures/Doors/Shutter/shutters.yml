@@ -7,6 +7,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Rotatable
   - type: StationAiWhitelist
   - type: Sprite
     sprite: _ST/Tileset/Doors/Shutters/shutter.rsi # Stellar

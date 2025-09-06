@@ -1,0 +1,70 @@
+# SPDX-FileCopyrightText: 2025 Janet Blackquill
+#
+# SPDX-License-Identifier: LicenseRef-Wallening
+
+- type: paintableGroup
+  id: StellarAirlock
+  time: 3
+  cost: 3
+  defaultStyle: base
+  styles:
+    base: StellarAirlock
+    cargo-courier: StellarAirlockCargoCourier
+    cargo-salvage: StellarAirlockCargoSalvage
+    cargo: StellarAirlockCargo
+    command-captain: StellarAirlockCommandCaptain
+    command-cargo: StellarAirlockCommandCargo
+    command-engineering: StellarAirlockCommandEngineering
+    command-medical: StellarAirlockCommandMedical
+    command-science: StellarAirlockCommandScience
+    command-security: StellarAirlockCommandSecurity
+    command-service: StellarAirlockCommandService
+    command: StellarAirlockCommand
+    engineering-atmospherics: StellarAirlockEngineeringAtmospherics
+    engineering: StellarAirlockEngineering
+    maintenance: StellarAirlockMaintenance
+    medical-chemistry: StellarAirlockMedicalChemistry
+    medical: StellarAirlockMedical
+    science: StellarAirlockScience
+    security-armory: StellarAirlockSecurityArmory
+    security-detective: StellarAirlockSecurityDetective
+    security: StellarAirlockSecurity
+    service-bartender: StellarAirlockServiceBartender
+    service-cleric: StellarAirlockServiceCleric
+    service-hydroponics: StellarAirlockServiceHydroponics
+    service-janitor: StellarAirlockServiceJanitor
+    service-kitchen: StellarAirlockServiceKitchen
+    service-performer: StellarAirlockServicePerformer
+    service: StellarAirlockService
+
+- type: paintableGroup
+  id: StellarAirlockGlass
+  time: 3
+  cost: 3
+  defaultStyle: base
+  styles:
+    base: StellarAirlockGlass
+    cargo: StellarAirlockGlassCargo
+    cargo-courier: StellarAirlockGlassCargoCourier
+    cargo-salvage: StellarAirlockGlassCargoSalvage
+    command: StellarAirlockGlassCommand
+    command-captain: StellarAirlockGlassCommandCaptain
+    command-cargo: StellarAirlockGlassCommandCargo
+    command-engineering: StellarAirlockGlassCommandEngineering
+    command-medical: StellarAirlockGlassCommandMedical
+    command-science: StellarAirlockGlassCommandScience
+    command-security: StellarAirlockGlassCommandSecurity
+    command-service: StellarAirlockGlassCommandService
+    engineering: StellarAirlockGlassEngineering
+    engineering-atmospherics: StellarAirlockGlassEngineeringAtmospherics
+    medical: StellarAirlockGlassMedical
+    medical-chemistry: StellarAirlockGlassMedicalChemistry
+    science: StellarAirlockGlassScience
+    security: StellarAirlockGlassSecurity
+    security-detective: StellarAirlockGlassSecurityDetective
+    service: StellarAirlockGlassService
+    service-bartender: StellarAirlockGlassServiceBartender
+    service-cleric: StellarAirlockGlassServiceCleric
+    service-janitor: StellarAirlockGlassServiceJanitor
+    service-kitchen: StellarAirlockGlassServiceKitchen
+    service-performer: StellarAirlockGlassServicePerformer

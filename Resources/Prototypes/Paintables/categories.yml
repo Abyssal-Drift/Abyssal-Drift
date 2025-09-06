@@ -1,8 +1,8 @@
 - type: paintableGroupCategory
   id: Airlocks
   groups:
-  - AirlockStandard
-  - AirlockGlass
+  - StellarAirlock # Stellar - respritening
+  - StellarAirlockGlass # Stellar - respritening
 
 - type: paintableGroupCategory
   id: Canisters

@@ -1,0 +1,324 @@
+# SPDX-FileCopyrightText: 2025 Janet Blackquill
+#
+# SPDX-License-Identifier: LicenseRef-Wallening
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessCargo
+  suffix: Cargo, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCargo ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessCargoCourier
+  parent: StellarAirlockMixinAccessCargo
+  suffix: Courier, Locked
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessCargoSalvage
+  suffix: Salvage, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSalvage ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessCommand
+  suffix: Command, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCommand ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessCommandCaptain
+  suffix: Captain, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCaptain ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessCommandCargo
+  suffix: Quartermaster, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsQuartermaster ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessCommandEngineering
+  suffix: Chief Engineer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsChiefEngineer ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessCommandMedical
+  suffix: Head of Medicine, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsChiefMedicalOfficer ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessCommandScience
+  suffix: Research Director, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsResearchDirector ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessCommandSecurity
+  suffix: Head of Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsHeadOfSecurity ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessCommandService
+  suffix: Head of Personnel, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsHeadOfPersonnel ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessEngineering
+  suffix: Engineering, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEngineering ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessEngineeringAtmospherics
+  suffix: Atmospherics, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsAtmospherics ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessExternal
+  suffix: EVA, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsExternal ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessLawyer
+  suffix: Lawyer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsLawyer ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessMaintenance
+  suffix: Maintenance, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMaintenance ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessMedical
+  suffix: Medical, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMedical ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessMedicalChemistry
+  suffix: Chemistry, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsChemistry ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessMedicalMorgue
+  suffix: Morgue, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMorgue ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessMedicalScience
+  suffix: Medical-Science, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMedicalResearch ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessScience
+  suffix: Science, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsResearch ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessSecurity
+  suffix: Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessSecurityArmory
+  suffix: Armory, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsArmory ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessSecurityBrig
+  suffix: Brig, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsBrig ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessSecurityDetective
+  suffix: Detective, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsDetective ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessSecurityLawyer
+  suffix: Security-Lawyer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurityLawyer ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessService
+  suffix: Service, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsService ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessServiceBartender
+  suffix: Bartender, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsBar ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessServiceCleric
+  suffix: Cleric, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsChapel ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessServiceHydroponics
+  suffix: Hydroponics, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsHydroponics ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessServiceJanitor
+  suffix: Janitor, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsJanitor ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessServiceKitchen
+  suffix: Kitchen, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsKitchen ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessServiceKitchenBartender
+  suffix: Kitchen-Bartender, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsBarKitchen ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessServiceKitchenHydroponics
+  suffix: Kitchen-Hydroponics, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsKitchenHydroponics ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessServicePerformer
+  suffix: Performer, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsTheatre ]
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinAccessVault
+  suffix: Vault, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsVault ]

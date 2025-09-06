@@ -1,0 +1,219 @@
+# SPDX-FileCopyrightText: 2025 AftrLite
+#
+# SPDX-License-Identifier: LicenseRef-Wallening
+
+- type: entity
+  parent: BaseStructure
+  abstract: true
+  id: StellarTallDoorBase
+  name: door
+  components:
+  - type: InteractionOutline
+  - type: AnimationPlayer
+  - type: Appearance
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.49,-0.49,0.49,0.49"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: Door
+    bumpOpen: false
+    clickOpen: true
+    closedDrawDepth: Mobs
+    openDrawDepth: BelowMobs
+    openSound:
+      path: /Audio/Effects/door_open.ogg
+    closeSound:
+      path: /Audio/Effects/door_close.ogg
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: NavMapDoor
+  - type: Occluder
+  - type: BlockWeather
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+
+- type: entity
+  id: StellarAirlock
+  parent: StellarTallDoorBase
+  name: airlock
+  description: An sturdy-looking airlock.
+  components:
+  - type: StationAiWhitelist
+  - type: MeleeSound
+    soundGroups:
+      Brute:
+        path:
+          "/Audio/Weapons/smash.ogg"
+  - type: InteractionOutline
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _ST/Tileset/Doors/Airlocks/airlock_base.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+    - state: closed_unlit
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseUnlit"]
+    - state: welded
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
+      map: ["enum.WeldableLayers.BaseWelded"]
+      visible: false
+    - state: bolted_unlit
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.BaseBolted"]
+    - state: emergency_unlit
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
+      map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
+      shader: unshaded
+    - state: panel_open
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - state: electrified_ai
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
+      map: ["enum.ElectrifiedLayers.HUD"]
+      shader: unshaded
+      visible: false
+    - state: electrified
+      sprite: _ST/Tileset/Doors/Airlocks/airlock_effects.rsi
+      map: ["enum.ElectrifiedLayers.Sparks"]
+      shader: unshaded
+      visible: false
+  - type: Door
+    bumpOpen: true
+    clickOpen: true
+    closeTimeOne: 0.2
+    closeTimeTwo: 0.6
+    openTimeOne: 0.2
+    openTimeTwo: 0.6
+    openingAnimationTime: 0.8
+    closingAnimationTime: 0.8
+    openSound:
+      path: /Audio/_ST/Machines/airlock_open.ogg
+    closeSound:
+      path: /Audio/_ST/Machines/airlock_close.ogg
+  - type: DoorBolt
+    boltUpSound:
+      path: /Audio/_ST/Machines/boltsup.ogg
+    boltDownSound:
+      path: /Audio/_ST/Machines/boltsdown.ogg
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: ContainerContainer
+    containers:
+      board: !type:Container
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronics ]
+  - type: AccessReader
+    containerAccessProvider: board
+  - type: AnimationPlayer
+  - type: Airlock
+  - type: NavMapDoor
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ElectrifiedVisuals.ShowSparks:
+        enum.ElectrifiedLayers.Sparks:
+          True: { visible: True }
+          False: { visible: False }
+  - type: WiresVisuals
+  - type: ElectrocutionHUDVisuals
+  - type: ApcPowerReceiver
+    powerLoad: 20
+  - type: ExtensionCableReceiver
+  - type: Electrified
+    enabled: false
+    usesApcPower: true
+  - type: WiresPanel
+  - type: WiresPanelSecurity
+  - type: Wires
+    boardName: wires-board-name-airlock
+    layoutId: Airlock
+  - type: DoorSignalControl
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - Open
+      - Close
+      - Toggle
+      - AutoClose
+      - DoorBolt
+  - type: DeviceLinkSource
+    ports:
+      - DoorStatus
+    lastSignals:
+      DoorStatus: false
+  - type: SoundOnOverload
+  - type: SpawnOnOverload
+  - type: UserInterface
+    interfaces:
+      enum.AiUi.Key:
+        type: StationAiBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Airtight
+    noAirWhenFullyAirBlocked: false
+  - type: RadiationBlocker
+    resistance: 3
+  - type: Occluder
+    boundingBox: "-0.5,-0.3,0.5,0.3"
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StrongMetallic
+  - type: PlacementReplacement
+    key: walls
+  - type: PryUnpowered
+  - type: BlockWeather
+  - type: GuideHelp
+    guides:
+    - Airlocks
+    - WirePanels
+    - Networking
+  - type: Tag
+    tags:
+      - Airlock
+      # This tag is used to nagivate the Airlock construction graph. It's needed because the construction graph is shared between Airlock, AirlockGlass, and HighSecDoor
+  - type: Paintable
+    group: StellarAirlock
+
+- type: entity
+  id: StellarAirlockGlass
+  parent: StellarAirlock
+  name: glass airlock
+  description: An airlock with a window.
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/airlock_glass_base.rsi
+  - type: Door
+    occludes: false
+  - type: Occluder
+    enabled: false
+  - type: Paintable
+    group: StellarAirlockGlass

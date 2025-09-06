@@ -1,0 +1,98 @@
+# SPDX-FileCopyrightText: 2025 Janet Blackquill
+#
+# SPDX-License-Identifier: LicenseRef-Wallening
+
+# external airlocks
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessExternal, StellarAirlockMixinExternal, StellarAirlockCommand ]
+  id: StellarAirlockEVALocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessExternal, StellarAirlockMixinExternal, StellarAirlockGlassCommand ]
+  id: StellarAirlockGlassEVALocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCargo, StellarAirlockMixinCargo, StellarAirlockGlassExternal ]
+  id: StellarAirlockGlassExternalCargoLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCommand, StellarAirlockMixinCommand, StellarAirlockGlassExternal ]
+  id: StellarAirlockGlassExternalCommandLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessEngineeringAtmospherics, StellarAirlockMixinEngineeringAtmospherics, StellarAirlockGlassExternal ]
+  id: StellarAirlockGlassExternalEngineeringAtmosphericsLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessEngineering, StellarAirlockMixinEngineering, StellarAirlockGlassExternal ]
+  id: StellarAirlockGlassExternalEngineeringLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessExternal, StellarAirlockMixinExternal, StellarAirlockGlassExternal ]
+  id: StellarAirlockGlassExternalLocked
+
+# freezer airlocks
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessServiceHydroponics, StellarAirlockMixinServiceHydroponics, StellarAirlockFreezer ]
+  id: StellarAirlockFreezerServiceHydroponicsLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessServiceKitchen, StellarAirlockMixinServiceKitchen, StellarAirlockFreezer ]
+  id: StellarAirlockFreezerServiceKitchenLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessServiceKitchenHydroponics, StellarAirlockMixinServiceKitchen, StellarAirlockFreezer ]
+  id: StellarAirlockFreezerServiceKitchenHydroponicsLocked
+
+# high security airlocks
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCommand, StellarAirlockMixinCommand, StellarAirlockHighSecurity ]
+  id: StellarAirlockHighSecurityCommandLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCommandCaptain, StellarAirlockMixinCommandCaptain, StellarAirlockHighSecurity ]
+  id: StellarAirlockHighSecurityCommandCaptainLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessSecurityArmory, StellarAirlockMixinSecurityArmory, StellarAirlockHighSecurity ]
+  id: StellarAirlockHighSecuritySecurityArmoryLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessVault, StellarAirlockMixinHighSecurity, StellarAirlockHighSecurity ]
+  id: StellarAirlockHighSecurityVaultLocked
+
+# docking airlocks
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessExternal, StellarAirlockGlassShuttle ]
+  id: StellarAirlockGlassShuttleArrivalsLocked
+  suffix: Arrivals, EVA Locked
+  components:
+  - type: PriorityDock
+    tag: DockArrivals
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessExternal, StellarAirlockGlassShuttle ]
+  id: StellarAirlockGlassShuttleEvacuationLocked
+  suffix: Evacuation, EVA Locked
+  components:
+  - type: PriorityDock
+    tag: DockEmergency
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessExternal, StellarAirlockGlassShuttle ]
+  id: StellarAirlockGlassShuttleEmergencyPodLocked
+  suffix: Emergency Pod, EVA Locked
+  components:
+  - type: GridFill
+    addComponents:
+    - type: IFF
+      flags:
+      - HideLabel
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessExternal, StellarAirlockGlassShuttle ]
+  id: StellarAirlockGlassShuttleLocked

@@ -269,3 +269,24 @@
   id: 33
   time: '2025-08-29T02:06:39.0000000+00:00'
   url: https://github.com/Stellar-Station/Stellar-Station/pull/104
+- author: sowelipililimute
+  changes:
+  - message: Stellar airlocks now have prototypes
+    type: Add
+  id: 34
+  time: '2025-09-03T22:25:06.0000000+00:00'
+  url: https://github.com/Stellar-Station/Stellar-Station/pull/105
+- author: AftrLite
+  changes:
+  - message: Thrown item improvements, courtesy of MirrorCult/Ephemeral Space
+    type: Add
+  id: 35
+  time: '2025-09-03T23:56:36.0000000+00:00'
+  url: https://github.com/Stellar-Station/Stellar-Station/pull/106
+- author: sowelipililimute
+  changes:
+  - message: Nothing ever happens
+    type: Add
+  id: 36
+  time: '2025-09-04T04:42:33.0000000+00:00'
+  url: https://github.com/Stellar-Station/Stellar-Station/pull/107

@@ -21,9 +21,18 @@ GITHUB_API_URL = os.environ.get("GITHUB_API_URL", "https://api.github.com")
 
 # https://discord.com/developers/docs/resources/webhook
 DISCORD_SPLIT_LIMIT = 2000
-DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
+DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL") or ""
 
-CHANGELOG_FILE = "Resources/Changelog/Changelog.yml"
+CHANGELOG_FILES = [
+    {
+        "file": "Resources/Changelog/Changelog.yml",
+        "fork": "Wizard's Den",
+    },
+    {
+        "file": "Resources/Changelog/StellarChangelog.yml",
+        "fork": "Stellar Station",
+    },
+]
 
 TYPES_TO_EMOJI = {"Fix": "🐛", "Add": "🆕", "Remove": "❌", "Tweak": "⚒️"}
 
@@ -35,22 +44,23 @@ def main():
         print("No discord webhook URL found, skipping discord send")
         return
 
-    if DEBUG:
-        # to debug this script locally, you can use
-        # a separate local file as the old changelog
-        last_changelog_stream = DEBUG_CHANGELOG_FILE_OLD.read_text()
-    else:
-        # when running this normally in a GitHub actions workflow,
-        # it will get the old changelog from the GitHub API
-        last_changelog_stream = get_last_changelog()
+    for changelog in CHANGELOG_FILES:
+        if DEBUG:
+            # to debug this script locally, you can use
+            # a separate local file as the old changelog
+            last_changelog_stream = DEBUG_CHANGELOG_FILE_OLD.read_text()
+        else:
+            # when running this normally in a GitHub actions workflow,
+            # it will get the old changelog from the GitHub API
+            last_changelog_stream = get_last_changelog(changelog["file"])
 
-    last_changelog = yaml.safe_load(last_changelog_stream)
-    with open(CHANGELOG_FILE, "r") as f:
-        cur_changelog = yaml.safe_load(f)
+        last_changelog = yaml.safe_load(last_changelog_stream)
+        with open(changelog["file"], "r") as f:
+            cur_changelog = yaml.safe_load(f)
 
-    diff = diff_changelog(last_changelog, cur_changelog)
-    message_lines = changelog_entries_to_message_lines(diff)
-    send_message_lines(message_lines)
+        diff = diff_changelog(last_changelog, cur_changelog)
+        message_lines = changelog_entries_to_message_lines(diff)
+        send_message_lines(message_lines, changelog["fork"])
 
 
 def get_most_recent_workflow(
@@ -86,7 +96,7 @@ def get_past_runs(sess: requests.Session, current_run: Any) -> Any:
     return resp.json()
 
 
-def get_last_changelog() -> str:
+def get_last_changelog(changelog_file: str) -> str:
     github_repository = os.environ["GITHUB_REPOSITORY"]
     github_run = os.environ["GITHUB_RUN_ID"]
     github_token = os.environ["GITHUB_TOKEN"]
@@ -100,14 +110,14 @@ def get_last_changelog() -> str:
     last_sha = most_recent["head_commit"]["id"]
     print(f"Last successful publish job was {most_recent['id']}: {last_sha}")
     last_changelog_stream = get_last_changelog_by_sha(
-        session, last_sha, github_repository
+        session, last_sha, github_repository, changelog_file
     )
 
     return last_changelog_stream
 
 
 def get_last_changelog_by_sha(
-    sess: requests.Session, sha: str, github_repository: str
+    sess: requests.Session, sha: str, github_repository: str, changelog_file: str
 ) -> str:
     """
     Use GitHub API to get the previous version of the changelog YAML (Actions builds are fetched with a shallow clone)
@@ -118,7 +128,7 @@ def get_last_changelog_by_sha(
     headers = {"Accept": "application/vnd.github.raw"}
 
     resp = sess.get(
-        f"{GITHUB_API_URL}/repos/{github_repository}/contents/{CHANGELOG_FILE}",
+        f"{GITHUB_API_URL}/repos/{github_repository}/contents/{changelog_file}",
         headers=headers,
         params=params,
     )
@@ -200,10 +210,13 @@ def changelog_entries_to_message_lines(entries: Iterable[ChangelogEntry]) -> lis
     return message_lines
 
 
-def send_message_lines(message_lines: list[str]):
+def send_message_lines(message_lines: list[str], fork: str):
     """Join a list of message lines into chunks that are each below Discord's message length limit, and send them."""
-    chunk_lines = []
-    chunk_length = 0
+    chunk_lines = [f"## {fork}"]
+    chunk_length = len(f"## {fork}")
+
+    if len(message_lines) <= 0:
+        return
 
     for line in message_lines:
         line_length = len(line)

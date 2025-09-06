@@ -37,8 +37,10 @@ public sealed partial class DropshadowComponent : Component
 [Serializable, NetSerializable]
 public enum DropshadowVisuals
 {
-    Visible,
-    Prone
+    Weightless,
+    Prone,
+    Anchored,
+    Buckled
 }
 
 [Serializable, NetSerializable]

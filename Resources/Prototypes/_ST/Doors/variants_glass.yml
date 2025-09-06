@@ -1,0 +1,172 @@
+# SPDX-FileCopyrightText: 2025 Janet Blackquill
+#
+# SPDX-License-Identifier: LicenseRef-Wallening
+
+- type: entity
+  id: StellarAirlockGlassCargo
+  parent: [ StellarAirlockMixinCargo, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/cargo-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassCargoCourier
+  parent: [ StellarAirlockMixinCargoCourier, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/cargo-courier-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassCargoSalvage
+  parent: [ StellarAirlockMixinCargoSalvage, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/cargo-salvage-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassCommand
+  parent: [ StellarAirlockMixinCommand, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/command-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassCommandCaptain
+  parent: [ StellarAirlockMixinCommandCaptain, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/command-captain-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassCommandCargo
+  parent: [ StellarAirlockMixinCommandCargo, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/command-cargo-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassCommandEngineering
+  parent: [ StellarAirlockMixinCommandEngineering, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/command-engineering-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassCommandMedical
+  parent: [ StellarAirlockMixinCommandMedical, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/command-medical-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassCommandScience
+  parent: [ StellarAirlockMixinCommandScience, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/command-science-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassCommandSecurity
+  parent: [ StellarAirlockMixinCommandSecurity, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/command-security-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassCommandService
+  parent: [ StellarAirlockMixinCommandService, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/command-service-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassEngineering
+  parent: [ StellarAirlockMixinEngineering, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/engineering-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassEngineeringAtmospherics
+  parent: [ StellarAirlockMixinEngineeringAtmospherics, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/engineering-atmos-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassMedical
+  parent: [ StellarAirlockMixinMedical, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/medical-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassMedicalChemistry
+  parent: [ StellarAirlockMixinMedicalChemistry, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/chemical-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassScience
+  parent: [ StellarAirlockMixinScience, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/science-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassSecurity
+  parent: [ StellarAirlockMixinSecurity, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/security-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassSecurityDetective
+  parent: [ StellarAirlockMixinSecurityDetective, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/security-detective-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassService
+  parent: [ StellarAirlockMixinService, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/service-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassServiceBartender
+  parent: [ StellarAirlockMixinServiceBartender, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/service-bartender-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassServiceCleric
+  parent: [ StellarAirlockMixinServiceCleric, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/service-cleric-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassServiceJanitor
+  parent: [ StellarAirlockMixinServiceJanitor, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/service-janitor-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassServiceKitchen
+  parent: [ StellarAirlockMixinServiceKitchen, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/service-kitchen-glass.rsi
+
+- type: entity
+  id: StellarAirlockGlassServicePerformer
+  parent: [ StellarAirlockMixinServicePerformer, StellarAirlockGlass ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks-Glass/service-performer-glass.rsi
+

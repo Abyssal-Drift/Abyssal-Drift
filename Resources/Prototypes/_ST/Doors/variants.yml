@@ -1,0 +1,187 @@
+# SPDX-FileCopyrightText: 2025 Janet Blackquill
+#
+# SPDX-License-Identifier: LicenseRef-Wallening
+
+- type: entity
+  id: StellarAirlockCargo
+  parent: [ StellarAirlockMixinCargo, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/cargo.rsi
+
+- type: entity
+  id: StellarAirlockCargoCourier
+  parent: [ StellarAirlockMixinCargoCourier, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/cargo-courier.rsi
+
+- type: entity
+  id: StellarAirlockCargoSalvage
+  parent: [ StellarAirlockMixinCargoSalvage, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/cargo-salvage.rsi
+
+- type: entity
+  id: StellarAirlockCommand
+  parent: [ StellarAirlockMixinCommand, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command.rsi
+
+- type: entity
+  id: StellarAirlockCommandCaptain
+  parent: [ StellarAirlockMixinCommandCaptain, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-captain.rsi
+
+- type: entity
+  id: StellarAirlockCommandCargo
+  parent: [ StellarAirlockMixinCommandCargo, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-cargo.rsi
+
+- type: entity
+  id: StellarAirlockCommandEngineering
+  parent: [ StellarAirlockMixinCommandEngineering, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-engineering.rsi
+
+- type: entity
+  id: StellarAirlockCommandMedical
+  parent: [ StellarAirlockMixinCommandMedical, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-medical.rsi
+
+- type: entity
+  id: StellarAirlockCommandScience
+  parent: [ StellarAirlockMixinCommandScience, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-science.rsi
+
+- type: entity
+  id: StellarAirlockCommandSecurity
+  parent: [ StellarAirlockMixinCommandSecurity, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-security.rsi
+
+- type: entity
+  id: StellarAirlockCommandService
+  parent: [ StellarAirlockMixinCommandService, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/command-service.rsi
+
+- type: entity
+  id: StellarAirlockEngineering
+  parent: [ StellarAirlockMixinEngineering, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/engineering.rsi
+
+- type: entity
+  id: StellarAirlockEngineeringAtmospherics
+  parent: [ StellarAirlockMixinEngineeringAtmospherics, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/engineering-atmos.rsi
+
+- type: entity
+  id: StellarAirlockMedical
+  parent: [ StellarAirlockMixinMedical, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/medical.rsi
+
+- type: entity
+  id: StellarAirlockMedicalChemistry
+  parent: [ StellarAirlockMixinMedicalChemistry, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/medical-chemistry.rsi
+
+- type: entity
+  id: StellarAirlockScience
+  parent: [ StellarAirlockMixinScience, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/science.rsi
+
+- type: entity
+  id: StellarAirlockSecurity
+  parent: [ StellarAirlockMixinSecurity, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/security.rsi
+
+- type: entity
+  id: StellarAirlockSecurityArmory
+  parent: [ StellarAirlockMixinSecurity, StellarAirlock ]
+  suffix: Armory
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/security-armory.rsi
+
+- type: entity
+  id: StellarAirlockSecurityDetective
+  parent: [ StellarAirlockMixinSecurityDetective, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/security-detective.rsi
+
+- type: entity
+  id: StellarAirlockService
+  parent: [ StellarAirlockMixinService, StellarAirlock ]
+  suffix: Service
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/service.rsi
+
+- type: entity
+  id: StellarAirlockServiceBartender
+  parent: [ StellarAirlockMixinServiceBartender, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/service-bartender.rsi
+
+- type: entity
+  id: StellarAirlockServiceCleric
+  parent: [ StellarAirlockMixinServiceCleric, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/service-cleric.rsi
+
+- type: entity
+  id: StellarAirlockServiceHydroponics
+  parent: [ StellarAirlockMixinServiceHydroponics, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/botany.rsi
+
+- type: entity
+  id: StellarAirlockServiceJanitor
+  parent: [ StellarAirlockMixinServiceJanitor, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/service-janitor.rsi
+
+- type: entity
+  id: StellarAirlockServiceKitchen
+  parent: [ StellarAirlockMixinServiceKitchen, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/service-kitchen.rsi
+
+- type: entity
+  id: StellarAirlockServicePerformer
+  parent: [ StellarAirlockMixinServicePerformer, StellarAirlock ]
+  components:
+  - type: Sprite
+    sprite: _ST/Tileset/Doors/Airlocks/service-performer.rsi

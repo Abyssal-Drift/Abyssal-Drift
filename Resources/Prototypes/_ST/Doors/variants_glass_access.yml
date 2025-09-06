@@ -1,0 +1,127 @@
+# SPDX-FileCopyrightText: 2025 Janet Blackquill
+#
+# SPDX-License-Identifier: LicenseRef-Wallening
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCargo, StellarAirlockGlassCargo ]
+  id: StellarAirlockGlassCargoLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCargoCourier, StellarAirlockGlassCargoCourier ]
+  id: StellarAirlockGlassCargoCourierLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCargoSalvage, StellarAirlockGlassCargoSalvage ]
+  id: StellarAirlockGlassCargoSalvageLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCommand, StellarAirlockGlassCommand ]
+  id: StellarAirlockGlassCommandLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCommandCaptain, StellarAirlockGlassCommandCaptain ]
+  id: StellarAirlockGlassCommandCaptainLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCommandCargo, StellarAirlockGlassCommandCargo ]
+  id: StellarAirlockGlassCommandCargoLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCommandEngineering, StellarAirlockGlassCommandEngineering ]
+  id: StellarAirlockGlassCommandEngineeringLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCommandMedical, StellarAirlockGlassCommandMedical ]
+  id: StellarAirlockGlassCommandMedicalLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCommandScience, StellarAirlockGlassCommandScience ]
+  id: StellarAirlockGlassCommandScienceLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCommandSecurity, StellarAirlockGlassCommandSecurity ]
+  id: StellarAirlockGlassCommandSecurityLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessCommandService, StellarAirlockGlassCommandService ]
+  id: StellarAirlockGlassCommandServiceLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessEngineering, StellarAirlockGlassEngineering ]
+  id: StellarAirlockGlassEngineeringLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessEngineeringAtmospherics, StellarAirlockGlassEngineeringAtmospherics ]
+  id: StellarAirlockGlassEngineeringAtmosphericsLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessLawyer, StellarAirlockGlassService ]
+  id: StellarAirlockGlassLawyerLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessMedical, StellarAirlockGlassMedical ]
+  id: StellarAirlockGlassMedicalLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessMedicalChemistry, StellarAirlockGlassMedicalChemistry ]
+  id: StellarAirlockGlassMedicalChemistryLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessMedicalMorgue, StellarAirlockGlassMedical ]
+  id: StellarAirlockGlassMedicalMorgueLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessMedicalScience, StellarAirlockGlassMedical ]
+  id: StellarAirlockGlassMedicalScienceLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessScience, StellarAirlockGlassScience ]
+  id: StellarAirlockGlassScienceLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessSecurity, StellarAirlockGlassSecurity ]
+  id: StellarAirlockGlassSecurityLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessSecurityBrig, StellarAirlockGlassSecurity ]
+  id: StellarAirlockGlassSecurityBrigLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessSecurityDetective, StellarAirlockGlassSecurityDetective ]
+  id: StellarAirlockGlassSecurityDetectiveLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessSecurityLawyer, StellarAirlockGlassSecurity ]
+  id: StellarAirlockGlassSecurityLawyerLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessService, StellarAirlockGlassService ]
+  id: StellarAirlockGlassServiceLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessServiceBartender, StellarAirlockGlassServiceBartender ]
+  id: StellarAirlockGlassServiceBartenderLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessServiceCleric, StellarAirlockGlassServiceCleric ]
+  id: StellarAirlockGlassServiceClericLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessServiceHydroponics, StellarAirlockGlassService ] # todo - hydroponics variant?
+  id: StellarAirlockGlassServiceHydroponicsLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessServiceJanitor, StellarAirlockGlassServiceJanitor ]
+  id: StellarAirlockGlassServiceJanitorLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessServiceKitchen, StellarAirlockGlassServiceKitchen ]
+  id: StellarAirlockGlassServiceKitchenLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessServiceKitchenBartender, StellarAirlockGlassServiceKitchen ]
+  id: StellarAirlockGlassServiceKitchenBartenderLocked
+
+- type: entity
+  parent: [ StellarAirlockMixinAccessServicePerformer, StellarAirlockGlassServicePerformer ]
+  id: StellarAirlockGlassServicePerformerLocked

@@ -112,6 +112,8 @@ namespace Content.Client.Input
             aghost.AddFunction(ContentKeyFunctions.TryPullObject);
             aghost.AddFunction(ContentKeyFunctions.MovePulledObject);
             aghost.AddFunction(ContentKeyFunctions.ReleasePulledObject);
+            aghost.AddFunction(ContentKeyFunctions.RotateObjectClockwise); // Stellar - admins should be able to do that
+            aghost.AddFunction(ContentKeyFunctions.RotateObjectCounterclockwise); // Stellar - admins should be able to do that
 
             var ghost = contexts.New("ghost", "human");
             ghost.AddFunction(EngineKeyFunctions.MoveUp);

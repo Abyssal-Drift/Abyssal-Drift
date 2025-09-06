@@ -1220,8 +1220,6 @@
       0: Alive
       200: Critical
       250: Dead
-  - type: StaminaResistance
-    damageCoefficient: 0.40
 
 - type: entity
   name: kangaroo
@@ -3779,6 +3777,7 @@
   id: MobCorgiSmart
   name: smart corgi
   description: An unusually smart dog.
+  abstract: true # Stellar - Corgium is truly reprehensibly insipid noncontent. Begone.
   components:
   # Use corgi sprite, need to add handcuff layer
   - type: Sprite

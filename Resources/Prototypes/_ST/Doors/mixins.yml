@@ -1,0 +1,189 @@
+# SPDX-FileCopyrightText: 2025 Janet Blackquill
+#
+# SPDX-License-Identifier: LicenseRef-Wallening
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinCargo
+  suffix: Cargo
+  components:
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinCargo
+  id: StellarAirlockMixinCargoCourier
+  suffix: Courier
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinCargo
+  id: StellarAirlockMixinCargoSalvage
+  suffix: Salvage
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinCommand
+  suffix: Command
+  components:
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinCommand
+  id: StellarAirlockMixinCommandCaptain
+  suffix: Captain
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinCommand
+  id: StellarAirlockMixinCommandCargo
+  suffix: Quartermaster
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinCommand
+  id: StellarAirlockMixinCommandEngineering
+  suffix: Chief Engineer
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinCommand
+  id: StellarAirlockMixinCommandMedical
+  suffix: Head of Medicine
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinCommand
+  id: StellarAirlockMixinCommandScience
+  suffix: Research Director
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinCommand
+  id: StellarAirlockMixinCommandSecurity
+  suffix: Head of Security
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinCommand
+  id: StellarAirlockMixinCommandService
+  suffix: Head of Personnel
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinEngineering
+  suffix: Engineering
+  components:
+  - type: Wires
+    layoutId: AirlockEngineering
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinEngineering
+  id: StellarAirlockMixinEngineeringAtmospherics
+  suffix: Atmospherics
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinExternal
+  suffix: EVA
+  components:
+  - type: Wires
+    layoutId: AirlockExternal
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinHighSecurity
+  suffix: High Security
+  components:
+  - type: Wires
+    layoutId: HighSec
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinMedical
+  suffix: Medical
+  components:
+  - type: Wires
+    layoutId: AirlockMedical
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinMedical
+  id: StellarAirlockMixinMedicalChemistry
+  suffix: Chemistry
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinScience
+  suffix: Science
+  components:
+  - type: Wires
+    layoutId: AirlockScience
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinSecurity
+  suffix: Security
+  components:
+  - type: Wires
+    layoutId: AirlockSecurity
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinSecurity
+  id: StellarAirlockMixinSecurityArmory
+  suffix: Armory
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinSecurity
+  id: StellarAirlockMixinSecurityDetective
+  suffix: Detective
+
+- type: entity
+  abstract: true
+  id: StellarAirlockMixinService
+  suffix: Service
+  components:
+  - type: Wires
+    layoutId: AirlockService
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinService
+  id: StellarAirlockMixinServiceBartender
+  suffix: Bartender
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinService
+  id: StellarAirlockMixinServiceCleric
+  suffix: Cleric
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinService
+  id: StellarAirlockMixinServiceHydroponics
+  suffix: Hydroponics
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinService
+  id: StellarAirlockMixinServiceJanitor
+  suffix: Janitor
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinService
+  id: StellarAirlockMixinServiceKitchen
+  suffix: Kitchen
+
+- type: entity
+  abstract: true
+  parent: StellarAirlockMixinService
+  id: StellarAirlockMixinServicePerformer
+  suffix: Performer
