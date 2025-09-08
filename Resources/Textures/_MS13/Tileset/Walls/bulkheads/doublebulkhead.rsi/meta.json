@@ -1,0 +1,186 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-3.0",
+    "copyright": "By INFRARED_BARON // Recoloured and edited, additional variants, side sprites and conversion to ss14 wall smoothing technology done by StudioFaewilds",
+    "size": {
+        "x": 32,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "bulkhead_double0",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_double1",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_double2",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_double3",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_double4",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_double5",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_double6",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_double7",
+            "directions": 4
+        },
+        {
+            "name": "fullb"
+        },
+        {
+            "name": "bulkhead_doubleb0",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubleb1",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubleb2",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubleb3",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubleb4",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubleb5",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubleb6",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubleb7",
+            "directions": 4
+        },
+        {
+            "name": "fullc"
+        },
+        {
+            "name": "bulkhead_doublec0",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublec1",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublec2",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublec3",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublec4",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublec5",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublec6",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublec7",
+            "directions": 4
+        },
+        {
+            "name": "fulld"
+        },
+        {
+            "name": "bulkhead_doubled0",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubled1",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubled2",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubled3",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubled4",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubled5",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubled6",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doubled7",
+            "directions": 4
+        },
+        {
+            "name": "fulle"
+        },
+        {
+            "name": "bulkhead_doublee0",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublee1",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublee2",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublee3",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublee4",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublee5",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublee6",
+            "directions": 4
+        },
+        {
+            "name": "bulkhead_doublee7",
+            "directions": 4
+        }
+    ]
+}
