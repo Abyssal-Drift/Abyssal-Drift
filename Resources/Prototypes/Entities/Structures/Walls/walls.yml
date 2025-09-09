@@ -1007,7 +1007,7 @@
   components:
   - type: Sprite
     # Begin Abyssal
-    sprite: _MS13/Tileset/Walls/bulkheads/unborderedbulkhead.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkhead_unbordered.rsi
   - type: SpriteFade
     # End Abyssal
   - type: WallReplacementMarker
@@ -1015,7 +1015,7 @@
     graph: Girder
     node: wall
   - type: Icon
-    sprite: _MS13/Tileset/Walls/bulkheads/unborderedbulkhead.rsi # Abyssal
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkhead_unbordered.rsi # Abyssal
   - type: RCDDeconstructable
     cost: 6
     delay: 8
