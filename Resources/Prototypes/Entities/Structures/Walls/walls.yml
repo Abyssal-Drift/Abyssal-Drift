@@ -1100,16 +1100,16 @@
   suffix: rusted
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheadunbordered.rsi # Abyssal
   - type: Icon
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheadunbordered.rsi # Abyssal
     state: full
   - type: Construction
     graph: Girder
     node: wallrust
   - type: IconSmooth
     key: walls
-    base: solid
+    base: bulkheadunbordered
   - type: Destructible
     thresholds:
     - trigger:
