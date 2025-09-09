@@ -9,9 +9,9 @@
   description: An ordinary bulkhead, with a border trim at the bottom.
   components:
   - type: Sprite
-    sprite: _MS13/Tileset/Walls/bulkheads/borderedbulkhead.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkhead_bordered.rsi
   - type: Icon
-    sprite: _MS13/Tileset/Walls/bulkheads/borderedbulkhead.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkhead_bordered.rsi
   - type: RCDDeconstructable
     cost: 6
     delay: 8
@@ -48,9 +48,9 @@
   description: An ordinary bulkhead, with two panels instead of one.
   components:
   - type: Sprite
-    sprite: _MS13/Tileset/Walls/bulkheads/doublebulkhead.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkhead_double.rsi
   - type: Icon
-    sprite: _MS13/Tileset/Walls/bulkheads/doublebulkhead.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkhead_double.rsi
   - type: RCDDeconstructable
     cost: 6
     delay: 8
