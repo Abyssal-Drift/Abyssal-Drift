@@ -10,7 +10,7 @@
     - Wall
   components:
   - type: Anchorable
-    flags: 
+    flags:
     - Anchorable
   - type: Rotatable
   - type: RangedDamageSound
@@ -1002,19 +1002,20 @@
 - type: entity
   parent: BaseWall
   id: WallSolid
-  name: solid wall
+  name: bulkhead # Abyssal
+  description: An ordinary bulkhead with only one panel. # Abyssal
   components:
   - type: Sprite
-    # Begin Stellar - Wallening
-    sprite: _ST/Tileset/Walls/metal.rsi
+    # Begin Abyssal
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheadunbordered.rsi
   - type: SpriteFade
-    # End Stellar - Wallening
+    # End Abyssal
   - type: WallReplacementMarker
   - type: Construction
     graph: Girder
     node: wall
   - type: Icon
-    sprite: _ST/Tileset/Walls/metal.rsi # Stellar
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheadunbordered.rsi # Abyssal
   - type: RCDDeconstructable
     cost: 6
     delay: 8
@@ -1043,7 +1044,15 @@
         acts: ["Destruction"]
   - type: IconSmooth
     key: wallsbase # Stellar
-    base: tallmetal
+    base: bulkheadunbordered # Abyssal start
+  - type: RandomIconSmooth
+    randomStates:
+    - bulkheadunbordered
+    - bulkheadunborderedb
+    - bulkheadunborderedc
+    - bulkheadunborderedd
+  - type: Appearance
+  # Abyssal end
 
 
 - type: entity
@@ -1091,16 +1100,16 @@
   suffix: rusted
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheadunbordered.rsi # Abyssal
   - type: Icon
-    sprite: Structures/Walls/solid_rust.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheadunbordered.rsi # Abyssal
     state: full
   - type: Construction
     graph: Girder
     node: wallrust
   - type: IconSmooth
     key: walls
-    base: solid
+    base: bulkheadunbordered
   - type: Destructible
     thresholds:
     - trigger:

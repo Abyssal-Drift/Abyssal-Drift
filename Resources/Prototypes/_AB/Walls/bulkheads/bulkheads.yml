@@ -1,0 +1,82 @@
+# SPDX-FileCopyrightText: AbyssalDrift / StudioFaewilds
+#
+# SPDX-License-Identifier: LicenseRef-AbyssalDrift
+
+- type: entity
+  parent: BaseStructureWall
+  id: BorderedBulkhead
+  name: bordered bulkhead
+  description: An ordinary bulkhead, with a border trim at the bottom.
+  components:
+  - type: Sprite
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheadbordered.rsi
+  - type: Icon
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheadbordered.rsi
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: Occluder # Breaks on diagonal walls
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Girder:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: wallsbase # Stellar
+    base: bulkheadbordered
+  - type: RandomIconSmooth
+    randomStates:
+    - bulkheadbordered
+    - bulkheadborderedb
+    - bulkheadborderedc
+    - bulkheadborderedd
+  - type: Appearance
+
+- type: entity
+  parent: BaseStructureWall
+  id: BulkheadDouble
+  name: double bulkhead
+  description: An ordinary bulkhead, with two panels instead of one.
+  components:
+  - type: Sprite
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheaddouble.rsi
+  - type: Icon
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheaddouble.rsi
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: Occluder # Breaks on diagonal walls
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Girder:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: wallsbase # Stellar
+    base: bulkheaddouble
+  - type: RandomIconSmooth
+    randomStates:
+    - bulkheaddouble
+    - bulkheaddoubleb
+    - bulkheaddoublec
+    - bulkheaddoubled
+    - bulkheaddoublee
+  - type: Appearance

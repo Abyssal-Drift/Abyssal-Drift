@@ -1,0 +1,151 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-3.0",
+    "copyright": "By INFRARED_BARON // Recoloured and edited, additional variants, side sprites and conversion to ss14 wall smoothing technology done by StudioFaewilds",
+    "size": {
+        "x": 32,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "bulkheadunbordered0",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunbordered1",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunbordered2",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunbordered3",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunbordered4",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunbordered5",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunbordered6",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunbordered7",
+            "directions": 4
+        },
+        {
+            "name": "fullb"
+        },
+        {
+            "name": "bulkheadunborderedb0",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedb1",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedb2",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedb3",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedb4",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedb5",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedb6",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedb7",
+            "directions": 4
+        },
+        {
+            "name": "fullc"
+        },
+        {
+            "name": "bulkheadunborderedc0",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedc1",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedc2",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedc3",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedc4",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedc5",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedc6",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedc7",
+            "directions": 4
+        },
+        {
+            "name": "fulld"
+        },
+        {
+            "name": "bulkheadunborderedd0",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedd1",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedd2",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedd3",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedd4",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedd5",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedd6",
+            "directions": 4
+        },
+        {
+            "name": "bulkheadunborderedd7",
+            "directions": 4
+        }
+    ]
+}
