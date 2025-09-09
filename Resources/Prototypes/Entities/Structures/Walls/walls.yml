@@ -1007,7 +1007,7 @@
   components:
   - type: Sprite
     # Begin Abyssal
-    sprite: _MS13/Tileset/Walls/bulkheads/bulkhead_unbordered.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheadunbordered.rsi
   - type: SpriteFade
     # End Abyssal
   - type: WallReplacementMarker
@@ -1015,7 +1015,7 @@
     graph: Girder
     node: wall
   - type: Icon
-    sprite: _MS13/Tileset/Walls/bulkheads/bulkhead_unbordered.rsi # Abyssal
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheadunbordered.rsi # Abyssal
   - type: RCDDeconstructable
     cost: 6
     delay: 8
@@ -1044,13 +1044,13 @@
         acts: ["Destruction"]
   - type: IconSmooth
     key: wallsbase # Stellar
-    base: bulkhead_unbordered # Abyssal start
+    base: bulkheadunbordered # Abyssal start
   - type: RandomIconSmooth
     randomStates:
-    - bulkhead_unbordered
-    - bulkhead_unborderedb
-    - bulkhead_unborderedc
-    - bulkhead_unborderedd
+    - bulkheadunbordered
+    - bulkheadunborderedb
+    - bulkheadunborderedc
+    - bulkheadunborderedd
   - type: Appearance
   # Abyssal end
 

@@ -11,140 +11,140 @@
             "name": "full"
         },
         {
-            "name": "bulkhead_bordered0",
+            "name": "bulkheadunbordered0",
             "directions": 4
         },
         {
-            "name": "bulkhead_bordered1",
+            "name": "bulkheadunbordered1",
             "directions": 4
         },
         {
-            "name": "bulkhead_bordered2",
+            "name": "bulkheadunbordered2",
             "directions": 4
         },
         {
-            "name": "bulkhead_bordered3",
+            "name": "bulkheadunbordered3",
             "directions": 4
         },
         {
-            "name": "bulkhead_bordered4",
+            "name": "bulkheadunbordered4",
             "directions": 4
         },
         {
-            "name": "bulkhead_bordered5",
+            "name": "bulkheadunbordered5",
             "directions": 4
         },
         {
-            "name": "bulkhead_bordered6",
+            "name": "bulkheadunbordered6",
             "directions": 4
         },
         {
-            "name": "bulkhead_bordered7",
+            "name": "bulkheadunbordered7",
             "directions": 4
         },
         {
             "name": "fullb"
         },
         {
-            "name": "bulkhead_borderedb0",
+            "name": "bulkheadunborderedb0",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedb1",
+            "name": "bulkheadunborderedb1",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedb2",
+            "name": "bulkheadunborderedb2",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedb3",
+            "name": "bulkheadunborderedb3",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedb4",
+            "name": "bulkheadunborderedb4",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedb5",
+            "name": "bulkheadunborderedb5",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedb6",
+            "name": "bulkheadunborderedb6",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedb7",
+            "name": "bulkheadunborderedb7",
             "directions": 4
         },
         {
             "name": "fullc"
         },
         {
-            "name": "bulkhead_borderedc0",
+            "name": "bulkheadunborderedc0",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedc1",
+            "name": "bulkheadunborderedc1",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedc2",
+            "name": "bulkheadunborderedc2",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedc3",
+            "name": "bulkheadunborderedc3",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedc4",
+            "name": "bulkheadunborderedc4",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedc5",
+            "name": "bulkheadunborderedc5",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedc6",
+            "name": "bulkheadunborderedc6",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedc7",
+            "name": "bulkheadunborderedc7",
             "directions": 4
         },
         {
             "name": "fulld"
         },
         {
-            "name": "bulkhead_borderedd0",
+            "name": "bulkheadunborderedd0",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedd1",
+            "name": "bulkheadunborderedd1",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedd2",
+            "name": "bulkheadunborderedd2",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedd3",
+            "name": "bulkheadunborderedd3",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedd4",
+            "name": "bulkheadunborderedd4",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedd5",
+            "name": "bulkheadunborderedd5",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedd6",
+            "name": "bulkheadunborderedd6",
             "directions": 4
         },
         {
-            "name": "bulkhead_borderedd7",
+            "name": "bulkheadunborderedd7",
             "directions": 4
         }
     ]

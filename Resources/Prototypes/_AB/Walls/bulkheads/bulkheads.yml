@@ -9,9 +9,9 @@
   description: An ordinary bulkhead, with a border trim at the bottom.
   components:
   - type: Sprite
-    sprite: _MS13/Tileset/Walls/bulkheads/bulkhead_bordered.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheadbordered.rsi
   - type: Icon
-    sprite: _MS13/Tileset/Walls/bulkheads/bulkhead_bordered.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheadbordered.rsi
   - type: RCDDeconstructable
     cost: 6
     delay: 8
@@ -32,13 +32,13 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: wallsbase # Stellar
-    base: bulkhead_bordered
+    base: bulkheadbordered
   - type: RandomIconSmooth
     randomStates:
-    - bulkhead_bordered
-    - bulkhead_borderedb
-    - bulkhead_borderedc
-    - bulkhead_borderedd
+    - bulkheadbordered
+    - bulkheadborderedb
+    - bulkheadborderedc
+    - bulkheadborderedd
   - type: Appearance
 
 - type: entity
@@ -48,9 +48,9 @@
   description: An ordinary bulkhead, with two panels instead of one.
   components:
   - type: Sprite
-    sprite: _MS13/Tileset/Walls/bulkheads/bulkhead_double.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheaddouble.rsi
   - type: Icon
-    sprite: _MS13/Tileset/Walls/bulkheads/bulkhead_double.rsi
+    sprite: _MS13/Tileset/Walls/bulkheads/bulkheaddouble.rsi
   - type: RCDDeconstructable
     cost: 6
     delay: 8
@@ -71,12 +71,12 @@
         acts: [ "Destruction" ]
   - type: IconSmooth
     key: wallsbase # Stellar
-    base: bulkhead_double
+    base: bulkheaddouble
   - type: RandomIconSmooth
     randomStates:
-    - bulkhead_double
-    - bulkhead_doubleb
-    - bulkhead_doublec
-    - bulkhead_doubled
-    - bulkhead_doublee
+    - bulkheaddouble
+    - bulkheaddoubleb
+    - bulkheaddoublec
+    - bulkheaddoubled
+    - bulkheaddoublee
   - type: Appearance
