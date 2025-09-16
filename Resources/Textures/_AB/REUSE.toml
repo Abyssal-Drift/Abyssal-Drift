@@ -1,0 +1,6 @@
+version = 1
+
+[[annotations]]
+path = ["**/meta.json"]
+SPDX-FileCopyrightText = "None"
+SPDX-License-Identifier = "CC0-1.0"
