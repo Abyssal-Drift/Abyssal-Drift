@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: AbyssalDrift / StudioFaewilds
+#
+# SPDX-License-Identifier: LicenseRef-AbyssalDrift
+
 - type: tile
   id: DesatLargeTileBlack
   name: tiles-desat-large-black
