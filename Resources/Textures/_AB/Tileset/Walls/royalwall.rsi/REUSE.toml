@@ -1,0 +1,6 @@
+version = 1
+
+[[annotations]]
+path = ["*.png"]
+SPDX-FileCopyrightText = "StudioFaewilds"
+SPDX-License-Identifier = "LicenseRef-AbyssalDrift"

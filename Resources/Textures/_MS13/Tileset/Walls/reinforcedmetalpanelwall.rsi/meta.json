@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-3.0",
+    "copyright": "By INFRARED_BARON // Conversion to ss14 wall smoothing technology and directionals done by StudioFaewilds",
+    "size": {
+        "x": 32,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "reinforcedmetalpanelwall0",
+            "directions": 4
+        },
+        {
+            "name": "reinforcedmetalpanelwall1",
+            "directions": 4
+        },
+        {
+            "name": "reinforcedmetalpanelwall2",
+            "directions": 4
+        },
+        {
+            "name": "reinforcedmetalpanelwall3",
+            "directions": 4
+        },
+        {
+            "name": "reinforcedmetalpanelwall4",
+            "directions": 4
+        },
+        {
+            "name": "reinforcedmetalpanelwall5",
+            "directions": 4
+        },
+        {
+            "name": "reinforcedmetalpanelwall6",
+            "directions": 4
+        },
+        {
+            "name": "reinforcedmetalpanelwall7",
+            "directions": 4
+        }
+    ]
+}

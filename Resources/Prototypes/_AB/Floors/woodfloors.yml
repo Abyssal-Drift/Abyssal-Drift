@@ -1,0 +1,95 @@
+# SPDX-FileCopyrightText: AbyssalDrift / StudioFaewilds
+#
+# SPDX-License-Identifier: LicenseRef-AbyssalDrift
+
+- type: tile
+  id: FloorWoodBroken
+  name: tiles-wood-Broken
+  sprite: /Textures/_MS13/Tileset/Floor/Wood/woodenplankbroken.png #AbyssalDrift
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemWood
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorLargeWoodBroken
+  name: tiles-wood-Broken-large
+  sprite: /Textures/_MS13/Tileset/Floor/Wood/largeplanksbroken.png #AbyssalDrift
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemWood
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorZigzagWood
+  name: zigzag-wood
+  sprite: /Textures/_MS13/Tileset/Floor/Wood/zigzag.png #AbyssalDrift
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemWood
+  heatCapacity: 10000
+
+- type: tile
+  id: FloorZigzagWoodBroken
+  name: zigzag-wood-broken
+  sprite: /Textures/_MS13/Tileset/Floor/Wood/zigzagbroken.png #AbyssalDrift
+  variants: 8
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepWood
+  barestepSounds:
+    collection: BarestepWood
+  itemDrop: FloorTileItemWood
+  heatCapacity: 10000

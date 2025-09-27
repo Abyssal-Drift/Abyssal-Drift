@@ -1,0 +1,6 @@
+version = 1
+
+[[annotations]]
+path = ["*.png"]
+SPDX-FileCopyrightText = "INFRARED_BARON // Flipped to be artstyle consistent w/ bottom lighting by StudioFaewilds"
+SPDX-License-Identifier = "LicenseRef-MojaveSun13"

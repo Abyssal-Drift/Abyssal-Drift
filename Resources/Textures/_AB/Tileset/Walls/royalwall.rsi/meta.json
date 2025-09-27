@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "license": "LicenseRef-AbyssalDrift",
+    "copyright": "StudioFaewilds",
+    "size": {
+        "x": 32,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "royalwall0",
+            "directions": 4
+        },
+        {
+            "name": "royalwall1",
+            "directions": 4
+        },
+        {
+            "name": "royalwall2",
+            "directions": 4
+        },
+        {
+            "name": "royalwall3",
+            "directions": 4
+        },
+        {
+            "name": "royalwall4",
+            "directions": 4
+        },
+        {
+            "name": "royalwall5",
+            "directions": 4
+        },
+        {
+            "name": "royalwall6",
+            "directions": 4
+        },
+        {
+            "name": "royalwall7",
+            "directions": 4
+        }
+    ]
+}

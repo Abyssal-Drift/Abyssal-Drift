@@ -235,7 +235,7 @@
 - type: tile
   id: FloorWood
   name: tiles-wood
-  sprite: /Textures/Tiles/wood.png
+  sprite: /Textures/_MS13/Tileset/Floor/Wood/woodenplank.png #AbyssalDrift
   variants: 4
   placementVariants:
   - 1.0
@@ -1843,7 +1843,7 @@
 - type: tile
   id: FloorWoodTile
   name: tiles-wood2
-  sprite: /Textures/Tiles/wood_tile.png
+  sprite: /Textures/_MS13/Tileset/Floor/Wood/squarewood.png #AbyssalDrift
   variants: 4
   placementVariants:
   - 1.0
@@ -1863,9 +1863,10 @@
 - type: tile
   id: FloorBrokenWood
   name: tiles-wood3
-  sprite: /Textures/Tiles/wood_broken.png
-  variants: 7
+  sprite: /Textures/_MS13/Tileset/Floor/Wood/squarewoodbroken.png #AbyssalDrift
+  variants: 8
   placementVariants:
+  - 1.0
   - 1.0
   - 1.0
   - 1.0
@@ -2046,7 +2047,7 @@
 - type: tile
   id: FloorWoodLarge
   name: tiles-wood-large
-  sprite: /Textures/Tiles/wood_large.png
+  sprite: /Textures/_MS13/Tileset/Floor/Wood/largeplanks.png #AbyssalDrift
   variants: 4
   placementVariants:
   - 1.0

@@ -1,0 +1,447 @@
+# SPDX-FileCopyrightText: AbyssalDrift / StudioFaewilds
+#
+# SPDX-License-Identifier: LicenseRef-AbyssalDrift
+
+- type: tile
+  id: DesatLargeTileBlack
+  name: tiles-desat-large-black
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatlargetileblack.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatLargeTileBlue
+  name: tiles-desat-large-blue
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatlargetileblue.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatLargeTileGreen
+  name: tiles-desat-large-green
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatlargetilegreen.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatLargeTileGrey
+  name: tiles-desat-large-grey
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatlargetilegrey.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatLargeTilePorcelain
+  name: tiles-desat-large-porcelain
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatlargetileporcelain.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatLargeTileWhite
+  name: tiles-desat-large-white
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatlargetilewhite.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileBlackWhite
+  name: tiles-desat-medium-checkered-blackwhite
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumchecktileblackwhite.png
+  variants: 2
+  placementVariants:
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileBlackWhiteBroken
+  name: tiles-desat-medium-checkered-blackwhite-broken
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumchecktileblackwhitebroken.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileRedWhite
+  name: tiles-desat-medium-checkered-redwhite
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumchecktileredwhite.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileRedWhiteBroken
+  name: tiles-desat-medium-checkered-redwhite-broken
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumchecktileredwhitebroken.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileBlack
+  name: tiles-desat-medium-black
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumtileblack.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileBlackBroken
+  name: tiles-desat-medium-black-broken
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumtileblackbroken.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileBlue
+  name: tiles-desat-medium-blue
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumtileblue.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileBlueBroken
+  name: tiles-desat-medium-blue-broken
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumtilebluebroken.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileGreen
+  name: tiles-desat-medium-green
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumtilegreen.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileGreenBroken
+  name: tiles-desat-medium-green-broken
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumtilegreenbroken.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileGrey
+  name: tiles-desat-medium-grey
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumtilegrey.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileGreyBroken
+  name: tiles-desat-medium-grey-broken
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumtilegreybroken.png
+  variants: 6
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileWhite
+  name: tiles-desat-medium-white
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumtilewhite.png
+  variants: 1
+  placementVariants:
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatMediumTileWhiteBroken
+  name: tiles-desat-medium-white-broken
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatmediumtilewhitebroken.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatSmallTileBlue
+  name: tiles-desat-small-blue
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatsmalltileblue.png
+  variants: 2
+  placementVariants:
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatSmallTileBlueBroken
+  name: tiles-desat-small-blue-broken
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatsmalltilebluebroken.png
+  variants: 9
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatSmallTileCream
+  name: tiles-desat-small-cream
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatsmalltileoffwhite.png
+  variants: 2
+  placementVariants:
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatSmallTileCreamBroken
+  name: tiles-desat-small-cream-broken
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatsmalltileoffwhitebroken.png
+  variants: 9
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatSmallTileWhite
+  name: tiles-desat-small-white
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatsmalltilewhite.png
+  variants: 2
+  placementVariants:
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
+
+- type: tile
+  id: DesatSmallTileWhiteBroken
+  name: tiles-desat-small-white-broken
+  sprite: /Textures/_MS13/Tileset/Floor/Tiles/desatsmalltilewhitebroken.png
+  variants: 9
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  deconstructTools: [ Prying ]
+  footstepSounds:
+    collection: FootstepFloor
+  itemDrop: FloorTileItemSteel
+  heatCapacity: 10000
