@@ -80,3 +80,35 @@
     - bulkheaddoubled
     - bulkheaddoublee
   - type: Appearance
+
+- type: entity
+  parent: BaseStructureWall
+  id: ReinforcedMetalPanelWall
+  name: reinforced metal panel wall
+  description: A wall made of reinforced metal panels, looks particularly hardy.
+  components:
+  - type: Sprite
+    sprite: _MS13/Tileset/Walls/reinforcedmetalpanelwall.rsi
+  - type: Icon
+    sprite: _MS13/Tileset/Walls/reinforcedmetalpanelwall.rsi
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  - type: Occluder # Breaks on diagonal walls
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 700
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Girder:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: IconSmooth
+    key: wallsbase # Stellar
+    base: reinforcedmetalpanelwall
